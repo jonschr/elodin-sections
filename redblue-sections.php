@@ -28,6 +28,18 @@ include_once( 'templates/add-template.php' );
 add_action( 'wp_enqueue_scripts', 'redblue_sections_enqueue_scripts_styles' );
 function redblue_sections_enqueue_scripts_styles() {
 
+    //* Don't add these scripts and styles to the admin side of the site
+    if ( is_admin() )
+		return;
+
+    //* Enqueue main style
     wp_enqueue_style( 'section-style', plugin_dir_url( __FILE__ ) . '/css/redblue-section-styles.css' );
+
+    //* Slick slider
+	wp_enqueue_script( 'slick-main', plugin_dir_url( __FILE__ ) . '/slick/slick.js', array( 'jquery' ), null );
+	wp_enqueue_script( 'slick-init', plugin_dir_url( __FILE__ ) . '/js/slick-init.js', array( 'slick-main' ), null );
+	wp_enqueue_style( 'slick-style', plugin_dir_url( __FILE__ ) . '/slick/slick.css' );
+	wp_enqueue_style( 'slick-theme', plugin_dir_url( __FILE__ ) . '/slick/slick-theme.css' );
+
 
 }

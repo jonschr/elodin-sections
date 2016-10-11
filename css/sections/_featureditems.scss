@@ -1,3 +1,7 @@
+/* ==========================================================================
+   Featured items
+   ========================================================================== */
+
 .section.featureditems {
 	position: static;
 
@@ -18,7 +22,7 @@
 		justify-content: center;
 		display: flex;
 		margin: 0 -15px -40px;
-		
+
 		.item {
 			flex: 1;
 			padding: 0 15px;
@@ -45,7 +49,7 @@
 			.item-container {
 
 			}
-			
+
 		}
 
 		&.force-four-columns .item {
@@ -61,18 +65,18 @@
 
 	}
 
-	.embed-container { 
-			position: relative; 
+	.embed-container {
+			position: relative;
 			padding-bottom: 56.25%;
 			height: 0;
 			overflow: hidden;
 			max-width: 100%;
 			height: auto;
-		} 
+		}
 
 	.embed-container iframe,
 	.embed-container object,
-	.embed-container embed { 
+	.embed-container embed {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -80,4 +84,3 @@
 		height: 100%;
 	}
 }
-

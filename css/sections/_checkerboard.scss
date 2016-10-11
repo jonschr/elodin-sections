@@ -2,10 +2,6 @@
    Checkerboard sections
    ========================================================================== */
 
-/*
-   Structure
-   ========================================================================== */
-
 .section.checkerboard {
     padding: 0;
     display: flex;
@@ -29,7 +25,6 @@
 
     .checkerboard-image {
         min-height: 300px;
-        background-color: black;
         background-size: cover;
         background-position: center center;
     }
@@ -63,18 +58,5 @@
         .content-wrap {
             float: right;
         }
-    }
-}
-
-
-/*
-   Specific
-   ========================================================================== */
-
-.section.checkerboard {
-    background: #333 !important;
-
-    * {
-        color: white;
     }
 }
