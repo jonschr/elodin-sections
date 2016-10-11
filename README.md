@@ -4,7 +4,7 @@ Red Blue Sections extends Advanced custom fields for Genesis themes. It sets up 
 *This plugin requires the Advanced Custom Fields Pro plugin*
 
 # Style-ready classes
-A few classes have ben set up by default to allow for more flexibility for sections.
+A few classes have ben set up by default to allow for more flexibility for sections. These can be added at the bottom of each section.
 
 ## For use on all sections ##
 - *align-center* – aligns everything inside the section to center on desktop and tablet, but left-aligns it on mobile
