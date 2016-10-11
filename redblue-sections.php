@@ -24,6 +24,9 @@ define( 'REDBLUE_SECTIONS', dirname( __FILE__ ) );
 //* Register the custom page template
 include_once( 'templates/add-template.php' );
 
+//* Add the fields
+include_once( 'fields/sections.php' );
+
 //* Enqueue Scripts and Styles
 add_action( 'wp_enqueue_scripts', 'redblue_sections_enqueue_scripts_styles' );
 function redblue_sections_enqueue_scripts_styles() {

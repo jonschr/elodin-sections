@@ -87,10 +87,10 @@
 }
 
 /*
-   Fullcolor
+   Full-color
    ========================================================================== */
 
-.section.background-image.fullcolor {
+.section.full-color {
 	.background-div {
 		filter: grayscale( 0% );
 
@@ -101,27 +101,50 @@
 }
 
 /*
-   Scrolldown
+   Align-center
    ========================================================================== */
 
-a.scrolldown {
-	display: none;
+.section.align-center {
+	text-align: center;
+
+	@include mobile {
+		text-align: left;
+	}
+}
+
+/*
+   Full-height
+   ========================================================================== */
+
+.section.full-height {
 
 	@include desktop {
-		display: block;
-		z-index: 10;
-	}
-	position: absolute;
-	bottom: 100px;
-	color: white;
-	left: 50%;
-	transform: translateX(-50%);
+		height: 100vh;
+		position: relative;
 
-	span.dashicons,
-	span.dashicons:before {
-		font-size: 70px;
-		display: block;
-		text-align: center;
-		width: auto;
+		.wrap {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate( -50%, -50% );
+		}
+	}
+}
+
+
+/*
+   Full-height
+   ========================================================================== */
+
+.section.limit-height {
+
+	@include desktop {
+		height: auto;
+		position: static;
+
+		.wrap {
+			position: static;
+			transform: translate( 0%, 0% );
+		}
 	}
 }

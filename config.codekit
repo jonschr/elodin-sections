@@ -28,8 +28,8 @@
 		"outputPathIsSetByUser": 0
 		},
 	"\/css\/redblue-section-styles.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
+		"createSourceMap": 1,
+		"debugStyle": 2,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 0,
@@ -39,9 +39,9 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
+		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/css\/sections\/_background_rotator.scss": {
 		"createSourceMap": 0,
@@ -296,6 +296,15 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
+		},
+	"\/fields\/sections.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fields\/sections.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/js\/fancybox-init.js": {
 		"fileType": 64,
