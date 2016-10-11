@@ -343,7 +343,7 @@ body .slick-slider {
       max-width: 360px;
       -webkit-transition: .3s all ease;
       transition: .3s all ease; }
-      @media (min-width: 960px) {
+      @media (min-width: 768px) and (max-width: 1199px) {
         /* line 26, /Users/jonschroeder/Documents/Websites/Sections Site/app/public/wp-content/plugins/redblue-sections/css/sections/_featureditems.scss */
         .section.featureditems .items .item {
           -webkit-box-flex: 0;
