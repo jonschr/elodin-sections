@@ -22,7 +22,7 @@
 		position: relative;
 		margin: 0;
 
-		@include mobile {
+		@include mobile-section {
 			padding-top: 20px;
 			padding-bottom: 20px;
 		}
@@ -43,7 +43,7 @@
 			position: relative;
 			z-index: 10;
 
-			@include tablet {
+			@include tablet-section {
 				padding-left: 20px;
 				padding-right: 20px;
 			}
@@ -107,10 +107,23 @@
 .section.align-center {
 	text-align: center;
 
-	@include mobile {
+	@include mobile-section {
 		text-align: left;
 	}
 }
+
+
+/*
+   Limit-width
+   ========================================================================== */
+
+.section.limit-width {
+	.wrap {
+		max-width: 600px;
+	}
+}
+
+
 
 /*
    Full-height
@@ -118,7 +131,7 @@
 
 .section.full-height {
 
-	@include desktop {
+	@include desktop-section {
 		height: 100vh;
 		position: relative;
 
@@ -138,7 +151,7 @@
 
 .section.limit-height {
 
-	@include desktop {
+	@include desktop-section {
 		height: auto;
 		position: static;
 

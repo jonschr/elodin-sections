@@ -8,7 +8,7 @@
 	background: black;
 	margin: 0;
 
-	@media( min-width: 1023px ) {
+	@include notmobile-section {
 		min-height: 100vh;
 	}
 
@@ -42,7 +42,7 @@
 			}
 		}
 
-		@media( min-width: 1023px ) {
+		@include notmobile-section {
 			height: 100vh;
 			padding: 0;
 

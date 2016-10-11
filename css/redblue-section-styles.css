@@ -95,20 +95,41 @@
       text-align: left; } }
 
 /*
+   Limit-width
+   ========================================================================== */
+/* line 121, /Users/jonschroeder/Documents/Websites/Sections Site/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+.section.limit-width .wrap {
+  max-width: 600px; }
+
+/*
    Full-height
    ========================================================================== */
 @media (min-width: 1200px) {
-  /* line 119, /Users/jonschroeder/Documents/Websites/Sections Site/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+  /* line 132, /Users/jonschroeder/Documents/Websites/Sections Site/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
   .section.full-height {
     height: 100vh;
     position: relative; }
-    /* line 125, /Users/jonschroeder/Documents/Websites/Sections Site/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+    /* line 138, /Users/jonschroeder/Documents/Websites/Sections Site/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
     .section.full-height .wrap {
       position: absolute;
       top: 50%;
       left: 50%;
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%); } }
+
+/*
+   Full-height
+   ========================================================================== */
+@media (min-width: 1200px) {
+  /* line 152, /Users/jonschroeder/Documents/Websites/Sections Site/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+  .section.limit-height {
+    height: auto;
+    position: static; }
+    /* line 158, /Users/jonschroeder/Documents/Websites/Sections Site/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+    .section.limit-height .wrap {
+      position: static;
+      -webkit-transform: translate(0%, 0%);
+              transform: translate(0%, 0%); } }
 
 /* line 3, /Users/jonschroeder/Documents/Websites/Sections Site/app/public/wp-content/plugins/redblue-sections/css/sections/_slidergeneral.scss */
 body .slick-slider {
@@ -130,7 +151,7 @@ body .slick-slider {
   padding: 0;
   background: black;
   margin: 0; }
-  @media (min-width: 1023px) {
+  @media (min-width: 768px) {
     /* line 5, /Users/jonschroeder/Documents/Websites/Sections Site/app/public/wp-content/plugins/redblue-sections/css/sections/_background_rotator.scss */
     .section.background_rotator {
       min-height: 100vh; } }
@@ -163,7 +184,7 @@ body .slick-slider {
         bottom: 0;
         background-color: rgba(0, 0, 0, 0.6);
         z-index: 5; }
-    @media (min-width: 1023px) {
+    @media (min-width: 768px) {
       /* line 15, /Users/jonschroeder/Documents/Websites/Sections Site/app/public/wp-content/plugins/redblue-sections/css/sections/_background_rotator.scss */
       .section.background_rotator .slide {
         height: 100vh;
@@ -226,6 +247,11 @@ body .slick-slider {
     padding-left: 5%;
     padding-right: 5%; }
   /* line 39, /Users/jonschroeder/Documents/Websites/Sections Site/app/public/wp-content/plugins/redblue-sections/css/sections/_background_video.scss */
+  .section.background_video h1,
+  .section.background_video h2,
+  .section.background_video h3 {
+    color: white; }
+  /* line 45, /Users/jonschroeder/Documents/Websites/Sections Site/app/public/wp-content/plugins/redblue-sections/css/sections/_background_video.scss */
   .section.background_video > video {
     position: absolute;
     z-index: 5;
@@ -235,17 +261,17 @@ body .slick-slider {
     height: 100%;
     opacity: 0.3; }
     @media (min-aspect-ratio: 16 / 9) {
-      /* line 39, /Users/jonschroeder/Documents/Websites/Sections Site/app/public/wp-content/plugins/redblue-sections/css/sections/_background_video.scss */
+      /* line 45, /Users/jonschroeder/Documents/Websites/Sections Site/app/public/wp-content/plugins/redblue-sections/css/sections/_background_video.scss */
       .section.background_video > video {
         height: 300%;
         top: -100%; } }
     @media (max-aspect-ratio: 16 / 9) {
-      /* line 39, /Users/jonschroeder/Documents/Websites/Sections Site/app/public/wp-content/plugins/redblue-sections/css/sections/_background_video.scss */
+      /* line 45, /Users/jonschroeder/Documents/Websites/Sections Site/app/public/wp-content/plugins/redblue-sections/css/sections/_background_video.scss */
       .section.background_video > video {
         width: 300%;
         left: -100%; } }
     @supports ((-o-object-fit: cover) or (object-fit: cover)) {
-      /* line 39, /Users/jonschroeder/Documents/Websites/Sections Site/app/public/wp-content/plugins/redblue-sections/css/sections/_background_video.scss */
+      /* line 45, /Users/jonschroeder/Documents/Websites/Sections Site/app/public/wp-content/plugins/redblue-sections/css/sections/_background_video.scss */
       .section.background_video > video {
         top: 0;
         left: 0;
@@ -257,7 +283,7 @@ body .slick-slider {
 /*
    Colors
    ========================================================================== */
-/* line 71, /Users/jonschroeder/Documents/Websites/Sections Site/app/public/wp-content/plugins/redblue-sections/css/sections/_background_video.scss */
+/* line 77, /Users/jonschroeder/Documents/Websites/Sections Site/app/public/wp-content/plugins/redblue-sections/css/sections/_background_video.scss */
 .section.background_video:after {
   content: "";
   position: absolute;
@@ -269,7 +295,7 @@ body .slick-slider {
   background-color: black;
   z-index: 0; }
 
-/* line 85, /Users/jonschroeder/Documents/Websites/Sections Site/app/public/wp-content/plugins/redblue-sections/css/sections/_background_video.scss */
+/* line 91, /Users/jonschroeder/Documents/Websites/Sections Site/app/public/wp-content/plugins/redblue-sections/css/sections/_background_video.scss */
 *::-webkit-media-controls-start-playback-button {
   display: none !important;
   -webkit-appearance: none; }

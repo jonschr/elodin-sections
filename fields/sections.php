@@ -1,9 +1,9 @@
 <?php
 
 
-if( function_exists('acf_add_local_field_group') ):
+if( function_exists( 'acf_add_local_field_group' ) ):
 
-acf_add_local_field_group(array (
+acf_add_local_field_group( array (
 	'key' => 'group_57a38f24e9031',
 	'title' => 'Sections',
 	'fields' => array (
