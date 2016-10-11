@@ -1,0 +1,121 @@
+
+/* Structure
+   ========================================================================== */
+
+.page-template-page-flexible-content {
+	background-image: none !important;
+
+	.site-inner {
+		padding: 0;
+		max-width: 100%;
+
+		.wrap {
+			max-width: 1140px;
+		}
+	}
+
+	.section {
+		padding-top: 100px;
+		padding-bottom: 100px;
+		background-color: white;
+		position: relative;
+		margin: 0;
+
+		p:last-child {
+			margin-bottom: 0;
+		}
+
+		ul:last-child {
+			margin-bottom: 0;
+		}
+
+		li:last-child {
+			margin-bottom: 0;
+		}
+
+		.wrap {
+			position: relative;
+			z-index: 10;
+		}
+	}
+
+	#section-0.section {
+		padding-top: 200px;
+		padding-bottom: 150px;
+	}
+
+	.section:nth-of-type(even) {
+		background-color: $light;
+	}
+}
+
+/* Background image
+   ========================================================================== */
+
+.section.background-image {
+	.background-div {
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		position: absolute;
+		background-size: cover;
+		background-position: center center;
+		filter: grayscale( 50% );
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba( black, 0.6 );
+			z-index: 5;
+		}
+	}
+
+	* {
+		color: white;
+	}
+}
+
+/*
+   Fullcolor
+   ========================================================================== */
+
+.section.background-image.fullcolor {
+	.background-div {
+		filter: grayscale( 0% );
+
+		&::before {
+			background-color: transparent;
+		}
+	}
+}
+
+/*
+   Scrolldown
+   ========================================================================== */
+
+a.scrolldown {
+	display: none;
+
+	@include desktop {
+		display: block;
+		z-index: 10;
+	}
+	position: absolute;
+	bottom: 100px;
+	color: white;
+	left: 50%;
+	transform: translateX(-50%);
+
+	span.dashicons,
+	span.dashicons:before {
+		font-size: 70px;
+		display: block;
+		text-align: center;
+		width: auto;
+	}
+}

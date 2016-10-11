@@ -1,0 +1,80 @@
+/* ==========================================================================
+   Checkerboard sections
+   ========================================================================== */
+
+/*
+   Structure
+   ========================================================================== */
+
+.section.checkerboard {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+
+    @media( max-width: 800px ) {
+        flex-direction: column;
+    }
+
+    flex-wrap: nowrap;
+    align-items: stretch;
+
+    .checkerboard-image,
+    .checkerboard-content {
+        flex: 0 0 50%;
+
+        @media( max-width: 800px ) {
+            flex: 0 0 100%;
+        }
+    }
+
+    .checkerboard-image {
+        min-height: 300px;
+        background-color: black;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .checkerboard-content {
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        @media( min-width: 800px ) {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+    }
+
+    .content-wrap {
+        padding-left: 50px;
+        padding-right: 50px;
+
+        @media( min-width: 800px ) {
+            max-width: 700px;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+    }
+}
+
+@media( min-width: 800px ) {
+    .section.checkerboard.left {
+        flex-direction: row-reverse;
+
+        .content-wrap {
+            float: right;
+        }
+    }
+}
+
+
+/*
+   Specific
+   ========================================================================== */
+
+.section.checkerboard {
+    background: #333 !important;
+
+    * {
+        color: white;
+    }
+}

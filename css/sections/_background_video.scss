@@ -1,0 +1,87 @@
+/* ==========================================================================
+   Background Video
+   ========================================================================== */
+
+/*
+   Structure
+   ========================================================================== */
+//
+.section.background_video {
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    display: block;
+
+}
+
+.section.background_video {
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+
+    .section-content {
+        position: absolute;
+        z-index: 10;
+        color: white;
+        top: 50%;
+        left: 50%;
+        transform: translate( -50%, -50% );
+        width: 90%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    > video {
+        position: absolute;
+        z-index: 5;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.15;
+        @media (min-aspect-ratio: 16/9) {
+            height: 300%;
+            top: -100%;
+        }
+        @media (max-aspect-ratio: 16/9) {
+            width: 300%;
+            left: -100%;
+        }
+
+        //* If supporting object-fit, overriding the more manual way:
+        @supports (object-fit: cover) {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+/*
+   Specifics
+   ========================================================================== */
+.section.background_video:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    z-index: 0;
+}
+
+
+
+*::-webkit-media-controls-start-playback-button {
+  display: none!important;
+  -webkit-appearance: none;
+}

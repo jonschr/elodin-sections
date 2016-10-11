@@ -1,0 +1,10 @@
+
+//* Fade in effect
+body .slick-slider {
+	opacity: 0 !important;
+	transition: 1s opacity ease-in-out;
+
+	&.slick-initialized {
+		opacity: 1 !important;
+	}
+}

@@ -1,0 +1,47 @@
+$main: #3A3A3A;
+$dark: #125275;
+$primary: #125275;
+$highlight: #F1B307;
+
+$default: #3A3C42; // used for basic text
+
+$blue: #2a414c;
+$light: #D9E6EC;
+
+$mobile-width: 767px;
+$tablet-width: 768px;
+$desktop-width: 1200px;
+
+@mixin mobile {
+	 @media (max-width: #{$mobile-width}){
+		@content;
+	}
+}
+
+@mixin tablet {
+	 @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}){
+		@content;
+	}
+}
+
+@mixin desktop {
+	 @media (min-width: #{$desktop-width}){
+		@content;
+	}
+}
+
+@mixin notmobile {
+	 @media (min-width: #{$tablet-width}){
+		@content;
+	}
+}
+
+@import '_sectiongeneral';
+@import 'sections/_slidergeneral';
+@import 'sections/_fullwidth';
+@import 'sections/_background_rotator';
+@import 'sections/_background_video';
+@import 'sections/_featureditems';
+@import 'sections/_threecol_fourth_half_fourth';
+@import 'sections/_checkerboard';
+@import 'sections/_testimonial_slider';
