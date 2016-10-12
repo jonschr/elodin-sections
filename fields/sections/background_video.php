@@ -1,6 +1,10 @@
 <?php
 
-$background_video = array (
+/**
+ * Background video
+ */
+
+$layouts[] = $background_video = array (
     'key' => '57eac9e2d0d01',
     'name' => 'background_video',
     'label' => 'Background Video',

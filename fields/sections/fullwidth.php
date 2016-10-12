@@ -1,6 +1,10 @@
 <?php
 
-$fullwidth = array (
+/**
+ * Full width
+ */
+
+$layouts[] = $fullwidth = array (
     'key' => '57a38f3ad4c9f',
     'name' => 'fullwidth',
     'label' => 'Fullwidth',

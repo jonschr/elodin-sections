@@ -1,6 +1,10 @@
 <?php
 
-$checkerboard = array (
+/**
+ * Checkerboard
+ */
+
+$layouts[] = $checkerboard = array (
     'key' => '57ec236529c66',
     'name' => 'checkerboard',
     'label' => 'Checkerboard',

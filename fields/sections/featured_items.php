@@ -1,6 +1,10 @@
 <?php
 
-$featured_items = array (
+/**
+ * Featured items
+ */
+
+$layouts[] = $featured_items = array (
     'key' => '57a4d8e26c31c',
     'name' => 'featureditems',
     'label' => 'Featured Items',

@@ -44,5 +44,27 @@ function redblue_sections_enqueue_scripts_styles() {
 	wp_enqueue_style( 'slick-style', plugin_dir_url( __FILE__ ) . '/slick/slick.css' );
 	wp_enqueue_style( 'slick-theme', plugin_dir_url( __FILE__ ) . '/slick/slick-theme.css' );
 
+}
 
+/**
+ * Add a 'Delete confirmation dialgue box' for removing ACF Flexible Content Row
+ * @author Ben Bankley (this is incredible, thank you Ben!)
+ * https://acfextras.com/flexible-content-page-builder/
+ */
+add_action('acf/input/admin_head', 'redblue_sections_acf_fc_delete_dialogue');
+function redblue_sections_acf_fc_delete_dialogue() {
+    ?>
+    <script type="text/javascript">
+        (function($) {
+
+            acf.add_action('ready', function(){
+
+                $('body').on('click', 'li.acf-fc-show-on-hover a.acf-icon.-minus.small', function( e ){
+
+                    return confirm("Do you really want to delete this?");
+                });
+            });
+        })(jQuery);
+    </script>
+    <?php
 }

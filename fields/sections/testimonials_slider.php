@@ -1,6 +1,10 @@
 <?php
 
-$testimonials_slider = array (
+/**
+ * Testimonials slider
+ */
+
+$layouts[] = $testimonials_slider = array (
     'key' => '57f4036d0bda1',
     'name' => 'testimonials_slider',
     'label' => 'Testimonials Slider',

@@ -1,6 +1,10 @@
 <?php
 
-$background_rotator = array (
+/**
+ * Background rotator
+ */
+
+$layouts[] = $background_rotator = array (
 	'key' => '57a3dc7ce8c04',
 	'name' => 'background_rotator',
 	'label' => 'Background Rotator',

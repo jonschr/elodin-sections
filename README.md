@@ -3,6 +3,19 @@ Red Blue Sections extends the Advanced Custom Fields for Genesis themes. It sets
 
 *This plugin requires the Advanced Custom Fields Pro plugin, and the Genesis framework. Without both of these installed and active, it probably won't do anything.*
 
+## Remove unused sections
+To remove sections you won't be using in this project, use the following filter in your functions.php file (or plugin):
+
+```php
+//* Remove sections
+add_filter( 'redblue_section_remove_layouts', 'redblue_section_remove_testimonials_sections' );
+function redblue_section_remove_testimonials_sections( $sections ) {
+	$sections[] = 'testimonials_slider';
+    $sections[] = 'whatever_section_you_want_to_remove';
+	return $sections;
+}
+```
+
 ## Style-ready classes
 A few classes have been set up by default to allow for more flexibility for sections. These can be added at the bottom of each section.
 

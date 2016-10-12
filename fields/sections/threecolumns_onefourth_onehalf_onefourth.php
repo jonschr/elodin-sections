@@ -1,6 +1,10 @@
 <?php
 
-$three_columns_onefourth_onehalf_onefourth = array (
+/**
+ * Three columns: one fourth, one half, one fourth
+ */
+
+$layouts[] = $three_columns_onefourth_onehalf_onefourth = array (
     'key' => '57ab2187b42c4',
     'name' => 'threecol-25-50-25',
     'label' => 'Three columns (fourth-half-fourth)',
