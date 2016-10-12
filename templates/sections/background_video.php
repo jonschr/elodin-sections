@@ -23,7 +23,7 @@ function rb_section_background_video( $id, $count, $case ) {
 		do_action( 'before_inside_section_' . $count );
 
 		if ( $content )
-		printf( '<div class="section-content">%s</div>', $content );
+		printf( '<div class="wrap">%s</div>', $content );
 
 			//* Output the video itself
 			printf( '<video class="background_video_the_video" autoplay="" muted="" loop="loop" poster="%s" preload="auto" class="video-playing">', $image_fallback );

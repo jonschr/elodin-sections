@@ -13,7 +13,6 @@
 
 		@include notmobile-section {
 			max-width: 600px;
-			text-align: center;
 		}
 	}
 
@@ -33,9 +32,12 @@
 			max-width: 360px;
 			transition: .3s all ease;
 
+			@include mobile-section {
+				padding: 0 10px;
+			}
+
 			@include tablet-section {
 				flex: 0 0 50%;
-				text-align: center;
 			}
 
 			@include desktop-section {
@@ -45,11 +47,6 @@
 			img {
 				margin-bottom: -6px;
 			}
-
-			.item-container {
-
-			}
-
 		}
 
 		&.force-four-columns .item {
@@ -60,7 +57,7 @@
 
 		.flex-featured-image,
 		.embed-container {
-			margin-bottom: 6px;
+			margin-bottom: 15px;
 		}
 
 	}

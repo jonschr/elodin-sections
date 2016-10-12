@@ -1,5 +1,5 @@
-
-/* Background rotator
+/* ==========================================================================
+   Background rotator
    ========================================================================== */
 
 .section.background_rotator {
@@ -14,7 +14,6 @@
 
 	.slide {
 		width: 100%;
-		text-align: center;
 		background-position: center center;
 		background-size: cover;
 		padding-top: 40px;
@@ -49,9 +48,8 @@
 			.wrap {
 				position: relative;
 				top: 50%;
-				transform: translateY(-50%);
+				transform: translateY( -50% );
 				margin-top: 0;
-				max-width: 800px;
 			}
 		}
 
@@ -67,14 +65,26 @@
 			font-size: 15px;
 		}
 	}
+}
 
-	.slick-slider {
+/*
+   Limit-height
+   ========================================================================== */
 
+.section.background_video.limit-height {
+    height: auto;
+	padding-top: 100px;
+	padding-bottom: 100px;
+
+	@include mobile-section {
+		padding-top: 30px;
+		padding-bottom: 30px;
 	}
 
-	.slide-content p {
-		max-width: 600px;
-		margin-left: auto;
-		margin-right: auto;
+	.wrap {
+		position: relative;
+		transform: translate( 0%, 0% );
+		top: auto;
+		left: auto;
 	}
 }

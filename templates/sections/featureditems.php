@@ -69,7 +69,7 @@ function rb_section_featureditems( $id, $count, $case ) {
 						$featured_imageid = (int) get_post_meta( $id, 'rb_section_' . $count . '_repeater_' . $i . '_image', true );
 
 						if ( $featured_imageid ) {
-							$featured_imageurlarray = wp_get_attachment_image_src( $featured_imageid, array( 390, 150 ) );
+							$featured_imageurlarray = wp_get_attachment_image_src( $featured_imageid, array( 400, 200 ) );
 							$featured_imageurl = $featured_imageurlarray[0];
 						}
 

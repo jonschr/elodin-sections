@@ -1,3 +1,6 @@
+/* ==========================================================================
+   Section defaults
+   ========================================================================== */
 
 /* Structure
    ========================================================================== */
@@ -10,7 +13,8 @@
 		max-width: 100%;
 
 		.wrap {
-			max-width: 1140px;
+			max-width: 1200px;
+			width: 100%;
 		}
 	}
 
@@ -21,10 +25,9 @@
 		background-color: white;
 		position: relative;
 		margin: 0;
-
 		@include mobile-section {
-			padding-top: 20px;
-			padding-bottom: 20px;
+			padding-top: 30px;
+			padding-bottom: 30px;
 		}
 
 		p:last-child {
@@ -43,9 +46,9 @@
 			position: relative;
 			z-index: 10;
 
-			@include tablet-section {
-				padding-left: 20px;
-				padding-right: 20px;
+			@include mobile-section {
+				padding-left: 30px;
+				padding-right: 30px;
 			}
 		}
 	}
@@ -106,31 +109,16 @@
 
 .section.align-center {
 	text-align: center;
-
 	@include mobile-section {
 		text-align: left;
 	}
 }
-
-
-/*
-   Limit-width
-   ========================================================================== */
-
-.section.limit-width {
-	.wrap {
-		max-width: 600px;
-	}
-}
-
-
 
 /*
    Full-height
    ========================================================================== */
 
 .section.full-height {
-
 	@include desktop-section {
 		height: 100vh;
 		position: relative;
@@ -144,13 +132,11 @@
 	}
 }
 
-
 /*
-   Full-height
+   Limit-height
    ========================================================================== */
 
 .section.limit-height {
-
 	@include desktop-section {
 		height: auto;
 		position: static;
@@ -159,5 +145,15 @@
 			position: static;
 			transform: translate( 0%, 0% );
 		}
+	}
+}
+
+/*
+   Limit-width
+   ========================================================================== */
+
+.section.limit-width {
+	.wrap {
+		max-width: 600px;
 	}
 }
