@@ -16,6 +16,34 @@ function redblue_section_remove_testimonials_sections( $sections ) {
 }
 ```
 
+## Add sections
+
+If you'd like to add a section for a specific project, you can use the **redblue_section_add_layout** filter to do that. This is what makes this plugin extensible. [Official ACF guide](https://www.advancedcustomfields.com/resources/register-fields-via-php/) (keep in mind that you're only adding *layouts*, not entire field groups, so the fields listed at the bottom of this page will likely be the most helpful). Alternately, you can generate a layout through the ACF interface, then export the code as pdf and essentially copy the appropriate section into place.
+
+```php
+//* Add sections
+add_filter( 'redblue_section_add_layout', 'redblue_section_add_another_fullwidth_section' );
+function redblue_section_add_another_fullwidth_section( $layout ) {
+	$layouts[] = array (
+	    'key' => 'must_be_unique',
+	    'name' => 'fullwidth_section',
+	    'label' => 'Fullwidth section added by theme',
+	    'sub_fields' => array (
+	        array (
+	            'key' => 'field_57a38fbce0b6b',
+	            'label' => 'Content',
+	            'name' => 'content',
+	            'type' => 'wysiwyg',
+	            'required' => 0,
+	            'conditional_logic' => 0,
+	        ),
+	    ),
+	);
+
+	return $layouts;
+}
+```
+
 ## Style-ready classes
 A few classes have been set up by default to allow for more flexibility for sections. These can be added at the bottom of each section, separated by spaces, e.g. **align-center full-height**
 

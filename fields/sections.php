@@ -7,10 +7,12 @@ function redblue_sections_set_layouts() {
 	//* Figure out which sections to leave out for this project
 	$disable_layouts = array();
 	$disable_layouts = apply_filters( 'redblue_section_remove_layouts', $sections );
-	// $disable_layouts[] = apply_filters( 'redblue_section_remove_layouts_individually', $section );
 
 	//* Declare our $layouts variable, just in case (we'll be adding to this in each of the various sections)
 	$layouts = array();
+
+	//* Allow a theme to add a layout
+	$layouts = apply_filters( 'redblue_section_add_layout', $layout );
 
 	/**
 	 * Include the files that actually include the layouts, allowing the theme or another plugin to remove them
