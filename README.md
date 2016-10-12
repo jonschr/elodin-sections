@@ -4,7 +4,7 @@ Red Blue Sections extends the Advanced Custom Fields for Genesis themes. It sets
 *This plugin requires the Advanced Custom Fields Pro plugin, and the Genesis framework. Without both of these installed and active, it probably won't do anything.*
 
 ## Remove unused sections
-To remove sections you won't be using in this project, use the following filter in your functions.php file (or plugin):
+To remove sections you won't be using in this project, use the 'redblue_section_remove_layouts' in your functions.php file (or plugin):
 
 ```php
 //* Remove sections
@@ -17,7 +17,7 @@ function redblue_section_remove_testimonials_sections( $sections ) {
 ```
 
 ## Style-ready classes
-A few classes have been set up by default to allow for more flexibility for sections. These can be added at the bottom of each section.
+A few classes have been set up by default to allow for more flexibility for sections. These can be added at the bottom of each section, separated by spaces, e.g. **align-center full-height**
 
 ### For use on all sections
 - **align-center** – aligns everything inside the section to center on desktop and tablet, but leaves it left-aligned it on mobile. NOTE: some sections, due to their specific layouts, have defaults that already center align things.
