@@ -108,3 +108,17 @@ function redblue_sections_acf_fc_delete_dialogue() {
     </script>
     <?php
 }
+
+/**
+ * Start with all boxes closed, for a less intimidating UI and to avoid accidentally editing the wrong box.
+ */
+add_action('acf/input/admin_head', 'my_acf_input_admin_head');
+function my_acf_input_admin_head() {
+    ?>
+        <script type="text/javascript">
+        jQuery(function(){
+          jQuery('.layout').addClass('-collapsed');
+        });
+        </script>
+    <?php
+}

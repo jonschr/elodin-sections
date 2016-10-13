@@ -12,7 +12,7 @@ require_once( 'sections/background_video.php' );
 require_once( 'sections/threecol_fourth_half_fourth.php' );
 require_once( 'sections/checkerboard.php' );
 require_once( 'sections/testimonials_slider.php' );
-require_once( 'sections/repetoire.php' );
+require_once( 'sections/trust_building_snippets.php' );
 
 function rb_home_page_content() {
 
@@ -68,9 +68,9 @@ function rb_home_page_content() {
 
 			break;
 
-			case 'repetoire':
+			case 'trust_building_snippets':
 
-				rb_section_repetoire( $id, $count, $case );
+				rb_section_trust_building_snippets( $id, $count, $case );
 
 			break;
 

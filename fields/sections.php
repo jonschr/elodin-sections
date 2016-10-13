@@ -38,6 +38,9 @@ function redblue_sections_set_layouts() {
 	if ( !in_array( 'threecolumns_onefourth_onehalf_onefourth', $disable_layouts ) )
 		include( 'sections/threecolumns_onefourth_onehalf_onefourth.php' );
 
+	if ( !in_array( 'trust_building_snippets', $disable_layouts ) )
+		include( 'sections/trust_building_snippets.php' );
+
 	//* Allows a theme or another plugin to hook in and add its own section
 	do_action( 'redblue_sections_add_sections' );
 
