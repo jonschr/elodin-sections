@@ -5,6 +5,10 @@
 .section.featureditems {
 	position: static;
 
+	&.align-center {
+		text-align: center;
+	}
+
 	.featuredcontent {
 		margin-bottom: 55px;
 		max-width: 100%;

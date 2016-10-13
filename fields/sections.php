@@ -32,6 +32,9 @@ function redblue_sections_set_layouts() {
 	if ( !in_array( 'featured_items', $disable_layouts ) )
 		include( 'sections/featured_items.php' );
 
+	if ( !in_array( 'featured_3col', $disable_layouts ) )
+		include( 'sections/featured_3col.php' );
+
 	if ( !in_array( 'testimonials_slider', $disable_layouts ) )
 		include( 'sections/testimonials_slider.php' );
 

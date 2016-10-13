@@ -15,11 +15,19 @@
 
 #testimonial-slider {
     .slick-slide {
-        padding: 50px 20px 30px;
+        padding: 50px 20px 0;
         text-align: left;
 
         &:focus {
             outline: none !important;
+        }
+
+        small a {
+            color: red;
+        }
+
+        small {
+            display: block;
         }
     }
 
