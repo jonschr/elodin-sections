@@ -1,7 +1,7 @@
 <?php
 
 //* Set up the layouts on the init hook, so that the theme will have access to remove layouts if needed
-add_action( 'init', 'redblue_sections_set_layouts' );
+add_action( 'genesis_init', 'redblue_sections_set_layouts' );
 function redblue_sections_set_layouts() {
 
 	//* Figure out which sections to leave out for this project
