@@ -18,17 +18,74 @@
     GNU General Public License for more details.
 */
 
+/* Prevent direct access to the plugin */
+if ( !defined( 'ABSPATH' ) ) {
+    die( "Sorry, you are not allowed to access this page directly." );
+}
+
 // Plugin directory
 define( 'REDBLUE_SECTIONS', dirname( __FILE__ ) );
 
-//* Register the custom page template
-include_once( 'templates/add-template.php' );
+/**
+ * Add a notification if ACF isn't installed and active
+ */
+add_action( 'admin_notices', 'redblue_sections_error_notice_ACF' );
+function redblue_sections_error_notice_ACF() {
+    if( !class_exists( 'acf' ) ) {
+    ?>
+        <div class="error notice">
+            <p>Please install and activate the <a target="_blank" href="https://www.advancedcustomfields.com/pro/">Advanced Custom Fields Pro</a> plugin. Without it, the Red Blue Sections plugin won't work properly.</p>
+        </div>
+    <?php
+    }
+}
 
-//* Add the fields
-include_once( 'fields/sections.php' );
+/**
+ * Add a notification if ACF isn't installed and active
+ */
+add_action( 'admin_notices', 'redblue_sections_error_notice_ACF_pro' );
+function redblue_sections_error_notice_ACF_pro() {
+
+    //* Testing to see whether we have the Pro version of ACF installed
+    if( class_exists( 'acf' ) && !class_exists( 'acf_pro_updates' ) ) {
+    ?>
+        <div class="error notice">
+            <p>It looks like you've installed the free version of Advanced Custom Fields. To work properly, the Red Blue Sections plugin requires <a target="_blank" href="https://www.advancedcustomfields.com/pro/">the Pro version</a> instead.</p>
+        </div>
+    <?php
+    }
+}
+
+/**
+ * Add a notification if Genesis isn't installed and active
+ */
+add_action( 'admin_notices', 'redblue_sections_error_notice_genesis' );
+function redblue_sections_error_notice_genesis() {
+    if( !function_exists( 'genesis' ) ) {
+    ?>
+        <div class="error notice">
+            <p>Please install and activate the <a target="_blank" href="http://my.studiopress.com/themes/genesis/">Genesis Framework</a> parent theme, then install a child theme. Without the framework, the Red Blue Sections plugin won't work properly.</p>
+        </div>
+    <?php
+    }
+}
+
+/**
+ * Start the plugin
+ */
+if ( !class_exists( 'acf' ) || !function_exists( 'genesis' ) ) {
+
+    //* Register the custom page template
+    include_once( 'templates/add-template.php' );
+
+    //* Add the fields
+    include_once( 'fields/sections.php' );
+
+    //* Do our main function to include scripts and styles
+    add_action( 'wp_enqueue_scripts', 'redblue_sections_enqueue_scripts_styles' );
+}
 
 //* Enqueue Scripts and Styles
-add_action( 'wp_enqueue_scripts', 'redblue_sections_enqueue_scripts_styles' );
 function redblue_sections_enqueue_scripts_styles() {
 
     //* Don't add these scripts and styles to the admin side of the site
@@ -51,7 +108,7 @@ function redblue_sections_enqueue_scripts_styles() {
  * @author Ben Bankley (this is incredible, thank you Ben!)
  * https://acfextras.com/flexible-content-page-builder/
  */
-add_action('acf/input/admin_head', 'redblue_sections_acf_fc_delete_dialogue');
+add_action( 'acf/input/admin_head', 'redblue_sections_acf_fc_delete_dialogue' );
 function redblue_sections_acf_fc_delete_dialogue() {
     ?>
     <script type="text/javascript">
