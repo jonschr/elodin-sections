@@ -553,24 +553,22 @@ body .slick-slider {
    Testimonials home page slider
    ========================================================================== */
 /*
-   Structure
+   Default styles
    ========================================================================== */
-/*
-   Specific
-   ========================================================================== */
-/* line 14, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_testimonial_slider.scss */
+/* line 10, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_testimonial_slider.scss */
 .page-template-page-flexible-content .section.testimonials_slider .wrap {
   max-width: 100%;
   padding: 0; }
 
-/* line 21, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_testimonial_slider.scss */
+/* line 17, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_testimonial_slider.scss */
 #testimonial-slider .slick-slide {
-  padding: 50px 20px 30px; }
-  /* line 24, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_testimonial_slider.scss */
+  padding: 50px 20px 30px;
+  text-align: left; }
+  /* line 21, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_testimonial_slider.scss */
   #testimonial-slider .slick-slide:focus {
     outline: none !important; }
 
-/* line 29, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_testimonial_slider.scss */
+/* line 26, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_testimonial_slider.scss */
 #testimonial-slider .post-content {
   background-color: white;
   color: black;
@@ -581,7 +579,7 @@ body .slick-slider {
   font-size: 16px;
   border-radius: 10px; }
 
-/* line 40, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_testimonial_slider.scss */
+/* line 37, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_testimonial_slider.scss */
 #testimonial-slider .post-content::after {
   position: absolute;
   content: "";

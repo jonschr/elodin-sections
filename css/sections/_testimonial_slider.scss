@@ -3,11 +3,7 @@
    ========================================================================== */
 
 /*
-   Structure
-   ========================================================================== */
-
-/*
-   Specific
+   Default styles
    ========================================================================== */
 
 .page-template-page-flexible-content .section.testimonials_slider {
@@ -20,6 +16,7 @@
 #testimonial-slider {
     .slick-slide {
         padding: 50px 20px 30px;
+        text-align: left;
 
         &:focus {
             outline: none !important;
