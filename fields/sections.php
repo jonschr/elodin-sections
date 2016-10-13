@@ -100,3 +100,10 @@ function redblue_sections_set_layouts() {
 		));
 	}
 }
+
+//* Sample code for removing a section (this doesn't actually remove one, but it *does* set the variable to an array, which it needs to be.)
+add_filter( 'redblue_section_remove_layouts', 'redblue_section_remove_sample_sections', 5, 1 );
+function redblue_section_remove_sample_sections( $sections ) {
+    $sections[] = 'whatever_section_you_want_to_remove';
+    return $sections;
+}
