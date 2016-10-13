@@ -1,0 +1,66 @@
+/* ==========================================================================
+   Trust Building Snippets
+   ========================================================================== */
+
+.page-template-page-flexible-content .section.trust_building_snippets {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .contents-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+        text-align: center;
+
+        @include mobile-section {
+            flex-direction: column;
+        }
+
+        .snippet-content {
+            flex: 20% 0 0;
+            text-align: center;
+            display: block;
+
+            @include tablet-section {
+                flex: 33% 0 0 !important;
+            }
+
+            p {
+                margin-bottom: 20px;
+                font-size: 16px;
+                line-height: 1.4em;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                img,
+                img.alignnone {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .snippet-padding {
+            padding: 20px;
+        }
+    }
+
+    .contents-container.thre .snippet-contente {
+        flex: 33% 0 0;
+    }
+
+    .contents-container.four .snippet-content {
+        flex: 25% 0 0;
+
+        @include tablet-section {
+            flex: 50% 0 0 !important;
+        }
+    }
+
+    .contents-container.five .snippet-content {
+        flex: 20% 0 0;
+    }
+}

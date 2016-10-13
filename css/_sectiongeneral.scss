@@ -15,6 +15,11 @@
 		.wrap {
 			max-width: 1200px;
 			width: 100%;
+
+			@include tablet-section {
+				padding-left: 30px;
+				padding-right: 30px;
+			}
 		}
 	}
 

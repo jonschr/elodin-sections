@@ -1,7 +1,7 @@
 <?php
 
 //* Set up the layouts on the init hook, so that the theme will have access to remove layouts if needed
-add_action( 'init', 'redblue_sections_set_layouts' );
+add_action( 'genesis_init', 'redblue_sections_set_layouts' );
 function redblue_sections_set_layouts() {
 
 	//* Figure out which sections to leave out for this project
@@ -32,11 +32,17 @@ function redblue_sections_set_layouts() {
 	if ( !in_array( 'featured_items', $disable_layouts ) )
 		include( 'sections/featured_items.php' );
 
+	if ( !in_array( 'featured_3col', $disable_layouts ) )
+		include( 'sections/featured_3col.php' );
+
 	if ( !in_array( 'testimonials_slider', $disable_layouts ) )
 		include( 'sections/testimonials_slider.php' );
 
 	if ( !in_array( 'threecolumns_onefourth_onehalf_onefourth', $disable_layouts ) )
 		include( 'sections/threecolumns_onefourth_onehalf_onefourth.php' );
+
+	if ( !in_array( 'trust_building_snippets', $disable_layouts ) )
+		include( 'sections/trust_building_snippets.php' );
 
 	//* Allows a theme or another plugin to hook in and add its own section
 	do_action( 'redblue_sections_add_sections' );
@@ -99,4 +105,11 @@ function redblue_sections_set_layouts() {
 			'description' => '',
 		));
 	}
+}
+
+//* Sample code for removing a section (this doesn't actually remove one, but it *does* set the variable to an array, which it needs to be.)
+add_filter( 'redblue_section_remove_layouts', 'redblue_section_remove_sample_sections', 5, 1 );
+function redblue_section_remove_sample_sections( $sections ) {
+    $sections[] = 'whatever_section_you_want_to_remove';
+    return $sections;
 }

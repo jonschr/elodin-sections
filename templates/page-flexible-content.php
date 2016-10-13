@@ -7,12 +7,13 @@
 //* Requiring a file for each section
 require_once( 'sections/fullwidth.php' );
 require_once( 'sections/featureditems.php' );
+require_once( 'sections/featured_3col.php' );
 require_once( 'sections/background_rotator.php' );
 require_once( 'sections/background_video.php' );
 require_once( 'sections/threecol_fourth_half_fourth.php' );
 require_once( 'sections/checkerboard.php' );
 require_once( 'sections/testimonials_slider.php' );
-require_once( 'sections/repetoire.php' );
+require_once( 'sections/trust_building_snippets.php' );
 
 function rb_home_page_content() {
 
@@ -35,6 +36,12 @@ function rb_home_page_content() {
 			case 'featureditems':
 
 				rb_section_featureditems( $id, $count, $case );
+
+			break;
+
+			case 'featured_3col':
+
+				rb_section_featured_3col( $id, $count, $case );
 
 			break;
 
@@ -68,9 +75,9 @@ function rb_home_page_content() {
 
 			break;
 
-			case 'repetoire':
+			case 'trust_building_snippets':
 
-				rb_section_repetoire( $id, $count, $case );
+				rb_section_trust_building_snippets( $id, $count, $case );
 
 			break;
 
