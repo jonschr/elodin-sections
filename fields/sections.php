@@ -58,7 +58,7 @@ function redblue_sections_set_layouts() {
 				array (
 					'key' => 'field_57a38f30e0b68',
 					'label' => 'Flexible Content Area',
-					'name' => 'rb_section',
+					'name' => 'page_flexible_content',
 					'type' => 'flexible_content',
 					'instructions' => '',
 					'button_label' => 'Add Section',
@@ -108,7 +108,7 @@ function redblue_sections_set_layouts() {
 				array (
 					'key' => 'field_57a38f30e0agagwb6asdlfkjadsf8',
 					'label' => 'Flexible Content Area',
-					'name' => 'rb_section_above',
+					'name' => 'page_default_above',
 					'type' => 'flexible_content',
 					'instructions' => '',
 					'button_label' => 'Add Section',
@@ -156,7 +156,7 @@ function redblue_sections_set_layouts() {
 				array (
 					'key' => 'field_57a38f30e0b6aggasdlfkjadsf8',
 					'label' => 'Flexible Content Area',
-					'name' => 'rb_section_below',
+					'name' => 'page_default_below',
 					'type' => 'flexible_content',
 					'instructions' => '',
 					'button_label' => 'Add Section',

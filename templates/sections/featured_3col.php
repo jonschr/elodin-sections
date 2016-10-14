@@ -1,12 +1,12 @@
 <?php
 
-function rb_section_featured_3col( $id, $count, $case ) {
+function rb_section_featured_3col( $id, $count, $case, $context_prefix ) {
 
 	//* Do the function which figures out which classes we need
-	$class = rb_section_class_setup( $id, $count, $case );
+	$class = rb_section_class_setup( $id, $count, $case, $context_prefix );
 
 	//* Get the background image information
-	$imageid = (int) get_post_meta( $id, 'rb_section_' . $count . '_background', true );
+	$imageid = (int) get_post_meta( $id, $context_prefix . $count . '_background', true );
 
 	if ( $imageid ) {
 		$imageurlarray = wp_get_attachment_image_src( $imageid, 'full-bkg' );
@@ -21,49 +21,49 @@ function rb_section_featured_3col( $id, $count, $case ) {
 	$class = implode( ' ', $class );
 
 	//* Variables for this section
-	$content = get_post_meta( $id, 'rb_section_' . $count . '_content', true );
+	$content = get_post_meta( $id, $context_prefix . $count . '_content', true );
 	$content = apply_filters( 'the_content', $content );
 
     //* Get the headings
-    $heading_left = get_post_meta( $id, 'rb_section_' . $count . '_heading_left', true );
-    $heading_center = get_post_meta( $id, 'rb_section_' . $count . '_heading_center', true );
-    $heading_right = get_post_meta( $id, 'rb_section_' . $count . '_heading_right', true );
+    $heading_left = get_post_meta( $id, $context_prefix . $count . '_heading_left', true );
+    $heading_center = get_post_meta( $id, $context_prefix . $count . '_heading_center', true );
+    $heading_right = get_post_meta( $id, $context_prefix . $count . '_heading_right', true );
 
     //* Get the contents
-    $content_left = apply_filters( 'the_content', get_post_meta( $id, 'rb_section_' . $count . '_content_left', true ) );
-    $content_center = apply_filters( 'the_content', get_post_meta( $id, 'rb_section_' . $count . '_content_center', true ) );
-    $content_right = apply_filters( 'the_content', get_post_meta( $id, 'rb_section_' . $count . '_content_right', true ) );
+    $content_left = apply_filters( 'the_content', get_post_meta( $id, $context_prefix . $count . '_content_left', true ) );
+    $content_center = apply_filters( 'the_content', get_post_meta( $id, $context_prefix . $count . '_content_center', true ) );
+    $content_right = apply_filters( 'the_content', get_post_meta( $id, $context_prefix . $count . '_content_right', true ) );
 
     //* Get the logos
-    $logo_left = get_post_meta( $id, 'rb_section_' . $count . '_icon_left', true );
+    $logo_left = get_post_meta( $id, $context_prefix . $count . '_icon_left', true );
 	$image_url_array_left = wp_get_attachment_image_src( $logo_left, 'thumbnail' );
 	$image_url_left = $image_url_array_left[0];
 
-    $logo_center = get_post_meta( $id, 'rb_section_' . $count . '_icon_center', true );
+    $logo_center = get_post_meta( $id, $context_prefix . $count . '_icon_center', true );
 	$image_url_array_center = wp_get_attachment_image_src( $logo_center, 'thumbnail' );
 	$image_url_center = $image_url_array_center[0];
 
-    $logo_right = get_post_meta( $id, 'rb_section_' . $count . '_icon_right', true );
+    $logo_right = get_post_meta( $id, $context_prefix . $count . '_icon_right', true );
 	$image_url_array_right = wp_get_attachment_image_src( $logo_right, 'thumbnail' );
 	$image_url_right = $image_url_array_right[0];
 
     //* Get the background images
-    $bkg_left = get_post_meta( $id, 'rb_section_' . $count . '_image_left', true );
+    $bkg_left = get_post_meta( $id, $context_prefix . $count . '_image_left', true );
 	$bkg_array_left = wp_get_attachment_image_src( $bkg_left, 'full' );
 	$bkg_left = $bkg_array_left[0];
 
-    $bkg_center = get_post_meta( $id, 'rb_section_' . $count . '_image_center', true );
+    $bkg_center = get_post_meta( $id, $context_prefix . $count . '_image_center', true );
 	$bkg_array_center = wp_get_attachment_image_src( $bkg_center, 'full' );
 	$bkg_center = $bkg_array_center[0];
 
-    $bkg_right = get_post_meta( $id, 'rb_section_' . $count . '_image_right', true );
+    $bkg_right = get_post_meta( $id, $context_prefix . $count . '_image_right', true );
 	$bkg_array_right = wp_get_attachment_image_src( $bkg_right, 'full' );
 	$bkg_right = $bkg_array_right[0];
 
     //* Get the links
-    $url_left = get_post_meta( $id, 'rb_section_' . $count . '_link_left', true );
-    $url_center = get_post_meta( $id, 'rb_section_' . $count . '_link_center', true );
-    $url_right = get_post_meta( $id, 'rb_section_' . $count . '_link_right', true );
+    $url_left = get_post_meta( $id, $context_prefix . $count . '_link_left', true );
+    $url_center = get_post_meta( $id, $context_prefix . $count . '_link_center', true );
+    $url_right = get_post_meta( $id, $context_prefix . $count . '_link_right', true );
 
 
 	//* Markup for this section

@@ -11,7 +11,7 @@
     .container-3col {
         padding-top: 50px;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-content: center;
         flex-wrap: wrap;
         flex-direction: row;
@@ -21,18 +21,22 @@
         }
 
         .column {
-            flex: 31% 0 0;
+            flex: 29% 0 0;
             background-color: #333;
             color: white;
+            margin-left: 2%;
+            margin-right: 2%;
 
             @include tablet-section {
-                flex: 48% 0 0;
+                flex: 46% 0 0;
                 margin-bottom: 35px;
             }
 
             @include mobile-section {
                 flex: 100% 0 0;
                 margin-bottom: 20px;
+                margin-left: 0;
+                margin-right: 0;
             }
 
             &:last-child {
