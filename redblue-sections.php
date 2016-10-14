@@ -3,7 +3,7 @@
 	Plugin Name: Red Blue Sections
 	Plugin URI: http://redblue.us
 	Description: An ACF addon which installs fields and basic layouts for flexible content areas.
-	Version: 1.1
+	Version: 0.1
     Author: Jon Schroeder
     Author URI: http://redblue.us
 
