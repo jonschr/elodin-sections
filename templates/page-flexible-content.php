@@ -15,6 +15,11 @@ require_once( 'sections/checkerboard.php' );
 require_once( 'sections/testimonials_slider.php' );
 require_once( 'sections/trust_building_snippets.php' );
 
+/**
+ * This function builds the markup for each of the sections
+ * @param  [type] $context [description]
+ * @return [type]          [description]
+ */
 function rb_home_page_content() {
 
 	$id = get_the_id();
@@ -108,25 +113,6 @@ function rb_section_class_setup( $id, $count, $case ) {
 	//* Return the string of classes for later use
 	return $class;
 }
-
-//* Add scrolling if we're on the home page first section
-// add_action( 'after_inside_section_0', 'add_the_scroll_icon' );
-function add_the_scroll_icon() {
-
-	if ( is_front_page() )
-		echo '<a class="scrolldown" href="#section-1"><span class="dashicons dashicons-arrow-down-alt2 animated pulse infinite"></span></a>';
-
-}
-
-//* Add the submenu
-// add_action( 'genesis_header', 'rb_add_submenu' );
-function rb_add_submenu() {
-
-	if ( !is_front_page() )
-		add_action( 'after_section_0', 'genesis_do_subnav', 5 );
-
-}
-
 
 // Build the page
 get_header();

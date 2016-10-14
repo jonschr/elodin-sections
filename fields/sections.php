@@ -61,16 +61,7 @@ function redblue_sections_set_layouts() {
 					'name' => 'rb_section',
 					'type' => 'flexible_content',
 					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array (
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
 					'button_label' => 'Add Section',
-					'min' => '',
-					'max' => '',
 					'layouts' => $layouts,
 				),
 			),
@@ -103,6 +94,91 @@ function redblue_sections_set_layouts() {
 			),
 			'active' => 1,
 			'description' => '',
+		));
+	}
+
+	/**
+	 * Registering the field group above content on normal pages
+	 */
+	if( function_exists( 'acf_add_local_field_group' ) ) {
+		acf_add_local_field_group( array (
+			'key' => 'group_57a38f24easdflkj1',
+			'title' => 'Sections Above Page Content',
+			'fields' => array (
+				array (
+					'key' => 'field_57a38f30e0agagwb6asdlfkjadsf8',
+					'label' => 'Flexible Content Area',
+					'name' => 'rb_section_above',
+					'type' => 'flexible_content',
+					'instructions' => '',
+					'button_label' => 'Add Section',
+					'layouts' => $layouts,
+				),
+			),
+			'location' => array (
+				array (
+					array (
+						'param' => 'page_template',
+						'operator' => '==',
+						'value' => 'default',
+					),
+				),
+			),
+			'menu_order' => 1,
+			'position' => 'acf_after_title',
+			'label_placement' => 'top',
+			'instruction_placement' => 'label',
+			'hide_on_screen' => array (
+				1 => 'custom_fields',
+				2 => 'discussion',
+				3 => 'comments',
+				4 => 'revisions',
+				5 => 'author',
+				6 => 'format',
+				7 => 'featured_image',
+				8 => 'categories',
+				9 => 'tags',
+				10 => 'send-trackbacks',
+			),
+			'active' => 1,
+			'description' => '',
+		));
+	}
+
+	/**
+	 * Registering the field group below content on normal pages
+	 */
+	if( function_exists( 'acf_add_local_field_group' ) ) {
+		acf_add_local_field_group( array (
+			'key' => 'group_57a38f24gaggflkj1',
+			'title' => 'Sections Below Page Content',
+			'fields' => array (
+				array (
+					'key' => 'field_57a38f30e0b6aggasdlfkjadsf8',
+					'label' => 'Flexible Content Area',
+					'name' => 'rb_section_below',
+					'type' => 'flexible_content',
+					'instructions' => '',
+					'button_label' => 'Add Section',
+					'min' => '',
+					'max' => '',
+					'layouts' => $layouts,
+				),
+			),
+			'location' => array (
+				array (
+					array (
+						'param' => 'page_template',
+						'operator' => '==',
+						'value' => 'default',
+					),
+				),
+			),
+			'menu_order' => 0,
+			'position' => 'normal',
+			'label_placement' => 'top',
+			'instruction_placement' => 'label',
+			'active' => 1,
 		));
 	}
 }
