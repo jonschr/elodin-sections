@@ -1,13 +1,13 @@
 <?php
 
-function rb_section_background_rotator( $id, $count, $case ) {
+function rb_section_background_rotator( $id, $count, $case, $context_prefix ) {
 
 	//* Do the function which figures out which classes we need
-	$class = rb_section_class_setup( $id, $count, $case );
+	$class = rb_section_class_setup( $id, $count, $case, $context_prefix );
 	$class[] = 'slick-slider';
 
 	//* Get the background image information
-	$image_ids = get_post_meta( $id, 'rb_section_' . $count . '_backgrounds', true );
+	$image_ids = get_post_meta( $id, $context_prefix . $count . '_backgrounds', true );
 
 	// if ( $image_number )
 	// 	$class[] = 'background-image';
@@ -16,7 +16,7 @@ function rb_section_background_rotator( $id, $count, $case ) {
 	$class = implode( ' ', $class );
 
 	//* Variables for this section
-	$content = get_post_meta( $id, 'rb_section_' . $count . '_content', true );
+	$content = get_post_meta( $id, $context_prefix . $count . '_content', true );
 	$content = apply_filters( 'the_content', $content );
 
 	$repeating_section_count = 0;

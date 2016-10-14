@@ -1,12 +1,12 @@
 <?php
 
-function rb_section_featureditems( $id, $count, $case ) {
+function rb_section_featureditems( $id, $count, $case, $context_prefix ) {
 
 	//* Do the function which figures out which classes we need
-	$class = rb_section_class_setup( $id, $count, $case );
+	$class = rb_section_class_setup( $id, $count, $case, $context_prefix );
 
 	//* Get the background image information
-	$imageid = (int) get_post_meta( $id, 'rb_section_' . $count . '_background', true );
+	$imageid = (int) get_post_meta( $id, $context_prefix . $count . '_background', true );
 
 	if ( $imageid ) {
 		$imageurlarray = wp_get_attachment_image_src( $imageid, 'full-bkg' );
@@ -21,7 +21,7 @@ function rb_section_featureditems( $id, $count, $case ) {
 	$class = implode( ' ', $class );
 
 	//* Variables for this section
-	$content = get_post_meta( $id, 'rb_section_' . $count . '_content', true );
+	$content = get_post_meta( $id, $context_prefix . $count . '_content', true );
 	$content = apply_filters( 'the_content', $content );
 
 
@@ -41,7 +41,7 @@ function rb_section_featureditems( $id, $count, $case ) {
 		$itemsclass[0] = 'items';
 
 		//* Figure out how many featured items we'll have (to add to the class)
-		$featureditems = get_post_meta( $id, 'rb_section_' . $count . '_repeater', true );
+		$featureditems = get_post_meta( $id, $context_prefix . $count . '_repeater', true );
 
 		if ( ( $featureditems % 4 == 0 ) && !( $featureditems % 3 == 0 ) )
 			$itemsclass[] = 'force-four-columns';
@@ -56,7 +56,7 @@ function rb_section_featureditems( $id, $count, $case ) {
 					echo '<div class="item"><div class="item-container">';
 
 						//* Get the video information
-						$video = get_post_meta( $id, 'rb_section_' . $count . '_repeater_' . $i . '_video', true );
+						$video = get_post_meta( $id, $context_prefix . $count . '_repeater_' . $i . '_video', true );
 
 						if ( $video ) {
 							$oembed = wp_oembed_get( $video, array( 'width' => '390', 'height' => '150' ) );
@@ -66,7 +66,7 @@ function rb_section_featureditems( $id, $count, $case ) {
 						}
 
 						//* Get the background image information
-						$featured_imageid = (int) get_post_meta( $id, 'rb_section_' . $count . '_repeater_' . $i . '_image', true );
+						$featured_imageid = (int) get_post_meta( $id, $context_prefix . $count . '_repeater_' . $i . '_image', true );
 
 						if ( $featured_imageid ) {
 							$featured_imageurlarray = wp_get_attachment_image_src( $featured_imageid, array( 400, 200 ) );
@@ -74,13 +74,13 @@ function rb_section_featureditems( $id, $count, $case ) {
 						}
 
 						//* Get heading information
-						$featured_heading = get_post_meta( $id, 'rb_section_' . $count . '_repeater_' . $i . '_heading', true );
+						$featured_heading = get_post_meta( $id, $context_prefix . $count . '_repeater_' . $i . '_heading', true );
 
 						//* Get content information
-						$featured_content = get_post_meta( $id, 'rb_section_' . $count . '_repeater_' . $i . '_content', true );
+						$featured_content = get_post_meta( $id, $context_prefix . $count . '_repeater_' . $i . '_content', true );
 
 						//* Get the link information
-						$featured_link = get_post_meta( $id, 'rb_section_' . $count . '_repeater_' . $i . '_link', true );
+						$featured_link = get_post_meta( $id, $context_prefix . $count . '_repeater_' . $i . '_link', true );
 
 						if ( $featured_imageid && !$video )
 							printf( '<div class="flex-featured-image"><img src="%s" /></div>', $featured_imageurl );

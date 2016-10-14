@@ -3,59 +3,60 @@
    ========================================================================== */
 /* Structure
    ========================================================================== */
-/* line 8, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
-.page-template-page-flexible-content {
+/* line 9, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+.page-template-page-flexible-content .site-inner {
+  padding: 0;
+  max-width: 100%; }
+  /* line 13, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+  .page-template-page-flexible-content .site-inner .wrap {
+    max-width: 1200px;
+    width: 100%; }
+    @media (min-width: 768px) and (max-width: 1199px) {
+      /* line 13, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+      .page-template-page-flexible-content .site-inner .wrap {
+        padding-left: 30px;
+        padding-right: 30px; } }
+
+/* line 25, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+.flexible-content-page-builder {
   background-image: none !important; }
-  /* line 11, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
-  .page-template-page-flexible-content .site-inner {
-    padding: 0;
-    max-width: 100%; }
-    /* line 15, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
-    .page-template-page-flexible-content .site-inner .wrap {
-      max-width: 1200px;
-      width: 100%; }
-      @media (min-width: 768px) and (max-width: 1199px) {
-        /* line 15, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
-        .page-template-page-flexible-content .site-inner .wrap {
-          padding-left: 30px;
-          padding-right: 30px; } }
-  /* line 26, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
-  .page-template-page-flexible-content .section {
+  /* line 28, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+  .flexible-content-page-builder .section {
     padding-top: 100px;
     padding-bottom: 100px;
     background-color: white;
     position: relative;
     margin: 0; }
     @media (max-width: 767px) {
-      /* line 26, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
-      .page-template-page-flexible-content .section {
+      /* line 28, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+      .flexible-content-page-builder .section {
         padding-top: 30px;
         padding-bottom: 30px; } }
-    /* line 38, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
-    .page-template-page-flexible-content .section p:last-child {
+    /* line 40, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+    .flexible-content-page-builder .section p:last-child {
       margin-bottom: 0; }
-    /* line 42, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
-    .page-template-page-flexible-content .section ul:last-child {
+    /* line 44, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+    .flexible-content-page-builder .section ul:last-child {
       margin-bottom: 0; }
-    /* line 46, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
-    .page-template-page-flexible-content .section li:last-child {
+    /* line 48, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+    .flexible-content-page-builder .section li:last-child {
       margin-bottom: 0; }
-    /* line 50, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
-    .page-template-page-flexible-content .section .wrap {
+    /* line 52, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+    .flexible-content-page-builder .section .wrap {
       position: relative;
       z-index: 10; }
       @media (max-width: 767px) {
-        /* line 50, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
-        .page-template-page-flexible-content .section .wrap {
+        /* line 52, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+        .flexible-content-page-builder .section .wrap {
           padding-left: 30px;
           padding-right: 30px; } }
-  /* line 61, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
-  .page-template-page-flexible-content .section:nth-of-type(odd) {
+  /* line 63, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+  .flexible-content-page-builder .section:nth-of-type(odd) {
     background-color: #f1f1f1; }
 
 /* Background image
    ========================================================================== */
-/* line 70, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+/* line 72, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
 .section.background-image .background-div, .section.background_rotator .slide .background-div {
   top: 0;
   left: 0;
@@ -66,7 +67,7 @@
   background-position: center center;
   -webkit-filter: grayscale(50%);
           filter: grayscale(50%); }
-  /* line 80, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+  /* line 82, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
   .section.background-image .background-div::before, .section.background_rotator .slide .background-div::before {
     content: "";
     position: absolute;
@@ -77,29 +78,29 @@
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 5; }
 
-/* line 92, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+/* line 94, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
 .section.background-image *, .section.background_rotator .slide * {
   color: white; }
 
 /*
    Full-color
    ========================================================================== */
-/* line 102, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+/* line 104, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
 .section.full-color .background-div {
   -webkit-filter: grayscale(0%);
           filter: grayscale(0%); }
-  /* line 105, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+  /* line 107, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
   .section.full-color .background-div::before {
     background-color: transparent; }
 
 /*
    Align-center
    ========================================================================== */
-/* line 115, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+/* line 117, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
 .section.align-center {
   text-align: center; }
   @media (max-width: 767px) {
-    /* line 115, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+    /* line 117, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
     .section.align-center {
       text-align: left; } }
 
@@ -107,11 +108,11 @@
    Full-height
    ========================================================================== */
 @media (min-width: 1200px) {
-  /* line 126, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+  /* line 128, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
   .section.full-height {
     height: 100vh;
     position: relative; }
-    /* line 131, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+    /* line 133, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
     .section.full-height .wrap {
       position: absolute;
       top: 50%;
@@ -123,11 +124,11 @@
    Limit-height
    ========================================================================== */
 @media (min-width: 1200px) {
-  /* line 144, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+  /* line 146, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
   .section.limit-height {
     height: auto;
     position: static; }
-    /* line 149, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+    /* line 151, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
     .section.limit-height .wrap {
       position: static;
       -webkit-transform: translate(0%, 0%);
@@ -136,7 +137,7 @@
 /*
    Limit-width
    ========================================================================== */
-/* line 161, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+/* line 163, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
 .section.limit-width .wrap {
   max-width: 600px; }
 
@@ -454,9 +455,9 @@ body .slick-slider {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
   -ms-flex-wrap: wrap;
@@ -471,17 +472,19 @@ body .slick-slider {
       padding-top: 20px; } }
   /* line 23, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_3col.scss */
   .section.featured_3col .container-3col .column {
-    -webkit-box-flex: 31%;
-        -ms-flex: 31% 0 0;
-            flex: 31% 0 0;
+    -webkit-box-flex: 29%;
+        -ms-flex: 29% 0 0;
+            flex: 29% 0 0;
     background-color: #333;
-    color: white; }
+    color: white;
+    margin-left: 2%;
+    margin-right: 2%; }
     @media (min-width: 768px) and (max-width: 1199px) {
       /* line 23, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_3col.scss */
       .section.featured_3col .container-3col .column {
-        -webkit-box-flex: 48%;
-            -ms-flex: 48% 0 0;
-                flex: 48% 0 0;
+        -webkit-box-flex: 46%;
+            -ms-flex: 46% 0 0;
+                flex: 46% 0 0;
         margin-bottom: 35px; } }
     @media (max-width: 767px) {
       /* line 23, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_3col.scss */
@@ -489,23 +492,25 @@ body .slick-slider {
         -webkit-box-flex: 100%;
             -ms-flex: 100% 0 0;
                 flex: 100% 0 0;
-        margin-bottom: 20px; } }
-    /* line 38, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_3col.scss */
+        margin-bottom: 20px;
+        margin-left: 0;
+        margin-right: 0; } }
+    /* line 42, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_3col.scss */
     .section.featured_3col .container-3col .column:last-child {
       margin-bottom: 0; }
-    /* line 42, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_3col.scss */
+    /* line 46, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_3col.scss */
     .section.featured_3col .container-3col .column p {
       font-size: 16px;
       line-height: 1.4em;
       margin-bottom: 10px; }
-    /* line 48, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_3col.scss */
+    /* line 52, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_3col.scss */
     .section.featured_3col .container-3col .column a {
       color: white;
       text-decoration: none; }
-    /* line 53, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_3col.scss */
+    /* line 57, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_3col.scss */
     .section.featured_3col .container-3col .column .content {
       margin-bottom: 10px; }
-  /* line 58, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_3col.scss */
+  /* line 62, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_3col.scss */
   .section.featured_3col .container-3col .logo-image {
     text-align: center;
     position: relative;
@@ -513,10 +518,10 @@ body .slick-slider {
     background-size: cover;
     background-position: center center; }
     @media (max-width: 767px) {
-      /* line 58, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_3col.scss */
+      /* line 62, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_3col.scss */
       .section.featured_3col .container-3col .logo-image {
         min-height: 175px; } }
-    /* line 69, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_3col.scss */
+    /* line 73, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_3col.scss */
     .section.featured_3col .container-3col .logo-image img {
       bottom: 40px;
       position: absolute;
@@ -525,7 +530,7 @@ body .slick-slider {
       -webkit-transform: translateX(-50%);
               transform: translateX(-50%);
       z-index: 10; }
-  /* line 79, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_3col.scss */
+  /* line 83, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_3col.scss */
   .section.featured_3col .container-3col .logo-image:before {
     content: "";
     position: absolute;
@@ -537,7 +542,7 @@ body .slick-slider {
     border-color: transparent transparent #333333 transparent;
     display: block;
     z-index: 15; }
-  /* line 92, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_3col.scss */
+  /* line 96, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_3col.scss */
   .section.featured_3col .container-3col .logo-image:after {
     content: "";
     position: absolute;
@@ -553,16 +558,16 @@ body .slick-slider {
     /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, transparent 30%, rgba(0, 0, 0, 0.6) 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
-  /* line 108, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_3col.scss */
+  /* line 112, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_3col.scss */
   .section.featured_3col .container-3col .content-container {
     padding: 30px; }
 
 /* line 2, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_threecol_fourth_half_fourth.scss */
-.page-template-page-flexible-content .site-inner .threecol-25-50-25 .wrap {
+.flexible-content-page-builder .site-inner .threecol-25-50-25 .wrap {
   max-width: 1300px; }
 
 /* line 6, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_threecol_fourth_half_fourth.scss */
-.page-template-page-flexible-content .site-inner .threecol-25-50-25 p:last-child {
+.flexible-content-page-builder .site-inner .threecol-25-50-25 p:last-child {
   margin-bottom: 15px; }
 
 /* line 12, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_threecol_fourth_half_fourth.scss */
@@ -680,7 +685,7 @@ body .slick-slider {
    Default styles
    ========================================================================== */
 /* line 10, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_testimonial_slider.scss */
-.page-template-page-flexible-content .section.testimonials_slider .wrap {
+.flexible-content-page-builder .section.testimonials_slider .wrap {
   max-width: 100%;
   padding: 0; }
 
@@ -722,11 +727,11 @@ body .slick-slider {
    Trust Building Snippets
    ========================================================================== */
 /* line 5, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_trust_building_snippets.scss */
-.page-template-page-flexible-content .section.trust_building_snippets {
+.flexible-content-page-builder .section.trust_building_snippets {
   padding-top: 10px;
   padding-bottom: 10px; }
   /* line 9, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_trust_building_snippets.scss */
-  .page-template-page-flexible-content .section.trust_building_snippets .contents-container {
+  .flexible-content-page-builder .section.trust_building_snippets .contents-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -745,13 +750,13 @@ body .slick-slider {
     text-align: center; }
     @media (max-width: 767px) {
       /* line 9, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_trust_building_snippets.scss */
-      .page-template-page-flexible-content .section.trust_building_snippets .contents-container {
+      .flexible-content-page-builder .section.trust_building_snippets .contents-container {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column; } }
     /* line 21, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_trust_building_snippets.scss */
-    .page-template-page-flexible-content .section.trust_building_snippets .contents-container .snippet-content {
+    .flexible-content-page-builder .section.trust_building_snippets .contents-container .snippet-content {
       -webkit-box-flex: 20%;
           -ms-flex: 20% 0 0;
               flex: 20% 0 0;
@@ -759,43 +764,43 @@ body .slick-slider {
       display: block; }
       @media (min-width: 768px) and (max-width: 1199px) {
         /* line 21, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_trust_building_snippets.scss */
-        .page-template-page-flexible-content .section.trust_building_snippets .contents-container .snippet-content {
+        .flexible-content-page-builder .section.trust_building_snippets .contents-container .snippet-content {
           -webkit-box-flex: 33% !important;
               -ms-flex: 33% 0 0 !important;
                   flex: 33% 0 0 !important; } }
       /* line 30, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_trust_building_snippets.scss */
-      .page-template-page-flexible-content .section.trust_building_snippets .contents-container .snippet-content p {
+      .flexible-content-page-builder .section.trust_building_snippets .contents-container .snippet-content p {
         margin-bottom: 20px;
         font-size: 16px;
         line-height: 1.4em; }
         /* line 35, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_trust_building_snippets.scss */
-        .page-template-page-flexible-content .section.trust_building_snippets .contents-container .snippet-content p:last-child {
+        .flexible-content-page-builder .section.trust_building_snippets .contents-container .snippet-content p:last-child {
           margin-bottom: 0; }
         /* line 39, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_trust_building_snippets.scss */
-        .page-template-page-flexible-content .section.trust_building_snippets .contents-container .snippet-content p img,
-        .page-template-page-flexible-content .section.trust_building_snippets .contents-container .snippet-content p img.alignnone {
+        .flexible-content-page-builder .section.trust_building_snippets .contents-container .snippet-content p img,
+        .flexible-content-page-builder .section.trust_building_snippets .contents-container .snippet-content p img.alignnone {
           margin-bottom: 0; }
     /* line 46, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_trust_building_snippets.scss */
-    .page-template-page-flexible-content .section.trust_building_snippets .contents-container .snippet-padding {
+    .flexible-content-page-builder .section.trust_building_snippets .contents-container .snippet-padding {
       padding: 20px; }
   /* line 51, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_trust_building_snippets.scss */
-  .page-template-page-flexible-content .section.trust_building_snippets .contents-container.thre .snippet-contente {
+  .flexible-content-page-builder .section.trust_building_snippets .contents-container.thre .snippet-contente {
     -webkit-box-flex: 33%;
         -ms-flex: 33% 0 0;
             flex: 33% 0 0; }
   /* line 55, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_trust_building_snippets.scss */
-  .page-template-page-flexible-content .section.trust_building_snippets .contents-container.four .snippet-content {
+  .flexible-content-page-builder .section.trust_building_snippets .contents-container.four .snippet-content {
     -webkit-box-flex: 25%;
         -ms-flex: 25% 0 0;
             flex: 25% 0 0; }
     @media (min-width: 768px) and (max-width: 1199px) {
       /* line 55, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_trust_building_snippets.scss */
-      .page-template-page-flexible-content .section.trust_building_snippets .contents-container.four .snippet-content {
+      .flexible-content-page-builder .section.trust_building_snippets .contents-container.four .snippet-content {
         -webkit-box-flex: 50% !important;
             -ms-flex: 50% 0 0 !important;
                 flex: 50% 0 0 !important; } }
   /* line 63, /Users/jonschroeder/Documents/Websites/Naked Clean/app/public/wp-content/plugins/redblue-sections/css/sections/_trust_building_snippets.scss */
-  .page-template-page-flexible-content .section.trust_building_snippets .contents-container.five .snippet-content {
+  .flexible-content-page-builder .section.trust_building_snippets .contents-container.five .snippet-content {
     -webkit-box-flex: 20%;
         -ms-flex: 20% 0 0;
             flex: 20% 0 0; }

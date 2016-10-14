@@ -1,19 +1,19 @@
 <?php
 
-function rb_section_checkerboard( $id, $count, $case ) {
+function rb_section_checkerboard( $id, $count, $case, $context_prefix ) {
 
 	//* Do the function which figures out which classes we need
-	$class = rb_section_class_setup( $id, $count, $case );
-	$class[] = get_post_meta( $id, 'rb_section_' . $count . '_alignment', true );
+	$class = rb_section_class_setup( $id, $count, $case, $context_prefix );
+	$class[] = get_post_meta( $id, $context_prefix . $count . '_alignment', true );
 
 	//* Get the background image information
-	$image = wp_get_attachment_url( get_post_meta( $id, 'rb_section_' . $count . '_background', true ) );
+	$image = wp_get_attachment_url( get_post_meta( $id, $context_prefix . $count . '_background', true ) );
 
 	//* Get the classes ready
 	$class = implode( ' ', $class );
 
 	//* Variables for this section
-	$content = get_post_meta( $id, 'rb_section_' . $count . '_content', true );
+	$content = get_post_meta( $id, $context_prefix . $count . '_content', true );
 	$content = apply_filters( 'the_content', $content );
 
 	//* Output the container section

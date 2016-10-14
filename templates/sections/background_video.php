@@ -1,20 +1,20 @@
 <?php
 
-function rb_section_background_video( $id, $count, $case ) {
+function rb_section_background_video( $id, $count, $case, $context_prefix ) {
 
 	//* Do the function which figures out which classes we need
-	$class = rb_section_class_setup( $id, $count, $case );
+	$class = rb_section_class_setup( $id, $count, $case, $context_prefix );
 
 	//* Get the background image information
-	$video_mp4 = wp_get_attachment_url( get_post_meta( $id, 'rb_section_' . $count . '_video_mp4', true ) );
-    $video_webm = wp_get_attachment_url( get_post_meta( $id, 'rb_section_' . $count . '_video_webm', true ) );
-	$image_fallback = wp_get_attachment_url( get_post_meta( $id, 'rb_section_' . $count . '_image_fallback', true ) );
+	$video_mp4 = wp_get_attachment_url( get_post_meta( $id, $context_prefix . $count . '_video_mp4', true ) );
+    $video_webm = wp_get_attachment_url( get_post_meta( $id, $context_prefix . $count . '_video_webm', true ) );
+	$image_fallback = wp_get_attachment_url( get_post_meta( $id, $context_prefix . $count . '_image_fallback', true ) );
 
 	//* Get the classes ready
 	$class = implode( ' ', $class );
 
 	//* Variables for this section
-	$content = get_post_meta( $id, 'rb_section_' . $count . '_content', true );
+	$content = get_post_meta( $id, $context_prefix . $count . '_content', true );
 	$content = apply_filters( 'the_content', $content );
 
 	//* Output the container section

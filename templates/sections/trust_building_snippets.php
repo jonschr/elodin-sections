@@ -1,12 +1,12 @@
 <?php
 
-function rb_section_trust_building_snippets( $id, $count, $case ) {
+function rb_section_trust_building_snippets( $id, $count, $case, $context_prefix ) {
 
 	//* Do the function which figures out which classes we need
-	$class = rb_section_class_setup( $id, $count, $case );
+	$class = rb_section_class_setup( $id, $count, $case, $context_prefix );
 
 	//* Get the background image information
-	$imageid = (int) get_post_meta( $id, 'rb_section_' . $count . '_background', true );
+	$imageid = (int) get_post_meta( $id, $context_prefix . $count . '_background', true );
 
 	if ( $imageid ) {
 		$imageurlarray = wp_get_attachment_image_src( $imageid, 'full-bkg' );
@@ -21,7 +21,7 @@ function rb_section_trust_building_snippets( $id, $count, $case ) {
 	$class = implode( ' ', $class );
 
 	//* Variables for this section
-	$contents = get_post_meta( $id, 'rb_section_' . $count . '_repeater', true );
+	$contents = get_post_meta( $id, $context_prefix . $count . '_repeater', true );
 
 	//* Markup for this section
 	if ( $imageid )
@@ -47,7 +47,7 @@ function rb_section_trust_building_snippets( $id, $count, $case ) {
 
             for( $i = 0; $i < $contents; $i++ ) {
 
-                $content = apply_filters( 'the_content', get_post_meta( $id, 'rb_section_' . $count . '_repeater_' . $i .  '_content' , true ) );
+                $content = apply_filters( 'the_content', get_post_meta( $id, $context_prefix . $count . '_repeater_' . $i .  '_content' , true ) );
 
                 if ( $content )
                     printf( '<div class="snippet-content"><div class="snippet-padding">%s</div></div>', $content );

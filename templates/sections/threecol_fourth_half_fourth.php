@@ -1,12 +1,12 @@
 <?php
 
-function rb_section_threecol_fourth_half_fourth( $id, $count, $case ) {
+function rb_section_threecol_fourth_half_fourth( $id, $count, $case, $context_prefix ) {
 
 	//* Do the function which figures out which classes we need
-	$class = rb_section_class_setup( $id, $count, $case );
+	$class = rb_section_class_setup( $id, $count, $case, $context_prefix );
 
 	//* Get the background image information
-	$imageid = (int) get_post_meta( $id, 'rb_section_' . $count . '_background', true );
+	$imageid = (int) get_post_meta( $id, $context_prefix . $count . '_background', true );
 
 	if ( $imageid ) {
 		$imageurlarray = wp_get_attachment_image_src( $imageid, 'full-bkg' );
@@ -21,16 +21,16 @@ function rb_section_threecol_fourth_half_fourth( $id, $count, $case ) {
 	$class = implode( ' ', $class );
 
 	//* Variables for this section
-	$headercontent = get_post_meta( $id, 'rb_section_' . $count . '_headercontent', true );
+	$headercontent = get_post_meta( $id, $context_prefix . $count . '_headercontent', true );
 	$headercontent = apply_filters( 'the_content', $headercontent );
 
-	$contentleft = get_post_meta( $id, 'rb_section_' . $count . '_contentleft', true );
+	$contentleft = get_post_meta( $id, $context_prefix . $count . '_contentleft', true );
 	$contentleft = apply_filters( 'the_content', $contentleft );
 
-	$contentcenter = get_post_meta( $id, 'rb_section_' . $count . '_contentcenter', true );
+	$contentcenter = get_post_meta( $id, $context_prefix . $count . '_contentcenter', true );
 	$contentcenter = apply_filters( 'the_content', $contentcenter );
 
-	$contentright = get_post_meta( $id, 'rb_section_' . $count . '_contentright', true );
+	$contentright = get_post_meta( $id, $context_prefix . $count . '_contentright', true );
 	$contentright = apply_filters( 'the_content', $contentright );
 
 	//* Markup for this section

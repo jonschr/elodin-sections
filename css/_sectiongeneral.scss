@@ -6,8 +6,6 @@
    ========================================================================== */
 
 .page-template-page-flexible-content {
-	background-image: none !important;
-
 	.site-inner {
 		padding: 0;
 		max-width: 100%;
@@ -22,6 +20,10 @@
 			}
 		}
 	}
+}
+
+.flexible-content-page-builder {
+	background-image: none !important;
 
 	.section {
 		padding-top: 100px;
