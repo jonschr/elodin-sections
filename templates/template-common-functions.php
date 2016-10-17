@@ -52,6 +52,9 @@ function rb_sections_output_sections( $context_prefix ) {
 		//* A hook to allow for adding things before each section
 		do_action( $context_prefix . 'before_section_' . $count );
 
+		// * A hook to allow for layouts to be added by other themes or plugins
+		do_action( 'redblue_sections_add_layout', $id, $count, $case, $context_prefix );
+
 		//* A case for each section
 		switch( $case ) {
 

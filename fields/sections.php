@@ -1,7 +1,7 @@
 <?php
 
 //* Set up the layouts on the init hook, so that the theme will have access to remove layouts if needed
-add_action( 'genesis_init', 'redblue_sections_set_layouts' );
+add_action( 'init', 'redblue_sections_set_layouts' );
 function redblue_sections_set_layouts() {
 
 	//* Figure out which sections to leave out for this project
@@ -12,7 +12,7 @@ function redblue_sections_set_layouts() {
 	$layouts = array();
 
 	//* Allow a theme to add a layout
-	$layouts = apply_filters( 'redblue_section_add_layout', $layout );
+	$layouts = apply_filters( 'redblue_section_add_layout', $layouts );
 
 	/**
 	 * Include the files that actually include the layouts, allowing the theme or another plugin to remove them
