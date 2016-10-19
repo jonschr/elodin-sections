@@ -29,6 +29,7 @@ require_once( 'sections/background_rotator.php' );
 require_once( 'sections/background_video.php' );
 require_once( 'sections/threecol_fourth_half_fourth.php' );
 require_once( 'sections/checkerboard.php' );
+require_once( 'sections/two_column.php' );
 require_once( 'sections/testimonials_slider.php' );
 require_once( 'sections/trust_building_snippets.php' );
 
@@ -84,6 +85,10 @@ function rb_sections_output_sections( $context_prefix ) {
 
 			case 'checkerboard':
 				rb_section_checkerboard( $id, $count, $case, $context_prefix );
+			break;
+
+			case 'two_column':
+				rb_section_two_column( $id, $count, $case, $context_prefix );
 			break;
 
 			case 'testimonials_slider':

@@ -29,6 +29,9 @@ function redblue_sections_set_layouts() {
 	if ( !in_array( 'checkerboard', $disable_layouts ) )
 		include( 'sections/checkerboard.php' );
 
+	if ( !in_array( 'two_column', $disable_layouts ) )
+		include( 'sections/two_column.php' );
+
 	if ( !in_array( 'featured_items', $disable_layouts ) )
 		include( 'sections/featured_items.php' );
 
