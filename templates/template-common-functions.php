@@ -5,7 +5,7 @@
  * @param  strng 	$id     The ID of the piece of content we're on
  * @param  string 	$count  The number of the section
  * @param  string 	$case   The type of section we're using
- * @return string   $class  An array of the classes we'll be outputting in the section markup
+ * @return array   $class  An array of the classes we'll be outputting in the section markup
  */
 function rb_section_class_setup( $id, $count, $case, $context_prefix ) {
 

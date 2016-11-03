@@ -51,7 +51,7 @@ function redblue_sections_set_layouts() {
 	do_action( 'redblue_sections_add_sections' );
 
 	/**
-	 * Here's where we're actually registering out main field group
+	 * Here's where we're actually registering our main field group
 	 */
 	if( function_exists( 'acf_add_local_field_group' ) ) {
 		acf_add_local_field_group( array (
