@@ -636,52 +636,69 @@ body .slick-slider {
           -ms-flex-direction: column;
               flex-direction: column; } }
   /* line 17, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_checkerboard.scss */
+  .section.checkerboard .label {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    margin-top: 15px;
+    float: left;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 15px; }
+  /* line 28, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_checkerboard.scss */
   .section.checkerboard .checkerboard-image,
   .section.checkerboard .checkerboard-content {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
             flex: 0 0 50%; }
     @media (max-width: 767px) {
-      /* line 17, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_checkerboard.scss */
+      /* line 28, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_checkerboard.scss */
       .section.checkerboard .checkerboard-image,
       .section.checkerboard .checkerboard-content {
         -webkit-box-flex: 0;
             -ms-flex: 0 0 100%;
                 flex: 0 0 100%; } }
-  /* line 26, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_checkerboard.scss */
+  /* line 37, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_checkerboard.scss */
   .section.checkerboard .checkerboard-image {
     min-height: 300px;
     background-size: cover;
-    background-position: center center; }
-  /* line 32, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_checkerboard.scss */
+    background-position: center center;
+    background-color: rgba(0, 0, 0, 0.1); }
+  /* line 44, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_checkerboard.scss */
   .section.checkerboard .checkerboard-content {
     padding-top: 30px;
     padding-bottom: 30px; }
+    /* line 48, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_checkerboard.scss */
+    .section.checkerboard .checkerboard-content h2 a {
+      text-decoration: none; }
     @media (min-width: 768px) {
-      /* line 32, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_checkerboard.scss */
+      /* line 44, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_checkerboard.scss */
       .section.checkerboard .checkerboard-content {
         padding-top: 100px;
         padding-bottom: 100px; } }
-  /* line 42, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_checkerboard.scss */
+  /* line 58, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_checkerboard.scss */
   .section.checkerboard .content-wrap {
     padding-left: 30px;
     padding-right: 30px; }
     @media (min-width: 768px) {
-      /* line 42, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_checkerboard.scss */
+      /* line 58, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_checkerboard.scss */
       .section.checkerboard .content-wrap {
         max-width: 700px;
         padding-left: 100px;
         padding-right: 100px; } }
 
 @media (min-width: 768px) {
-  /* line 55, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_checkerboard.scss */
+  /* line 71, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_checkerboard.scss */
   .section.checkerboard.left {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse; }
-    /* line 58, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_checkerboard.scss */
+    /* line 74, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_checkerboard.scss */
     .section.checkerboard.left .content-wrap {
+      float: right; }
+    /* line 78, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_checkerboard.scss */
+    .section.checkerboard.left .label {
       float: right; } }
 
 /* ==========================================================================

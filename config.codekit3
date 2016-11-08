@@ -434,6 +434,12 @@
 		"oAP": "\/fields\/sections\/featured_content_carousel.php",
 		"oF": 0
 		},
+	"\/fields\/sections\/featured_content_checkerboard.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fields\/sections\/featured_content_checkerboard.php",
+		"oF": 0
+		},
 	"\/fields\/sections\/featured_items.php": {
 		"ft": 8192,
 		"oA": 0,
@@ -707,6 +713,12 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/templates\/sections\/featured_content_carousel.php",
+		"oF": 0
+		},
+	"\/templates\/sections\/featured_content_checkerboard.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/sections\/featured_content_checkerboard.php",
 		"oF": 0
 		},
 	"\/templates\/sections\/featureditems.php": {

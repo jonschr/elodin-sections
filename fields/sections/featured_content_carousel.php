@@ -5,7 +5,7 @@
  */
 
 $layouts[] = $featured_content_carousel = array (
-    'key' => 'YBinxxpzJfud',
+    'key' => 'YBinxxpagazJfud',
     'name' => 'featured_content_carousel',
     'label' => 'Featured Content Carousel',
     'display' => 'block',

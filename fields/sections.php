@@ -29,6 +29,9 @@ function redblue_sections_set_layouts() {
 	if ( !in_array( 'checkerboard', $disable_layouts ) )
 		include( 'sections/checkerboard.php' );
 
+	if ( !in_array( 'featured_content_checkerboard', $disable_layouts ) )
+		include( 'sections/featured_content_checkerboard.php' );
+
 	if ( !in_array( 'two_column', $disable_layouts ) )
 		include( 'sections/two_column.php' );
 
@@ -66,7 +69,6 @@ function redblue_sections_set_layouts() {
 					'label' => 'Flexible Content Area',
 					'name' => 'page_flexible_content',
 					'type' => 'flexible_content',
-					'instructions' => '',
 					'button_label' => 'Add Section',
 					'layouts' => $layouts,
 				),
@@ -164,10 +166,7 @@ function redblue_sections_set_layouts() {
 					'label' => 'Flexible Content Area',
 					'name' => 'page_default_below',
 					'type' => 'flexible_content',
-					'instructions' => '',
 					'button_label' => 'Add Section',
-					'min' => '',
-					'max' => '',
 					'layouts' => $layouts,
 				),
 			),
