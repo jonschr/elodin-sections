@@ -1,7 +1,7 @@
 <?php
 
-//* Set up the layouts on the init hook, so that the theme will have access to remove layouts if needed
-add_action( 'init', 'redblue_sections_set_layouts' );
+//* Set up the layouts on the init hook, so that the theme will have access to remove layouts if needed. We need to do it late so that all our posts types have finished registering
+add_action( 'init', 'redblue_sections_set_layouts', 99 );
 function redblue_sections_set_layouts() {
 
 	//* Figure out which sections to leave out for this project
@@ -32,17 +32,20 @@ function redblue_sections_set_layouts() {
 	if ( !in_array( 'two_column', $disable_layouts ) )
 		include( 'sections/two_column.php' );
 
-	if ( !in_array( 'featured_items', $disable_layouts ) )
-		include( 'sections/featured_items.php' );
-
 	if ( !in_array( 'featured_3col', $disable_layouts ) )
 		include( 'sections/featured_3col.php' );
 
-	if ( !in_array( 'testimonials_slider', $disable_layouts ) )
-		include( 'sections/testimonials_slider.php' );
-
 	if ( !in_array( 'threecolumns_onefourth_onehalf_onefourth', $disable_layouts ) )
 		include( 'sections/threecolumns_onefourth_onehalf_onefourth.php' );
+
+	if ( !in_array( 'featured_items', $disable_layouts ) )
+		include( 'sections/featured_items.php' );
+
+	if ( !in_array( 'featured_content_carousel', $disable_layouts ) )
+		include( 'sections/featured_content_carousel.php' );
+
+	if ( !in_array( 'testimonials_slider', $disable_layouts ) )
+		include( 'sections/testimonials_slider.php' );
 
 	if ( !in_array( 'trust_building_snippets', $disable_layouts ) )
 		include( 'sections/trust_building_snippets.php' );

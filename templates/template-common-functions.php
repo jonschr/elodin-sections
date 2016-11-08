@@ -30,6 +30,7 @@ require_once( 'sections/background_video.php' );
 require_once( 'sections/threecol_fourth_half_fourth.php' );
 require_once( 'sections/checkerboard.php' );
 require_once( 'sections/two_column.php' );
+require_once( 'sections/featured_content_carousel.php' );
 require_once( 'sections/testimonials_slider.php' );
 require_once( 'sections/trust_building_snippets.php' );
 
@@ -93,6 +94,10 @@ function rb_sections_output_sections( $context_prefix ) {
 
 			case 'testimonials_slider':
 				rb_section_testimonials_slider( $id, $count, $case, $context_prefix );
+			break;
+
+			case 'featured_content_carousel':
+				rb_section_featured_content_carousel( $id, $count, $case, $context_prefix );
 			break;
 
 			case 'trust_building_snippets':

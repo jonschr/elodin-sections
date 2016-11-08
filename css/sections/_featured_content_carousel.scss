@@ -1,0 +1,53 @@
+/* ==========================================================================
+   Featured content carousel
+   ========================================================================== */
+
+.featured-content-carousel-container {
+    max-width: 1200px;
+    margin: 80px auto 0;
+
+    .slick-dots {
+        top: -65px;
+        bottom: auto;
+    }
+
+    .slick-dots li button:before {
+        font-size: 12px;
+    }
+
+    .slick-slide:focus {
+        outline: none;
+        color: inherit;
+    }
+
+    .slick-slide {
+        transition: .5s opacity ease;
+
+        .post-content {
+            margin: 0 6px;
+
+            h3.featured-content-heading {
+                font-size: 18px;
+                text-transform: uppercase;
+            }
+
+            .featured-image {
+                display: block;
+                min-height: 150px;
+                background-color: rgba( black, 0.1 );
+                background-size: cover;
+                background-position: center center;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            .the-content {
+                line-height: 1.4em;
+                font-size: 15px;
+                padding-top: 20px;
+            }
+        }
+    }
+}

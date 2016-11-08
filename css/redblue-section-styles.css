@@ -137,9 +137,15 @@
 /*
    Limit-width
    ========================================================================== */
-/* line 163, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
-.section.limit-width .wrap {
+/* line 165, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+.section.limit-width:not(.featured_content_carousel) .wrap {
   max-width: 600px; }
+
+/* line 170, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+.section.limit-width .featuredcontent {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto; }
 
 /* ==========================================================================
    Sliders in general
@@ -876,4 +882,49 @@ body .slick-slider {
     -webkit-box-flex: 20%;
         -ms-flex: 20% 0 0;
             flex: 20% 0 0; }
+
+/* ==========================================================================
+   Featured content carousel
+   ========================================================================== */
+/* line 5, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_content_carousel.scss */
+.featured-content-carousel-container {
+  max-width: 1200px;
+  margin: 80px auto 0; }
+  /* line 9, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_content_carousel.scss */
+  .featured-content-carousel-container .slick-dots {
+    top: -65px;
+    bottom: auto; }
+  /* line 14, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_content_carousel.scss */
+  .featured-content-carousel-container .slick-dots li button:before {
+    font-size: 12px; }
+  /* line 18, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_content_carousel.scss */
+  .featured-content-carousel-container .slick-slide:focus {
+    outline: none;
+    color: inherit; }
+  /* line 23, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_content_carousel.scss */
+  .featured-content-carousel-container .slick-slide {
+    -webkit-transition: .5s opacity ease;
+    transition: .5s opacity ease; }
+    /* line 26, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_content_carousel.scss */
+    .featured-content-carousel-container .slick-slide .post-content {
+      margin: 0 6px; }
+      /* line 29, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_content_carousel.scss */
+      .featured-content-carousel-container .slick-slide .post-content h3.featured-content-heading {
+        font-size: 18px;
+        text-transform: uppercase; }
+      /* line 34, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_content_carousel.scss */
+      .featured-content-carousel-container .slick-slide .post-content .featured-image {
+        display: block;
+        min-height: 150px;
+        background-color: rgba(0, 0, 0, 0.1);
+        background-size: cover;
+        background-position: center center; }
+      /* line 42, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_content_carousel.scss */
+      .featured-content-carousel-container .slick-slide .post-content a {
+        text-decoration: none; }
+      /* line 46, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_content_carousel.scss */
+      .featured-content-carousel-container .slick-slide .post-content .the-content {
+        line-height: 1.4em;
+        font-size: 15px;
+        padding-top: 20px; }
 /*# sourceMappingURL=redblue-section-styles.css.map */

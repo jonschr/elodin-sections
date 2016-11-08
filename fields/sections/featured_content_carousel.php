@@ -1,0 +1,140 @@
+<?php
+
+/**
+ * Featured content carousel
+ */
+
+$layouts[] = $featured_content_carousel = array (
+    'key' => 'YBinxxpzJfud',
+    'name' => 'featured_content_carousel',
+    'label' => 'Featured Content Carousel',
+    'display' => 'block',
+    'sub_fields' => array (
+        array (
+            'key' => 'field_YBinxxpzJfuda2',
+            'label' => 'Content above the carousel',
+            'name' => 'content',
+            'type' => 'wysiwyg',
+            'instructions' => '',
+            'tabs' => 'all',
+            'toolbar' => 'full',
+            'media_upload' => 1,
+        ),
+        array (
+            'key' => 'field_YBinxxpzJfuda3',
+            'label' => 'Content type',
+            'name' => 'content_type',
+            'type' => 'select',
+            'choices' => get_post_types( array( 'public' => true ), 'names' ),
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => 20,
+            ),
+        ),
+        array (
+            'key' => 'field_YBinxxskyifuda3',
+            'label' => 'Max number of items',
+            'name' => 'items_to_display',
+            'type' => 'number',
+            'default_value' => '99',
+            'paceholder' => '99',
+            'wrapper' => array (
+                'width' => 20,
+            ),
+        ),
+        array (
+            'key' => 'field_YBinxxwworggJfuda3',
+            'label' => 'Show the content',
+            'name' => 'show_the_content',
+            'type' => 'radio',
+            'choices' => array(
+                'yes' => 'Yes',
+                'no' => 'No',
+            ),
+            'layout' => 'horizontal',
+            'default_value' => 'yes',
+            'wrapper' => array (
+                'width' => 15,
+            ),
+        ),
+        array (
+            'key' => 'field_YBinxwtlkjggJfuda3',
+            'label' => 'Link to item',
+            'name' => 'link_to_item',
+            'type' => 'radio',
+            'choices' => array(
+                'yes' => 'Yes',
+                'no' => 'No',
+                'read more' => 'Read More',
+            ),
+            'default_value' => 'yes',
+            'layout' => 'horizontal',
+            'wrapper' => array (
+                'width' => 25,
+            ),
+        ),
+        array (
+            'key' => 'field_YBinxwgagwtlkjggJfuda3',
+            'label' => 'Show featured image',
+            'name' => 'show_featured_image',
+            'type' => 'radio',
+            'choices' => array(
+                'yes' => 'Yes',
+                'no' => 'No',
+            ),
+            'default_value' => 'yes',
+            'layout' => 'horizontal',
+            'wrapper' => array (
+                'width' => 20,
+            ),
+        ),
+        array (
+            'key' => 'field_YBinxaaxpzJfuda3',
+            'label' => 'Background Image',
+            'name' => 'background',
+            'type' => 'image',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => 30,
+                'class' => '',
+                'id' => '',
+            ),
+            'return_format' => 'array',
+            'preview_size' => 'thumbnail',
+            'library' => 'all',
+            'min_width' => '',
+            'min_height' => '',
+            'min_size' => '',
+            'max_width' => '',
+            'max_height' => '',
+            'max_size' => '',
+            'mime_types' => '',
+        ),
+        array (
+            'key' => 'field_YBinxxpzJfuda4',
+            'label' => 'Class',
+            'name' => 'class',
+            'type' => 'text',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => 70,
+                'class' => '',
+                'id' => '',
+            ),
+            'default_value' => '',
+            'placeholder' => 'section-class another-class',
+            'prepend' => '',
+            'append' => '',
+            'maxlength' => '',
+            'readonly' => 0,
+            'disabled' => 0,
+        ),
+    ),
+    'min' => '',
+    'max' => '',
+);
