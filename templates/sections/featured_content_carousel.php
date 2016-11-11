@@ -66,7 +66,7 @@ function rb_section_featured_content_carousel( $id, $count, $case, $context_pref
 					$permalink = get_the_permalink();
 
 					$image_id = get_post_thumbnail_id( $post->ID );
-					$image_url_array = wp_get_attachment_image_src( $image_id, array( 400, 600 ) );
+					$image_url_array = wp_get_attachment_image_src( $image_id, array( 600, 400, true ) );
 					$background_image = $image_url_array[0];
 
 					?>
