@@ -81,7 +81,26 @@ function prefix_add_below_section( $args ) {
 
 	return array_merge( $args, $new_args );
 }
+```
 
+Or, if you'd like, you can replace the content altogether with the sections
+```php
+//* Replace the content with a section builder
+add_filter( 'redblue_section_instead_of_content_display', 'prefix_add_instead_of_section', 1, 10 );
+function prefix_add_instead_of_section( $args ) {
+
+	$new_args = array(
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'ministries',
+			),
+		),
+	);
+
+	return array_merge( $args, $new_args );
+}
 ```
 
 ## Style-ready classes
