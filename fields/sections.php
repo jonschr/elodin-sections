@@ -56,6 +56,15 @@ function redblue_sections_set_layouts() {
 	//* Allows a theme or another plugin to hook in and add its own section
 	do_action( 'redblue_sections_add_sections' );
 
+	//* Allow a theme to add arguments for where we use the sections
+	$instead_of_content = apply_filters( 'redblue_section_instead_of_content_display', $instead_of_args );
+
+	//* Allow a theme to add arguments for where we use the sections
+	$above_content = apply_filters( 'redblue_section_above_content_display', $above_args );
+
+	//* Allow a theme to add arguments for where we use the sections
+	$below_content = apply_filters( 'redblue_section_below_content_display', $below_args );
+
 	/**
 	 * Here's where we're actually registering our main field group
 	 */
@@ -73,15 +82,7 @@ function redblue_sections_set_layouts() {
 					'layouts' => $layouts,
 				),
 			),
-			'location' => array (
-				array (
-					array (
-						'param' => 'page_template',
-						'operator' => '==',
-						'value' => 'page-flexible-content.php',
-					),
-				),
-			),
+			'location' => $instead_of_content,
 			'menu_order' => 1,
 			'position' => 'acf_after_title',
 			'style' => 'default',
@@ -101,7 +102,6 @@ function redblue_sections_set_layouts() {
 				10 => 'send-trackbacks',
 			),
 			'active' => 1,
-			'description' => '',
 		));
 	}
 
@@ -123,15 +123,7 @@ function redblue_sections_set_layouts() {
 					'layouts' => $layouts,
 				),
 			),
-			'location' => array (
-				array (
-					array (
-						'param' => 'page_template',
-						'operator' => '==',
-						'value' => 'default',
-					),
-				),
-			),
+			'location' => $above_content,
 			'menu_order' => 1,
 			'position' => 'acf_after_title',
 			'label_placement' => 'top',
@@ -149,7 +141,6 @@ function redblue_sections_set_layouts() {
 				10 => 'send-trackbacks',
 			),
 			'active' => 1,
-			'description' => '',
 		));
 	}
 
@@ -170,15 +161,7 @@ function redblue_sections_set_layouts() {
 					'layouts' => $layouts,
 				),
 			),
-			'location' => array (
-				array (
-					array (
-						'param' => 'page_template',
-						'operator' => '==',
-						'value' => 'default',
-					),
-				),
-			),
+			'location' => $below_content,
 			'menu_order' => 0,
 			'position' => 'normal',
 			'label_placement' => 'top',
@@ -193,4 +176,55 @@ add_filter( 'redblue_section_remove_layouts', 'redblue_section_remove_sample_sec
 function redblue_section_remove_sample_sections( $sections ) {
     $sections[] = 'whatever_section_you_want_to_remove';
     return $sections;
+}
+
+//* Defaults for the flexible content page
+add_filter( 'redblue_section_instead_of_content_display', 'redblue_section_instead_of_content_defaults', 1, 1 );
+function redblue_section_instead_of_content_defaults( $instead_of_args ) {
+
+	$instead_of_args = array(
+		array(
+			array (
+				'param' => 'page_template',
+				'operator' => '==',
+				'value' => 'page-flexible-content.php',
+			),
+		),
+	);
+
+	return $instead_of_args;
+}
+
+//* Defaults for the default page (above)
+add_filter( 'redblue_section_above_content_display', 'redblue_section_above_content_defaults', 1, 1 );
+function redblue_section_above_content_defaults( $above_args ) {
+
+	$above_args = array(
+		array(
+			array (
+				'param' => 'page_template',
+				'operator' => '==',
+				'value' => 'default',
+			),
+		),
+	);
+
+	return $above_args;
+}
+
+//* Defaults for the default page (above)
+add_filter( 'redblue_section_below_content_display', 'redblue_section_below_content_defaults', 1, 1 );
+function redblue_section_below_content_defaults( $below_args ) {
+
+	$below_args = array(
+		array(
+			array (
+				'param' => 'page_template',
+				'operator' => '==',
+				'value' => 'default',
+			),
+		),
+	);
+
+	return $below_args;
 }
