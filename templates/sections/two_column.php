@@ -18,9 +18,6 @@ function rb_section_two_column( $id, $count, $case, $context_prefix ) {
     if ( $imageid )
         $class[] = 'background-image';
 
-	//* Get the background image information
-	$image = wp_get_attachment_url( get_post_meta( $id, $context_prefix . $count . '_background', true ) );
-
 	//* Get the classes ready
 	$class = implode( ' ', $class );
 
@@ -33,6 +30,10 @@ function rb_section_two_column( $id, $count, $case, $context_prefix ) {
 
 	//* Output the container section
 	printf( '<section id="section-%s" class="%s">', $count, $class );
+
+	//* If there's a background image, output that
+	if ( $imageid )
+		printf( '<div class="background-div" style="background-image:url( %s )"></div>', $imageurl );
 
 		do_action( 'before_inside_section_' . $count );
 
