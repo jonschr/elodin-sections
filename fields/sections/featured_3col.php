@@ -7,7 +7,7 @@
 $layouts[] = $featued_3col = array (
     'key' => 'RjNWCcMfsiEU1',
     'name' => 'featured_3col',
-    'label' => 'Featured (3 column)',
+    'label' => 'Three Column',
     'display' => 'block',
     'sub_fields' => array (
         array (

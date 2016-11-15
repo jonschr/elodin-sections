@@ -83,13 +83,13 @@ function rb_section_featureditems( $id, $count, $case, $context_prefix ) {
 						$featured_link = get_post_meta( $id, $context_prefix . $count . '_repeater_' . $i . '_link', true );
 
 						if ( $featured_imageid && !$video )
-							printf( '<div class="flex-featured-image"><img src="%s" /></div>', $featured_imageurl );
+							printf( '<a class="flex-featured-image" href="%s"><img src="%s" /></a>', $featured_link, $featured_imageurl );
 
-						if ( $featured_heading  && !$featured_link )
+						if ( $featured_heading && !$featured_link )
 							printf( '<h3>%s</h3>', $featured_heading );
 
 						if ( $featured_heading  && $featured_link )
-							printf( '<h3><a href="%s">%s</a></h3>', $featured_heading, $featured_link );
+							printf( '<h3><a href="%s">%s</a></h3>', $featured_link, $featured_heading );
 
 						if ( $featured_content )
 							echo apply_filters( 'the_content', $featured_content );

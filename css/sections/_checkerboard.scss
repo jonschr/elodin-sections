@@ -14,6 +14,17 @@
     flex-wrap: nowrap;
     align-items: stretch;
 
+    .label {
+        background-color: rgba( black, 0.8 );
+        color: white;
+        margin-top: 15px;
+        float: left;
+        padding: 5px 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 15px;
+    }
+
     .checkerboard-image,
     .checkerboard-content {
         flex: 0 0 50%;
@@ -27,11 +38,16 @@
         min-height: 300px;
         background-size: cover;
         background-position: center center;
+        background-color: rgba( black, 0.1 );
     }
 
     .checkerboard-content {
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        h2 a {
+            text-decoration: none;
+        }
 
         @include notmobile-section {
             padding-top: 100px;
@@ -40,8 +56,8 @@
     }
 
     .content-wrap {
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 30px;
+        padding-right: 30px;
 
         @include notmobile-section {
             max-width: 700px;
@@ -56,6 +72,10 @@
         flex-direction: row-reverse;
 
         .content-wrap {
+            float: right;
+        }
+
+        .label {
             float: right;
         }
     }

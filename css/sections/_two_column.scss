@@ -1,0 +1,67 @@
+/* ==========================================================================
+   Two column
+   ========================================================================== */
+
+.flexible-content-page-builder .section.two_column {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    img,
+    img.alignnone {
+        margin: 0;
+    }
+}
+
+.section.two_column {
+    .column-container {
+        display: flex;
+        flex-flow: nowrap;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+
+        @include mobile-section {
+            flex-direction: column;
+
+            .column:nth-child(1) {
+                margin-bottom: 20px;
+            }
+        }
+
+        @include notmobile-section {
+            .column {
+                flex: 47% 0 0;
+            }
+        }
+
+    }
+}
+
+
+@include desktop-section {
+    .section.two_column.thirdleft {
+        .column-container .column:nth-child(1) {
+            flex: 33.3% 0 0;
+        }
+
+        .column-container .column:nth-child(2) {
+            flex: 60.6% 0 0;
+        }
+    }
+
+    .section.two_column.thirdright {
+        .column-container .column:nth-child(1) {
+            flex: 66.6% 0 0;
+        }
+
+        .column-container .column:nth-child(2) {
+            flex: 33.3% 0 0;
+        }
+    }
+
+    .section.two_column.halfhalf {
+        .column-container .column {
+            flex: 47% 0 0;
+        }
+    }
+}
