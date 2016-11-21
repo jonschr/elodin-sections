@@ -709,11 +709,10 @@ body .slick-slider {
   padding-top: 50px;
   padding-bottom: 50px; }
   /* line 9, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_two_column.scss */
-  .flexible-content-page-builder .section.two_column img,
   .flexible-content-page-builder .section.two_column img.alignnone {
     margin: 0; }
 
-/* line 16, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_two_column.scss */
+/* line 15, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_two_column.scss */
 .section.two_column .column-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -730,44 +729,44 @@ body .slick-slider {
       -ms-flex-direction: row;
           flex-direction: row; }
   @media (max-width: 767px) {
-    /* line 16, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_two_column.scss */
+    /* line 15, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_two_column.scss */
     .section.two_column .column-container {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column; }
-      /* line 26, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_two_column.scss */
+      /* line 25, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_two_column.scss */
       .section.two_column .column-container .column:nth-child(1) {
         margin-bottom: 20px; } }
   @media (min-width: 768px) {
-    /* line 32, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_two_column.scss */
+    /* line 31, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_two_column.scss */
     .section.two_column .column-container .column {
       -webkit-box-flex: 47%;
           -ms-flex: 47% 0 0;
               flex: 47% 0 0; } }
 
 @media (min-width: 1200px) {
-  /* line 43, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_two_column.scss */
+  /* line 42, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_two_column.scss */
   .section.two_column.thirdleft .column-container .column:nth-child(1) {
     -webkit-box-flex: 33.3%;
         -ms-flex: 33.3% 0 0;
             flex: 33.3% 0 0; }
-  /* line 47, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_two_column.scss */
+  /* line 46, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_two_column.scss */
   .section.two_column.thirdleft .column-container .column:nth-child(2) {
     -webkit-box-flex: 60.6%;
         -ms-flex: 60.6% 0 0;
             flex: 60.6% 0 0; }
-  /* line 53, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_two_column.scss */
+  /* line 52, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_two_column.scss */
   .section.two_column.thirdright .column-container .column:nth-child(1) {
     -webkit-box-flex: 66.6%;
         -ms-flex: 66.6% 0 0;
             flex: 66.6% 0 0; }
-  /* line 57, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_two_column.scss */
+  /* line 56, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_two_column.scss */
   .section.two_column.thirdright .column-container .column:nth-child(2) {
     -webkit-box-flex: 33.3%;
         -ms-flex: 33.3% 0 0;
             flex: 33.3% 0 0; }
-  /* line 63, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_two_column.scss */
+  /* line 62, /Users/jonschroeder/Documents/Websites/Trinity Presbyterian/app/public/wp-content/plugins/redblue-sections/css/sections/_two_column.scss */
   .section.two_column.halfhalf .column-container .column {
     -webkit-box-flex: 47%;
         -ms-flex: 47% 0 0;

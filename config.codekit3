@@ -503,6 +503,12 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/lib\/common.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/lib\/common.php",
+		"oF": 0
+		},
 	"\/README.md": {
 		"cS": 0,
 		"eF": 1,
