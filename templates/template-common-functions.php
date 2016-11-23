@@ -42,6 +42,10 @@ require_once( 'sections/trust_building_snippets.php' );
  */
 function rb_sections_output_sections( $context_prefix ) {
 
+	//* Just dump out if we aren't on a single template (so far, we haven't designed this functionality for archives)
+	if ( !is_singular() )
+		return;
+
 	$id = get_the_id();
 
     //* This is the only place (other than where we register the field) where we need the context prefix without the underscore
