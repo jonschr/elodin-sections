@@ -29,7 +29,21 @@ $layouts[] = $featured_content_carousel = array (
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array (
-                'width' => 20,
+                'width' => 33,
+            ),
+        ),
+        array (
+            'key' => 'field_YBinxxou3ggpzJfuda3',
+            'label' => 'Category (optional)',
+            'name' => 'taxonomy_term_selection',
+            'type' => 'select',
+            'allow_null' => 1,
+            'ui' => 0,
+            'choices' => redblue_section_get_term_list(),
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => 33,
             ),
         ),
         array (
@@ -40,7 +54,7 @@ $layouts[] = $featured_content_carousel = array (
             'default_value' => '99',
             'paceholder' => '99',
             'wrapper' => array (
-                'width' => 20,
+                'width' => 33,
             ),
         ),
         array (
@@ -55,7 +69,7 @@ $layouts[] = $featured_content_carousel = array (
             'layout' => 'horizontal',
             'default_value' => 'yes',
             'wrapper' => array (
-                'width' => 15,
+                'width' => 33,
             ),
         ),
         array (
@@ -71,7 +85,7 @@ $layouts[] = $featured_content_carousel = array (
             'default_value' => 'yes',
             'layout' => 'horizontal',
             'wrapper' => array (
-                'width' => 25,
+                'width' => 33,
             ),
         ),
         array (
@@ -86,7 +100,7 @@ $layouts[] = $featured_content_carousel = array (
             'default_value' => 'yes',
             'layout' => 'horizontal',
             'wrapper' => array (
-                'width' => 20,
+                'width' => 33,
             ),
         ),
         array (
@@ -98,7 +112,7 @@ $layouts[] = $featured_content_carousel = array (
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array (
-                'width' => 30,
+                'width' => 50,
                 'class' => '',
                 'id' => '',
             ),
@@ -122,7 +136,7 @@ $layouts[] = $featured_content_carousel = array (
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array (
-                'width' => 70,
+                'width' => '50',
                 'class' => '',
                 'id' => '',
             ),

@@ -49,6 +49,55 @@ function rb_section_featured_content_carousel( $id, $count, $case, $context_pref
 			'posts_per_page' => $number_of_posts,
 		);
 
+		//* Query details
+		$post_type = get_post_meta( $id, $context_prefix . $count . '_content_type', true );
+		$tax_and_terms = get_post_meta( $id, $context_prefix . $count . '_taxonomy_term_selection', true );
+
+		//* Add some query arguments if this is an event (to get the event in the right order)
+		if ( $post_type == 'events' ) {
+
+			//* Let's do the loop to grab the next upcoming event
+			$eventargs = array(
+				'order'          => 'ASC',
+				'orderby'        => 'meta_value_num',
+				'meta_key'       => 'be_event_start',
+				'meta_query'     => array(
+					array(
+						'key'     => 'be_event_end',
+						'value'   => time(),
+						'compare' => '>',
+					)
+				)
+			);
+
+			$args = wp_parse_args( $eventargs, $args );
+		}
+
+		//* Add some query arguments if there's a taxonomy term selected
+		if ( $tax_and_terms ) {
+
+			$tax_and_terms = explode( " ", $tax_and_terms );
+
+			// print_r( $tax_and_terms );
+			$taxonomy = $tax_and_terms[0];
+			$term = $tax_and_terms[1];
+
+			// echo 'Taxonomy is... ' . $taxonomy;
+			// echo 'Term is... ' . $term;
+
+			$taxargs = array(
+				'tax_query' => array(
+					array(
+						'taxonomy' => $taxonomy,
+						'field' => 'slug',
+						'terms' => $term
+					)
+				)
+			);
+
+			$args = wp_parse_args( $taxargs, $args );
+		}
+
 		// The Query
 		$cpt_query = new WP_Query( $args );
 

@@ -86,7 +86,8 @@ jQuery(document).ready(function($) {
 		{
 	        breakpoint: 768,
 	        settings: {
-	            arrows: false,
+				dots: false,
+	            arrows: true,
 	            slidesToShow: 1,
 				slidesToScroll: 1,
 	        }

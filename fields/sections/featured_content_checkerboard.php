@@ -4,6 +4,7 @@
  * Featured Content Checkerboard
  */
 
+
 $layouts[] = $featured_content_checkerboard = array (
     'key' => 'gbxnCboTxmbU66',
     'name' => 'featured_content_checkerboard',
@@ -20,7 +21,7 @@ $layouts[] = $featured_content_checkerboard = array (
             'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array (
-                'width' => 20,
+                'width' => 50,
                 'class' => '',
                 'id' => '',
             ),
@@ -32,7 +33,16 @@ $layouts[] = $featured_content_checkerboard = array (
             'other_choice' => 0,
             'save_other_choice' => 0,
             'default_value' => '',
-            'layout' => 'vertical',
+            'layout' => 'horizontal',
+        ),
+        array (
+            'key' => 'field_YBigbxnCgageebUfuda3',
+            'label' => 'Label (optional)',
+            'name' => 'label',
+            'type' => 'text',
+            'wrapper' => array (
+                'width' => 50,
+            ),
         ),
         array (
             'key' => 'field_gbxnCboTxmbUuda3',
@@ -43,7 +53,21 @@ $layouts[] = $featured_content_checkerboard = array (
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array (
-                'width' => 20,
+                'width' => 25,
+            ),
+        ),
+        array (
+            'key' => 'field_YBinxxgaagwweggpzJfuda3',
+            'label' => 'Category (optional)',
+            'name' => 'taxonomy_term_selection',
+            'type' => 'select',
+            'allow_null' => 1,
+            'ui' => 0,
+            'choices' => redblue_section_get_term_list(),
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => 25,
             ),
         ),
         array (
@@ -57,20 +81,12 @@ $layouts[] = $featured_content_checkerboard = array (
                 'read more' => 'Read More',
             ),
             'default_value' => 'yes',
-            'layout' => 'vertical',
+            'layout' => 'horizontal',
             'wrapper' => array (
-                'width' => 20,
+                'width' => 50,
             ),
         ),
-        array (
-            'key' => 'field_YBigbxnCgageebUfuda3',
-            'label' => 'Label (optional)',
-            'name' => 'label',
-            'type' => 'text',
-            'wrapper' => array (
-                'width' => 40,
-            ),
-        ),
+
         array (
             'key' => 'field_gbxnCboTxmbU69',
             'label' => 'Class',
