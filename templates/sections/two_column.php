@@ -10,7 +10,7 @@ function rb_section_two_column( $id, $count, $case, $context_prefix ) {
     $imageid = (int) get_post_meta( $id, $context_prefix . $count . '_background', true );
 
     if ( $imageid ) {
-        $imageurlarray = wp_get_attachment_image_src( $imageid, 'full-bkg' );
+        $imageurlarray = wp_get_attachment_image_src( $imageid, array( 1600, 1000 ) );
         $imageurl = $imageurlarray[0];
     }
 
