@@ -28,7 +28,7 @@ function redblue_section_get_term_list() {
 
         foreach ( $terms as $term ) {
 
-            $key = sprintf( '%s %s', $term->taxonomy, $term->name );
+            $key = sprintf( '%s %s', $term->taxonomy, $term->slug );
             $value = sprintf( '%s: %s (%s)', $term->taxonomy, $term->name, $term->count );
 
             $termchoices[$key] = $value;

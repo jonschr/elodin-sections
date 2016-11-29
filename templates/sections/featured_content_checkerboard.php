@@ -25,13 +25,14 @@ function rb_section_featured_content_checkerboard( $id, $count, $case, $context_
 
 		do_action( 'before_inside_section_' . $count );
 
+		$post_type = get_post_meta( $id, $context_prefix . $count . '_content_type', true );
+
 		$args = array(
 			'post_type' => $post_type,
 			'posts_per_page' => 1,
 		);
 
 		//* Query details
-		$post_type = get_post_meta( $id, $context_prefix . $count . '_content_type', true );
 		$tax_and_terms = get_post_meta( $id, $context_prefix . $count . '_taxonomy_term_selection', true );
 
 		//* Add some query arguments if this is an event (to get the event in the right order)
@@ -62,9 +63,6 @@ function rb_section_featured_content_checkerboard( $id, $count, $case, $context_
 			// print_r( $tax_and_terms );
 			$taxonomy = $tax_and_terms[0];
 			$term = $tax_and_terms[1];
-
-			// echo 'Taxonomy is... ' . $taxonomy;
-			// echo 'Term is... ' . $term;
 
 			$taxargs = array(
 				'tax_query' => array(
@@ -112,7 +110,15 @@ function rb_section_featured_content_checkerboard( $id, $count, $case, $context_
                     if ( $link_to_item == 'no' )
                         printf( '<h2>%s</h2>', $title );
 
-                    the_excerpt();
+					if ( $post_type != 'events' )
+	                    the_excerpt();
+
+
+					if ( $post_type == 'events' ) {
+						echo apply_filters( 'the_content', get_post_meta( get_the_id(), 'event_excerpt', true ) );
+
+					}
+
 
                     if ( $link_to_item == 'read more' )
                         printf( '<p><a href="%s" class="button button-small">Read more</a></p>', $permalink );
@@ -128,7 +134,7 @@ function rb_section_featured_content_checkerboard( $id, $count, $case, $context_
             }
 
         } else {
-            echo 'No posts of this type found...';
+            // silence is golden
         }
 
         /* Restore original Post Data */
