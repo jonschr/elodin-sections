@@ -47,6 +47,8 @@ function rb_section_testimonials_slider( $id, $count, $case, $context_prefix ) {
 		// The Loop
 		if ( $cpt_query->have_posts() ) {
 
+			wp_enqueue_style( 'testimonials-style' );
+
 			echo '<div class="testimonial-slider-container"><div id="testimonial-slider" class="loop-container">';
 
 				while ( $cpt_query->have_posts() ) {

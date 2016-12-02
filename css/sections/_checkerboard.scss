@@ -6,6 +6,7 @@
     padding: 0;
     display: flex;
     flex-direction: row;
+    background-color: white;
 
     @include mobile-section {
         flex-direction: column;
@@ -57,6 +58,52 @@
 
         .content-wrap {
             float: right;
+        }
+    }
+}
+
+/*
+   Checkerboard-wide
+   ========================================================================== */
+
+.section.checkerboard.checkerboard-wide {
+    .content-wrap {
+        @include notmobile-section {
+            max-width: 1000px;
+        }
+    }
+}
+
+.section.checkerboard.checkerboard-wide {
+
+    //* Wide sections need smaller margins
+    .checkerboard-content {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .content-wrap {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    //* Wide sections need to collapse sooner
+    @include tablet-section {
+        flex-direction: column;
+
+        .checkerboard-image,
+        .checkerboard-content {
+            flex: 0 0 100%;
+        }
+
+        .checkerboard-content {
+            padding: 50px 0;
+        }
+
+        .content-wrap {
+            width: 100%;
+            max-width: 100%;
+            padding: 0 50px;
         }
     }
 }
