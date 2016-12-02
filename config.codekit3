@@ -733,6 +733,12 @@
 		"oAP": "\/templates\/sections\/featureditems.php",
 		"oF": 0
 		},
+	"\/templates\/sections\/fullwidth.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/sections\/fullwidth.php",
+		"oF": 0
+		},
 	"\/templates\/sections\/testimonials_slider.php": {
 		"ft": 8192,
 		"oA": 0,
@@ -749,6 +755,12 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/templates\/sections\/trust_building_snippets.php",
+		"oF": 0
+		},
+	"\/templates\/sections\/two_column.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/sections\/two_column.php",
 		"oF": 0
 		},
 	"\/templates\/template-common-functions.php": {
