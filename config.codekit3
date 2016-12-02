@@ -163,19 +163,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/css\/sections\/_featured_content_carousel.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/css\/_featured_content_carousel.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
 	"\/css\/sections\/_featureditems.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -776,8 +763,8 @@
 	},
 "projectAttributes": {
 	"creationDate": 500237565,
-	"displayValue": "redblue-sections",
-	"displayValueWasSetByUser": 0,
+	"displayValue": "Naked Clean: Red Blue Sections",
+	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-lotr"
 	},
 "projectSettings": {
