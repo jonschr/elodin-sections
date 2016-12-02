@@ -23,20 +23,31 @@ function rb_section_background_rotator( $id, $count, $case, $context_prefix ) {
 
 	printf ( '<section id="section-%s" class="%s">', $count, $class );
 
-		do_action( 'before_inside_section_' . $count );
-
 		foreach( $image_ids as $image_id ) {
 
 			if ( $image_id ) {
+
 				$image_url_array = wp_get_attachment_image_src( $image_id, 'full-bkg' );
 				$image_url = $image_url_array[0];
 
-				printf( '<div class="slide"><div class="background-div" style="background-image:url(%s);"></div><div class="wrap"><div class="slide-content">%s</div></div></div>', $image_url, $content );
+				echo '<div class="slide">';
+
+					do_action( 'before_inside_section_' . $count );
+
+					//* Output the background div
+					printf( '<div class="background-div" style="background-image:url(%s);"></div>', $image_url );
+
+					//* Output the actual content
+					echo '<div class="wrap">';
+						printf( '<div class="slide-content">%s</div>', $content );
+					echo '</div>'; // .wrap
+
+					do_action( 'after_inside_section_' . $count );
+
+				echo '</div>'; // .slide
+
 			}
-
 		}
-
-		do_action( 'after_inside_section_' . $count );
 
 	echo '</section>'; // .wrap, section.section
 

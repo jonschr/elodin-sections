@@ -58,6 +58,9 @@ function redblue_sections_error_notice_genesis() {
  */
 if ( class_exists( 'acf_pro_updates' ) ) {
 
+    //* Get common functions
+    include_once( 'lib/common.php' );
+
     //* Register the custom page template
     include_once( 'templates/template-common-functions.php' );
 
