@@ -82,6 +82,22 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/css\/redblue-section-styles.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/css\/redblue-section-styles-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/css\/redblue-section-styles.css.map": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/css\/redblue-section-styles.css.map",
+		"oF": 0
+		},
 	"\/css\/redblue-section-styles.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -121,6 +137,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/css\/sections\/_checkerboard.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/css\/_checkerboard.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/css\/sections\/_featured_3col.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -130,6 +159,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/css\/css\/_featured_3col.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/css\/sections\/_featureditems.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/css\/_featureditems.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -624,6 +666,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/templates\/sections\/fullwidth.php",
+		"oF": 0
+		},
+	"\/templates\/sections\/testimonials_slider.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/sections\/testimonials_slider.php",
 		"oF": 0
 		},
 	"\/templates\/sections\/threecol_fourth_half_fourth.php": {

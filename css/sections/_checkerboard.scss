@@ -2,11 +2,16 @@
    Checkerboard sections
    ========================================================================== */
 
-.section.checkerboard {
+//* We don't want the background colors alternating by default
+.flexible-content-page-builder .section.checkerboard:nth-of-type(odd),
+.flexible-content-page-builder .section.checkerboard:nth-of-type(even) {
+    background-color: white;
+}
+
+.flexible-content-page-builder .section.checkerboard {
     padding: 0;
     display: flex;
     flex-direction: row;
-    background-color: white;
 
     @include mobile-section {
         flex-direction: column;
@@ -76,12 +81,13 @@
 
 .section.checkerboard.checkerboard-wide {
 
-    //* Wide sections need smaller margins
+    //* Wide sections need smaller vertical margins
     .checkerboard-content {
         padding-top: 50px;
         padding-bottom: 50px;
     }
 
+    //* Wide sections need smaller horizontal margins
     .content-wrap {
         padding-left: 50px;
         padding-right: 50px;
