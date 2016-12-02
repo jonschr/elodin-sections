@@ -163,6 +163,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/css\/sections\/_featured_content_carousel.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/css\/_featured_content_carousel.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/css\/sections\/_featureditems.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -237,6 +250,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/css\/css\/_trust_building_snippets.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/css\/sections\/_two_column.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/css\/_two_column.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -402,6 +428,18 @@
 		"oAP": "\/fields\/sections\/featured_3col.php",
 		"oF": 0
 		},
+	"\/fields\/sections\/featured_content_carousel.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fields\/sections\/featured_content_carousel.php",
+		"oF": 0
+		},
+	"\/fields\/sections\/featured_content_checkerboard.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fields\/sections\/featured_content_checkerboard.php",
+		"oF": 0
+		},
 	"\/fields\/sections\/featured_items.php": {
 		"ft": 8192,
 		"oA": 0,
@@ -432,11 +470,26 @@
 		"oAP": "\/fields\/sections\/trust_building_snippets.php",
 		"oF": 0
 		},
+	"\/fields\/sections\/two_column.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fields\/sections\/two_column.php",
+		"oF": 0
+		},
 	"\/js\/fancybox-init.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/js\/min\/fancybox-init-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/js\/min\/slick-init-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/min\/min\/slick-init-min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -449,6 +502,12 @@
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
+		},
+	"\/lib\/common.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/lib\/common.php",
+		"oF": 0
 		},
 	"\/README.md": {
 		"cS": 0,
@@ -656,6 +715,18 @@
 		"oAP": "\/templates\/sections\/featured_3col.php",
 		"oF": 0
 		},
+	"\/templates\/sections\/featured_content_carousel.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/sections\/featured_content_carousel.php",
+		"oF": 0
+		},
+	"\/templates\/sections\/featured_content_checkerboard.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/sections\/featured_content_checkerboard.php",
+		"oF": 0
+		},
 	"\/templates\/sections\/featureditems.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -684,6 +755,12 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/templates\/sections\/trust_building_snippets.php",
+		"oF": 0
+		},
+	"\/templates\/sections\/two_column.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/sections\/two_column.php",
 		"oF": 0
 		},
 	"\/templates\/template-common-functions.php": {
