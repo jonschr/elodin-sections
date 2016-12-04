@@ -87,7 +87,7 @@
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "\/css\/redblue-section-styles-min.css",
 		"oF": 0,
 		"oS": 0
@@ -99,12 +99,12 @@
 		"oF": 0
 		},
 	"\/css\/redblue-section-styles.scss": {
-		"aP": 1,
+		"aP": 0,
 		"bl": 0,
 		"dP": 10,
-		"dS": 2,
+		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 0,
 		"oAP": "\/css\/redblue-section-styles.css",
 		"oF": 0,
@@ -159,19 +159,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/css\/css\/_featured_3col.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/css\/sections\/_featured_content_carousel.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/css\/_featured_content_carousel.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -400,7 +387,7 @@
 		},
 	"\/fields\/sections.php": {
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/fields\/sections.php",
 		"oF": 0
 		},
@@ -424,13 +411,13 @@
 		},
 	"\/fields\/sections\/featured_3col.php": {
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/fields\/sections\/featured_3col.php",
 		"oF": 0
 		},
 	"\/fields\/sections\/featured_content_carousel.php": {
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/fields\/sections\/featured_content_carousel.php",
 		"oF": 0
 		},
@@ -472,7 +459,7 @@
 		},
 	"\/fields\/sections\/two_column.php": {
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/fields\/sections\/two_column.php",
 		"oF": 0
 		},
@@ -517,9 +504,9 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "\/README.html",
-		"oF": 1,
+		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
 		"pHT": 0,
@@ -529,7 +516,7 @@
 		},
 	"\/redblue-sections.php": {
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/redblue-sections.php",
 		"oF": 0
 		},
@@ -693,7 +680,7 @@
 		},
 	"\/templates\/sections\/background_rotator.php": {
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/templates\/sections\/background_rotator.php",
 		"oF": 0
 		},
@@ -717,7 +704,7 @@
 		},
 	"\/templates\/sections\/featured_content_carousel.php": {
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/templates\/sections\/featured_content_carousel.php",
 		"oF": 0
 		},
@@ -729,7 +716,7 @@
 		},
 	"\/templates\/sections\/featureditems.php": {
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/templates\/sections\/featureditems.php",
 		"oF": 0
 		},
@@ -741,7 +728,7 @@
 		},
 	"\/templates\/sections\/testimonials_slider.php": {
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/templates\/sections\/testimonials_slider.php",
 		"oF": 0
 		},
@@ -765,7 +752,7 @@
 		},
 	"\/templates\/template-common-functions.php": {
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/templates\/template-common-functions.php",
 		"oF": 0
 		}
@@ -776,8 +763,8 @@
 	},
 "projectAttributes": {
 	"creationDate": 500237565,
-	"displayValue": "redblue-sections",
-	"displayValueWasSetByUser": 0,
+	"displayValue": "Naked Clean: Red Blue Sections",
+	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-lotr"
 	},
 "projectSettings": {
@@ -2088,7 +2075,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "http:\/\/trinitypresbyterian.dev\/",
+	"externalServerAddress": "http:\/\/naked-clean.dev\/",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",
