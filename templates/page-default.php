@@ -15,7 +15,7 @@ add_filter( 'body_class', function( $classes ) {
 /**
  * Set up the output for the sections above the content for the default page layout
  */
-add_action( 'genesis_after_header', 'rb_sections_default_page_output_above' );
+add_action( 'genesis_after_header', 'rb_sections_default_page_output_above', 25 );
 function rb_sections_default_page_output_above() {
     if ( basename( get_page_template() ) == 'page.php' ) {
         $context_prefix = 'page_default_above_';
@@ -26,7 +26,7 @@ function rb_sections_default_page_output_above() {
 /**
  * Set up the output for the sections below the content for the default page layout
  */
-add_action( 'genesis_before_footer', 'rb_sections_default_page_output_below' );
+add_action( 'genesis_before_footer', 'rb_sections_default_page_output_below', 0 );
 function rb_sections_default_page_output_below() {
     if ( basename( get_page_template() ) == 'page.php' ) {
         $context_prefix = 'page_default_below_';
