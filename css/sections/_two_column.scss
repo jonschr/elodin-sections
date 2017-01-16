@@ -36,17 +36,40 @@
             }
         }
     }
+
+    &.autowidth {
+        justify-content: space-around;
+
+        .column:nth-of-type(1) {
+            margin-right: 1%;
+        }
+
+        .column:nth-of-type(2) {
+            margin-left: 2%;
+        }
+    }
 }
 
 
 @include desktop-section {
+
+    .section.two_column.autowidth {
+        .column-container .column:nth-child(1) {
+            width: auto;
+        }
+
+        .column-container .column:nth-child(2) {
+            width: auto;
+        }
+    }
+
     .section.two_column.thirdleft {
         .column-container .column:nth-child(1) {
             width: 32%;
         }
 
         .column-container .column:nth-child(2) {
-            width: 64%
+            width: 64%;
         }
     }
 
@@ -63,6 +86,36 @@
     .section.two_column.halfhalf {
         .column-container .column {
             width: 48%;
+        }
+    }
+}
+
+/* ==========================================================================
+   .limit-width
+   ========================================================================== */
+
+.flexible-content-page-builder .section.two_column.autowidth.limit-width {
+    .wrap {
+        max-width: 100%;
+
+        img,
+        .container-lazyload,
+        video,
+        iframe {
+            max-width: 600px;
+        }
+
+        @include notmobile-section {
+            max-width: 50%;
+
+            //* When we're on desktop, we don't want one column fully taking over the page. So we limit that.
+            .column {
+                max-width: 60%;
+            }
+        }
+
+        @include tablet-section {
+            max-width: 75%;
         }
     }
 }
