@@ -34,6 +34,7 @@ require_once( 'sections/two_column.php' );
 require_once( 'sections/featured_content_carousel.php' );
 require_once( 'sections/testimonials_slider.php' );
 require_once( 'sections/trust_building_snippets.php' );
+require_once( 'sections/google_maps.php' );
 
 /**
  * This function builds the markup for each of the sections
@@ -111,6 +112,10 @@ function rb_sections_output_sections( $context_prefix ) {
 
 			case 'trust_building_snippets':
 				rb_section_trust_building_snippets( $id, $count, $case, $context_prefix );
+			break;
+
+			case 'google_maps':
+				rb_section_google_maps( $id, $count, $case, $context_prefix );
 			break;
 
 		}

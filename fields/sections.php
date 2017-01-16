@@ -53,6 +53,9 @@ function redblue_sections_set_layouts() {
 	if ( !in_array( 'trust_building_snippets', $disable_layouts ) )
 		include( 'sections/trust_building_snippets.php' );
 
+	if ( !in_array( 'google_maps', $disable_layouts ) )
+		include( 'sections/google_maps.php' );
+
 	//* Allows a theme or another plugin to hook in and add its own section
 	do_action( 'redblue_sections_add_sections' );
 
