@@ -28,10 +28,10 @@
 	.section {
 		padding-top: 100px;
 		padding-bottom: 100px;
-
 		background-color: white;
 		position: relative;
 		margin: 0;
+
 		@include mobile-section {
 			padding-top: 30px;
 			padding-bottom: 30px;
@@ -92,12 +92,15 @@
    ========================================================================== */
 
 .section {
-	ul, ol {
+	ol,
+	ul {
 		padding-left: 35px;
 
+		&:last-child {
+			margin-bottom: 0;
+		}
+
 		li {
-			font-size: 0.9em;
-			line-height: 1.3em;
 			margin-bottom: 10px;
 		}
 	}
@@ -206,7 +209,6 @@
    ========================================================================== */
 
 .section.limit-width {
-
 	&:not( .featured_content_carousel ) {
 		.wrap {
 			max-width: 600px;
