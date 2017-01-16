@@ -8,7 +8,11 @@ function rb_section_google_maps( $id, $count, $case, $context_prefix ) {
 	//* Get the classes ready
 	$class = implode( ' ', $class );
 
+    //* Get the embed code
     $embed = get_post_meta( $id, $context_prefix . $count . '_embed', true );
+
+    //* Add the scrips for Google Maps scrolling fix
+    wp_enqueue_script( 'google-maps-scrollfix' );
 
 	//* Markup for this section
 	printf ( '<section id="section-%s" class="%s">', $count, $class );
@@ -21,6 +25,7 @@ function rb_section_google_maps( $id, $count, $case, $context_prefix ) {
                 echo $embed;
 
         echo '</div>';
+
 
 		do_action( 'after_inside_section_' . $count );
 

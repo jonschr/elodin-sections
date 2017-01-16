@@ -87,6 +87,9 @@ function redblue_sections_enqueue_scripts_styles() {
     //* Enqueue main style
     wp_enqueue_style( 'section-style', plugin_dir_url( __FILE__ ) . '/css/redblue-section-styles.css' );
 
+    //* Google maps scrollfix
+    wp_register_script( 'google-maps-scrollfix', plugin_dir_url( __FILE__ ) . '/js/google-maps-scrollfix.js', array( 'jquery' ), null );
+
     //* Slick slider
 	wp_enqueue_script( 'slick-main', plugin_dir_url( __FILE__ ) . '/slick/slick.js', array( 'jquery' ), null );
 	wp_enqueue_script( 'slick-init', plugin_dir_url( __FILE__ ) . '/js/slick-init.js', array( 'slick-main' ), null );

@@ -20,22 +20,13 @@ $layouts[] = $google_maps = array (
             'conditional_logic' => 0,
         ),
         array (
-            'key' => 'field_oLedymgj9A6GgHvCmFD2',
-            'label' => 'Height of the map',
-            'name' => 'height',
-            'type' => 'number',
-            'wrapper' => array (
-                'width' => 50,
-            ),
-        ),
-        array (
             'key' => 'field_oLedymgj9A6GgHvCmFD3',
             'label' => 'Class',
             'name' => 'class',
             'type' => 'text',
             'conditional_logic' => 0,
             'wrapper' => array (
-                'width' => 50,
+                'width' => '',
             ),
             'placeholder' => 'section-class another-class',
         ),
