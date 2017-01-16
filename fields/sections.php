@@ -93,16 +93,6 @@ function redblue_sections_set_layouts() {
 			'instruction_placement' => 'label',
 			'hide_on_screen' => array (
 				0 => 'the_content',
-				1 => 'custom_fields',
-				2 => 'discussion',
-				3 => 'comments',
-				4 => 'revisions',
-				5 => 'author',
-				6 => 'format',
-				7 => 'featured_image',
-				8 => 'categories',
-				9 => 'tags',
-				10 => 'send-trackbacks',
 			),
 			'active' => 1,
 		));
@@ -131,18 +121,7 @@ function redblue_sections_set_layouts() {
 			'position' => 'acf_after_title',
 			'label_placement' => 'top',
 			'instruction_placement' => 'label',
-			'hide_on_screen' => array (
-				1 => 'custom_fields',
-				2 => 'discussion',
-				3 => 'comments',
-				4 => 'revisions',
-				5 => 'author',
-				6 => 'format',
-				7 => 'featured_image',
-				8 => 'categories',
-				9 => 'tags',
-				10 => 'send-trackbacks',
-			),
+			'hide_on_screen' => array (),
 			'active' => 1,
 		));
 	}
@@ -169,6 +148,7 @@ function redblue_sections_set_layouts() {
 			'position' => 'normal',
 			'label_placement' => 'top',
 			'instruction_placement' => 'label',
+			'hide_on_screen' => array (),
 			'active' => 1,
 		));
 	}
@@ -215,7 +195,7 @@ function redblue_section_above_content_defaults( $above_args ) {
 	return $above_args;
 }
 
-//* Defaults for the default page (above)
+//* Defaults for the default page (below)
 add_filter( 'redblue_section_below_content_display', 'redblue_section_below_content_defaults', 1, 1 );
 function redblue_section_below_content_defaults( $below_args ) {
 
