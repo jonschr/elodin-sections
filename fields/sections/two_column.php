@@ -15,7 +15,7 @@ $layouts[] = $two_column = array (
             'label' => 'Alignment',
             'name' => 'alignment',
             'type' => 'radio',
-            'description' => 'How would you like these sections aligned on desktop? (All sections collapse on small screens in an appropriate way.)',
+            'instructions' => 'How would you like these sections aligned on desktop?',
             'required' => 1,
             'choices' => array (
                 'autowidth' => 'Automatic width',
@@ -23,7 +23,44 @@ $layouts[] = $two_column = array (
                 'thirdright' => '2/3 left, 1/3 right',
                 'halfhalf' => 'Half and half',
             ),
+            'wrapper' => array (
+                'width' => 60,
+            ),
             'layout' => 'horizontal',
+        ),
+        array (
+            'key' => 'field_fqscmagagaHgNXnwwW1',
+            'label' => 'Content above',
+            'name' => 'content_above_selection',
+            'type' => 'radio',
+            'instructions' => 'Content above the two-column area?',
+            'required' => 1,
+            'choices' => array (
+                'no' => 'No',
+                'yes' => 'Yes'
+            ),
+            'wrapper' => array (
+                'width' => 40,
+            ),
+            'layout' => 'horizontal',
+        ),
+        array (
+            'key' => 'field_fqscmHNXnwwW12ga',
+            'label' => 'Content above',
+            'name' => 'content_above',
+            'type' => 'wysiwyg',
+            'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_fqscmagagaHgNXnwwW1',
+						'operator' => '==',
+						'value' => 'yes',
+					),
+				),
+			),
+            'tabs' => 'all',
+            'toolbar' => 'full',
+            'media_upload' => 1,
         ),
         array (
             'key' => 'field_fqscmHNXnwwW1',

@@ -22,6 +22,9 @@ function rb_section_two_column( $id, $count, $case, $context_prefix ) {
 	$class = implode( ' ', $class );
 
 	//* Variables for this section
+	$content_above = get_post_meta( $id, $context_prefix . $count . '_content_above', true );
+	$content_above = apply_filters( 'the_content', $content_above );
+
 	$content_one = get_post_meta( $id, $context_prefix . $count . '_content_one', true );
 	$content_one = apply_filters( 'the_content', $content_one );
 
@@ -37,14 +40,20 @@ function rb_section_two_column( $id, $count, $case, $context_prefix ) {
 
 		do_action( 'before_inside_section_' . $count );
 
-        echo '<div class="wrap"><div class="column-container">';
+		echo '<div class="wrap">';
 
-    		printf( '<div class="column"><div class="content-wrap">%s</div></div>', $content_one );
-    		printf( '<div class="column"><div class="content-wrap">%s</div></div>', $content_two );
+			if ( $content_above )
+				printf( '<div class="content_above">%s</div>', $content_above );
 
-        echo '</div></div>'; // .column-container, .wrap
+	        echo '<div class="column-container">';
+
+	    		printf( '<div class="column"><div class="content-wrap">%s</div></div>', $content_one );
+	    		printf( '<div class="column"><div class="content-wrap">%s</div></div>', $content_two );
+
+	        echo '</div>'; // .wrap
+		echo '</div>'; // .column-container
 
 		do_action( 'after_inside_section_' . $count );
 
-	echo '</section>'; // .wrap, section.section
+	echo '</section>'; // section.section
 }

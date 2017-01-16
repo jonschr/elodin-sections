@@ -95,10 +95,9 @@
    .limit-width
    ========================================================================== */
 
-.flexible-content-page-builder .section.two_column.autowidth.limit-width {
+.flexible-content-page-builder .section.two_column.limit-width {
     .wrap {
         max-width: 100%;
-
 
         //* In the specific case when we're using an image with autowidth and limit-width, we're keeping the images constrained
         img,
@@ -110,7 +109,7 @@
         }
 
         @include notmobile-section {
-            max-width: 50%;
+            max-width: 1000px;
 
             //* When we're on desktop, we don't want one column fully taking over the page. So we limit that.
             .column {
@@ -119,11 +118,12 @@
         }
 
         @include tablet-section {
-            max-width: 75%;
+            max-width: 100%;
 
             //* When we're on desktop, we don't want one column fully taking over the page. So we limit that.
             .column {
-                max-width: 50%;
+                width: auto;
+                max-width: 60%;
             }
         }
     }
