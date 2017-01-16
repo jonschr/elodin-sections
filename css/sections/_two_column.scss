@@ -24,6 +24,7 @@
             width: 48%;
         }
 
+        //* Collapse into columns on mobile
         @include mobile-section {
             flex-direction: column;
 
@@ -37,6 +38,7 @@
         }
     }
 
+    //* Set up some base styles for autowidth layouts
     &.autowidth {
         justify-content: space-around;
 
