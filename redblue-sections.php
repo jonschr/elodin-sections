@@ -100,8 +100,8 @@ function redblue_sections_enqueue_scripts_styles() {
  * @author Ben Bankley (this is incredible, thank you Ben!)
  * https://acfextras.com/flexible-content-page-builder/
  */
-add_action( 'acf/input/admin_head', 'redblue_sections_acf_fc_delete_dialogue' );
-function redblue_sections_acf_fc_delete_dialogue() {
+add_action( 'acf/input/admin_head', 'redblue_sections_delete_dialogue' );
+function redblue_sections_delete_dialogue() {
     ?>
     <script type="text/javascript">
         (function($) {
@@ -121,8 +121,8 @@ function redblue_sections_acf_fc_delete_dialogue() {
 /**
  * Start with all boxes closed, for a less intimidating UI and to avoid accidentally editing the wrong box.
  */
-add_action('acf/input/admin_head', 'my_acf_input_admin_head');
-function my_acf_input_admin_head() {
+add_action('acf/input/admin_head', 'redblue_sections_acf_input_admin_head');
+function redblue_sections_acf_input_admin_head() {
     ?>
         <script type="text/javascript">
         jQuery(function(){
@@ -130,4 +130,9 @@ function my_acf_input_admin_head() {
         });
         </script>
     <?php
+}
+
+//* Set a content width so that videos and images on half-half sections show up correctly
+if ( ! isset( $content_width ) ) {
+	$content_width = 800;
 }

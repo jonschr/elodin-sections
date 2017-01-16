@@ -65,6 +65,52 @@
 	}
 }
 
+/*
+   Font defaults
+   ========================================================================== */
+
+.section {
+	p {
+		margin-bottom: 10px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		padding: 0;
+		line-height: 1em;
+	}
+}
+
+/*
+   Lists
+   ========================================================================== */
+
+.section {
+	ul, ol {
+		padding-left: 35px;
+
+		li {
+			font-size: 0.9em;
+			line-height: 1.3em;
+			margin-bottom: 10px;
+		}
+	}
+
+	ul li {
+		list-style-type: disc;
+	}
+
+	ol li {
+		list-style-type: upper-roman;
+	}
+}
+
 /* Background image
    ========================================================================== */
 

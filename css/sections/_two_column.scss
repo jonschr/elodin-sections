@@ -16,23 +16,25 @@
         display: flex;
         flex-flow: nowrap;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
         flex-direction: row;
+        flex-flow: 0 1 auto;
+
+        .column {
+            width: 48%;
+        }
 
         @include mobile-section {
             flex-direction: column;
+
+            .column {
+                width: 100%;
+            }
 
             .column:nth-child(1) {
                 margin-bottom: 20px;
             }
         }
-
-        @include notmobile-section {
-            .column {
-                flex: 47% 0 0;
-            }
-        }
-
     }
 }
 
@@ -40,27 +42,27 @@
 @include desktop-section {
     .section.two_column.thirdleft {
         .column-container .column:nth-child(1) {
-            flex: 33.3% 0 0;
+            width: 32%;
         }
 
         .column-container .column:nth-child(2) {
-            flex: 60.6% 0 0;
+            width: 64%
         }
     }
 
     .section.two_column.thirdright {
         .column-container .column:nth-child(1) {
-            flex: 66.6% 0 0;
+            width: 64%
         }
 
         .column-container .column:nth-child(2) {
-            flex: 33.3% 0 0;
+            width: 32%;
         }
     }
 
     .section.two_column.halfhalf {
         .column-container .column {
-            flex: 47% 0 0;
+            width: 48%;
         }
     }
 }
