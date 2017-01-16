@@ -39,10 +39,12 @@
 
     //* Set up some base styles for autowidth layouts
     &.autowidth {
-        justify-content: space-around;
+        .column-container {
+            justify-content: center;
+        }
 
         .column:nth-of-type(1) {
-            margin-right: 1%;
+            margin-right: 2%;
         }
 
         .column:nth-of-type(2) {
