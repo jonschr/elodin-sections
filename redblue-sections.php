@@ -3,7 +3,7 @@
 	Plugin Name: Red Blue Sections
 	Plugin URI: http://redblue.us
 	Description: An ACF addon which installs fields and basic layouts for flexible content areas.
-	Version: 0.1
+	Version: 0.9
     Author: Jon Schroeder
     Author URI: http://redblue.us
 
@@ -62,13 +62,13 @@ if ( class_exists( 'acf_pro_updates' ) ) {
     include_once( 'lib/common.php' );
 
     //* Register the custom page template
-    include_once( 'templates/template-common-functions.php' );
+    include_once( 'lib/template-common-functions.php' );
 
     //* Register the custom page template
-    include_once( 'templates/add-template.php' );
+    include_once( 'lib/add-template.php' );
 
     //* Add to the default page template
-    include_once( 'templates/page-default.php' );
+    include_once( 'lib/page-default.php' );
 
     //* The sections themselves
     require_once( 'sections/fullwidth.php' );
@@ -78,7 +78,7 @@ if ( class_exists( 'acf_pro_updates' ) ) {
     require_once( 'sections/featured_3col.php' );
     require_once( 'sections/background_rotator.php' );
     require_once( 'sections/background_video.php' );
-    // require_once( 'sections/threecol_fourth_half_fourth.php' );
+    // require_once( 'sections/threecol_fourth_half_fourth.php' ); // only for use on the Sigmaflow site. If needed, pull from github
     require_once( 'sections/featured_content_checkerboard.php' );
     require_once( 'sections/featured_content_carousel.php' );
     require_once( 'sections/testimonials_slider.php' );
@@ -86,7 +86,10 @@ if ( class_exists( 'acf_pro_updates' ) ) {
     require_once( 'sections/google_maps.php' );
 
     //* Add the fields
-    include_once( 'fields/sections.php' );
+    include_once( 'lib/fields.php' );
+
+    //* Scripts to change default ACF behaviors
+    include_once( 'lib/admin-print-scripts.php' );
 
     //* Do our main function to include scripts and styles
     add_action( 'wp_enqueue_scripts', 'redblue_sections_enqueue_scripts_styles' );
@@ -113,44 +116,7 @@ function redblue_sections_enqueue_scripts_styles() {
 
 }
 
-/**
- * Add a 'Delete confirmation dialgue box' for removing ACF Flexible Content Row
- * @author Ben Bankley (this is incredible, thank you Ben!)
- * https://acfextras.com/flexible-content-page-builder/
- */
-add_action( 'acf/input/admin_head', 'redblue_sections_delete_dialogue' );
-function redblue_sections_delete_dialogue() {
-    ?>
-    <script type="text/javascript">
-        (function($) {
-
-            acf.add_action('ready', function(){
-
-                $('body').on('click', 'li.acf-fc-show-on-hover a.acf-icon.-minus.small', function( e ){
-
-                    return confirm("Do you really want to delete this?");
-                });
-            });
-        })(jQuery);
-    </script>
-    <?php
-}
-
-/**
- * Start with all boxes closed, for a less intimidating UI and to avoid accidentally editing the wrong box.
- */
-add_action('acf/input/admin_head', 'redblue_sections_acf_input_admin_head');
-function redblue_sections_acf_input_admin_head() {
-    ?>
-        <script type="text/javascript">
-        jQuery(function(){
-          jQuery('.layout').addClass('-collapsed');
-        });
-        </script>
-    <?php
-}
-
-//* Set a content width so that videos and images on half-half sections show up correctly
+//* Set a content width so that videos and images aren't tiny by default
 if ( ! isset( $content_width ) ) {
 	$content_width = 800;
 }

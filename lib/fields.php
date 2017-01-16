@@ -14,49 +14,7 @@ function redblue_sections_set_layouts() {
 	//* Allow a theme to add a layout
 	$layouts = apply_filters( 'redblue_section_add_layout', $layouts );
 
-	/**
-	 * Include the files that actually include the layouts, allowing the theme or another plugin to remove them
-	 */
-	// if ( !in_array( 'fullwidth', $disable_layouts ) )
-	// 	include( 'sections/fullwidth.php' );
-	//
-	// if ( !in_array( 'background_video', $disable_layouts ) )
-	// 	include( 'sections/background_video.php' );
-	//
-	// if ( !in_array( 'background_rotator', $disable_layouts ) )
-	// 	include( 'sections/background_rotator.php' );
-	//
-	// if ( !in_array( 'checkerboard', $disable_layouts ) )
-	// 	include( 'sections/checkerboard.php' );
-	//
-	// if ( !in_array( 'featured_content_checkerboard', $disable_layouts ) )
-	// 	include( 'sections/featured_content_checkerboard.php' );
-	//
-	// if ( !in_array( 'two_column', $disable_layouts ) )
-	// 	include( 'sections/two_column.php' );
-	//
-	// if ( !in_array( 'featured_3col', $disable_layouts ) )
-	// 	include( 'sections/featured_3col.php' );
-	//
-	// if ( !in_array( 'threecolumns_onefourth_onehalf_onefourth', $disable_layouts ) )
-	// 	include( 'sections/threecolumns_onefourth_onehalf_onefourth.php' );
-	//
-	// if ( !in_array( 'featured_items', $disable_layouts ) )
-	// 	include( 'sections/featured_items.php' );
-	//
-	// if ( !in_array( 'featured_content_carousel', $disable_layouts ) )
-	// 	include( 'sections/featured_content_carousel.php' );
-	//
-	// if ( !in_array( 'testimonials_slider', $disable_layouts ) )
-	// 	include( 'sections/testimonials_slider.php' );
-	//
-	// if ( !in_array( 'trust_building_snippets', $disable_layouts ) )
-	// 	include( 'sections/trust_building_snippets.php' );
-	//
-	// if ( !in_array( 'google_maps', $disable_layouts ) )
-	// 	include( 'sections/google_maps.php' );
-
-	//* Allows a theme or another plugin to hook in and add its own section
+	//* Add the sections
 	do_action( 'redblue_sections_add_sections' );
 
 	//* Allow a theme to add arguments for where we use the sections
