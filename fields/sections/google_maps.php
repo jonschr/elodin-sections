@@ -15,7 +15,7 @@ $layouts[] = $google_maps = array (
             'label' => 'Embed Code',
             'name' => 'embed',
             'type' => 'text',
-            'instructions' => 'Use a Google Maps embed at whatever zoom level you\'d like to use.',
+            'instructions' => 'Use a Google Maps embed code (not just the URL)',
             'required' => 1,
             'conditional_logic' => 0,
         ),
