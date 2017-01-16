@@ -14,13 +14,12 @@
 .section.two_column {
     .column-container {
         display: flex;
-        flex-flow: nowrap;
         align-items: center;
         justify-content: space-between;
-        flex-direction: row;
-        flex-flow: 0 1 auto;
+        flex-flow: row nowrap;
 
         .column {
+            flex: 0 1 auto;
             width: 48%;
         }
 
@@ -100,11 +99,14 @@
     .wrap {
         max-width: 100%;
 
+
+        //* In the specific case when we're using an image with autowidth and limit-width, we're keeping the images constrained
         img,
         .container-lazyload,
         video,
         iframe {
-            max-width: 600px;
+            max-width: 100%;
+            width: 700px;
         }
 
         @include notmobile-section {
@@ -112,12 +114,17 @@
 
             //* When we're on desktop, we don't want one column fully taking over the page. So we limit that.
             .column {
-                max-width: 60%;
+                max-width: 65%;
             }
         }
 
         @include tablet-section {
             max-width: 75%;
+
+            //* When we're on desktop, we don't want one column fully taking over the page. So we limit that.
+            .column {
+                max-width: 50%;
+            }
         }
     }
 }
