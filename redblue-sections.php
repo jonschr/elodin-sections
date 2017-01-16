@@ -70,6 +70,21 @@ if ( class_exists( 'acf_pro_updates' ) ) {
     //* Add to the default page template
     include_once( 'templates/page-default.php' );
 
+    //* The sections themselves
+    require_once( 'sections/fullwidth.php' );
+    require_once( 'sections/featured_items.php' );
+    require_once( 'sections/two_column.php' );
+    require_once( 'sections/checkerboard.php' );
+    require_once( 'sections/featured_3col.php' );
+    require_once( 'sections/background_rotator.php' );
+    require_once( 'sections/background_video.php' );
+    // require_once( 'sections/threecol_fourth_half_fourth.php' );
+    require_once( 'sections/featured_content_checkerboard.php' );
+    require_once( 'sections/featured_content_carousel.php' );
+    require_once( 'sections/testimonials_slider.php' );
+    require_once( 'sections/trust_building_snippets.php' );
+    require_once( 'sections/google_maps.php' );
+
     //* Add the fields
     include_once( 'fields/sections.php' );
 

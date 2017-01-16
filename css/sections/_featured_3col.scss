@@ -11,32 +11,27 @@
     .container-3col {
         padding-top: 50px;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-content: center;
-        flex-wrap: wrap;
-        flex-direction: row;
+        flex-flow: row wrap;
 
         @include mobile-section {
-            padding-top: 20px;
+            flex-flow: column;
         }
 
         .column {
-            flex: 29% 0 0;
+            flex: 0 1 auto;
+            width: 30%;
             background-color: #333;
             color: white;
-            margin-left: 2%;
-            margin-right: 2%;
 
             @include tablet-section {
-                flex: 46% 0 0;
+                width: 48%;
                 margin-bottom: 35px;
             }
 
             @include mobile-section {
-                flex: 100% 0 0;
-                margin-bottom: 20px;
-                margin-left: 0;
-                margin-right: 0;
+                width: 100%;
             }
 
             &:last-child {
@@ -56,6 +51,7 @@
 
             .content {
                 margin-bottom: 10px;
+                max-width: 100%;
             }
         }
 
