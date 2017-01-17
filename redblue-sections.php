@@ -77,6 +77,7 @@ if ( class_exists( 'acf_pro_updates' ) ) {
     require_once( 'sections/checkerboard.php' );
     require_once( 'sections/featured_3col.php' );
     require_once( 'sections/background_rotator.php' );
+    require_once( 'sections/background_image_slider.php' );
     require_once( 'sections/background_video.php' );
     // require_once( 'sections/threecol_fourth_half_fourth.php' ); // only for use on the Sigmaflow site. If needed, pull from github
     require_once( 'sections/featured_content_checkerboard.php' );
@@ -108,10 +109,19 @@ function redblue_sections_enqueue_scripts_styles() {
     //* Google maps scrollfix
     wp_register_script( 'google-maps-scrollfix', plugin_dir_url( __FILE__ ) . '/js/google-maps-scrollfix.js', array( 'jquery' ), null );
 
-    //* Slick slider
+    ///////////
+    // SLICK //
+    ///////////
+
+    //* Slick slider main scripts
 	wp_enqueue_script( 'slick-main', plugin_dir_url( __FILE__ ) . '/slick/slick.js', array( 'jquery' ), null );
 	wp_enqueue_script( 'slick-init', plugin_dir_url( __FILE__ ) . '/js/slick-init.js', array( 'slick-main' ), null );
-	wp_enqueue_style( 'slick-style', plugin_dir_url( __FILE__ ) . '/slick/slick.css' );
+
+    //* Specific slider scripts
+    wp_register_script( 'background-image-slider-init', plugin_dir_url( __FILE__ ) . '/js/background_image_slider-init.js', array( 'slick-main' ), null );
+
+    //* Slick styles
+    wp_enqueue_style( 'slick-style', plugin_dir_url( __FILE__ ) . '/slick/slick.css' );
 	wp_enqueue_style( 'slick-theme', plugin_dir_url( __FILE__ ) . '/slick/slick-theme.css' );
 
 }
