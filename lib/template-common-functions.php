@@ -42,13 +42,21 @@ function rb_sections_output_sections( $context_prefix ) {
 
 	foreach( (array) $rows as $count => $case ) {
 
-		//* A hook to allow for adding things before each section
+		//* A hook to allow for adding things before each section (programmaticaly, every time we're using a particular layout)
 		do_action( $context_prefix . 'before_section_' . $count );
+		// echo $context_prefix . 'before_section_' . $count; // for testing, to easily show the name of the hook to use
+
+		//* A hook for adding things before the section number, regardless of which template
+		do_action( 'before_section_' . $count );
 
 		// * A hook to allow for layouts to be added by other themes or plugins
 		do_action( 'redblue_sections_add_layout', $id, $count, $case, $context_prefix );
 
+		//* A hook for adding things before the section number, regardless of which template
+		do_action( 'after_section_' . $count );
+
 		//* A hook to allow for adding things after each section
 		do_action( $context_prefix . 'after_section_' . $count );
+		// echo $context_prefix . 'after_section_' . $count; // for testing, to easily show the name of the hook to use
 	}
 }
