@@ -117,7 +117,7 @@ function redblue_section_markup_background_image_slider( $id, $count, $case, $co
 
 		for ( $i=0; $i < $slides; $i++ ) {
 
-            $slide_content = get_post_meta( $id, $context_prefix . $count . '_slide_' . $i . '_content', true );
+            $slide_content = apply_filters( 'the_content', get_post_meta( $id, $context_prefix . $count . '_slide_' . $i . '_content', true ) );
             $image_id = get_post_meta( $id, $context_prefix . $count . '_slide_' . $i . '_image', true );
 
             $slide_class = '';
