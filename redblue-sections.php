@@ -83,6 +83,7 @@ if ( class_exists( 'acf_pro_updates' ) ) {
     require_once( 'sections/featured_content_checkerboard.php' );
     require_once( 'sections/featured_content_carousel.php' );
     require_once( 'sections/testimonials_slider.php' );
+    require_once( 'sections/sliding_accordion.php' );
     require_once( 'sections/trust_building_snippets.php' );
     require_once( 'sections/google_maps.php' );
 
@@ -119,6 +120,7 @@ function redblue_sections_enqueue_scripts_styles() {
 
     //* Specific slider scripts
     wp_register_script( 'background-image-slider-init', plugin_dir_url( __FILE__ ) . '/js/background_image_slider-init.js', array( 'slick-main' ), null );
+    wp_register_script( 'accordion-slider-init', plugin_dir_url( __FILE__ ) . '/js/accordion-slider-init.js', array( 'slick-main' ), null );
 
     //* Slick styles
     wp_enqueue_style( 'slick-style', plugin_dir_url( __FILE__ ) . '/slick/slick.css' );
