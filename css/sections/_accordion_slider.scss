@@ -21,12 +21,12 @@
     }
 
     .accordion-slider-nav {
-
         .slick-track {
             margin: 0 auto;
         }
 
-        .slick-prev:before, .slick-next:before {
+        .slick-next:before,
+        .slick-prev:before {
             font-family: 'dashicons';
             color: #333;
         }
@@ -58,7 +58,7 @@
                     left: 50%;
                     background-color: rgba( black, 0.1 );
                     transform: translateX( -50% );
-                    transition: .3s all ease;
+                    transition: 0.3s all ease;
                     margin-top: 3px;
                 }
             }
@@ -74,10 +74,8 @@
         }
     }
 
-
     span.tab-name-wrap {
-
-    }
+        }
 
 }
 
@@ -87,24 +85,25 @@
 
 .section.sliding_accordion {
     .accordion-slider-section {
-        padding: 70px 0;
         background-color: #f5f5f5;
-
-        @include mobile-section {
-            padding: 20px 0;
-        }
 
         hr {
             margin: 50px 0;
             border: 1px solid #ebebeb;
-
             @include mobile-section {
                 margin: 20px 0;
             }
         }
 
         .slide {
-            // background-color: #f5f5f5;
+            padding: 70px 0;
+            @include mobile-section {
+                padding: 20px 0;
+            }
+
+            &.no-padding {
+                padding: 0;
+            }
         }
     }
 }

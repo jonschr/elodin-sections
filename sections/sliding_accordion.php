@@ -135,8 +135,9 @@ function redblue_section_markup_sliding_accordion( $id, $count, $case, $context_
 
                 //* Get the tab name
                 $tab_name = get_post_meta( $id, $context_prefix . $count . '_tab_' . $i . '_name', true );
+                $number = $i;
 
-                printf( '<div class="slide"><span class="tab-name-wrap">%s</span></div>', $tab_name );
+                printf( '<div class="slide" id="nav-%s"><span class="tab-name-wrap">%s</span></div>', $i, $tab_name );
             }
 
         echo '</div></div></div>';
@@ -149,7 +150,23 @@ function redblue_section_markup_sliding_accordion( $id, $count, $case, $context_
                 $tab_content = get_post_meta( $id, $context_prefix . $count . '_tab_' . $i . '_content', true );
                 $tab_content = apply_filters( 'the_content', $tab_content );
 
-                printf( '<div class="slide"><div class="wrap">%s</div></div>', $tab_content );
+                $padding = get_post_meta( $id, $context_prefix . $count . '_tab_' . $i . '_padding', true );
+                $number = $i;
+
+                if ( $padding != 'no' )
+                    printf( '<div class="slide" id="tab-%s">',  $id );
+
+                if ( $padding == 'no' )
+                    printf( '<div class="slide no-padding" id="tab-%s">',  $id );
+
+                    if ( $tab_content )
+                        printf( '<div class="wrap">%s</div>', $tab_content );
+
+                    //* Allow a theme to hook in if we wanted to do a loop or something here
+                    do_action( 'redblue_section_tab_' . $i . '_content' );
+
+                echo '</div>';
+
             }
 
         echo '</div></div>';
