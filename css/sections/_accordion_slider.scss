@@ -1,0 +1,110 @@
+/* ==========================================================================
+   Section defaults
+   ========================================================================== */
+
+.section.sliding_accordion {
+    padding: 0;
+
+    .slide:focus {
+        outline: none;
+    }
+}
+
+/* ==========================================================================
+   Accordion slider navigation
+   ========================================================================== */
+
+.section.sliding_accordion {
+    .accordion-nav-container {
+        background-color: white;
+        border-bottom: 1px solid #ebebeb;
+    }
+
+    .accordion-slider-nav {
+
+        .slick-track {
+            margin: 0 auto;
+        }
+
+        .slick-prev:before, .slick-next:before {
+            font-family: 'dashicons';
+            color: #333;
+        }
+
+        .slick-prev:before {
+            content: "\f341";
+        }
+
+        .slick-next:before {
+            content: "\f345";
+        }
+
+        .slide {
+            padding: 20px 0;
+            text-align: center;
+            line-height: 1em;
+            cursor: pointer;
+
+            span.tab-name-wrap {
+                position: relative;
+                display: inline-block;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    height: 3px;
+                    width: 0;
+                    left: 50%;
+                    background-color: rgba( black, 0.1 );
+                    transform: translateX( -50% );
+                    transition: .3s all ease;
+                    margin-top: 3px;
+                }
+            }
+
+            &.slick-current,
+            &:hover {
+                span.tab-name-wrap {
+                    &:after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+
+    span.tab-name-wrap {
+
+    }
+
+}
+
+/* ==========================================================================
+   Accordion slides
+   ========================================================================== */
+
+.section.sliding_accordion {
+    .accordion-slider-section {
+        padding: 70px 0;
+        background-color: #f5f5f5;
+
+        @include mobile-section {
+            padding: 20px 0;
+        }
+
+        hr {
+            margin: 50px 0;
+            border: 1px solid #ebebeb;
+
+            @include mobile-section {
+                margin: 20px 0;
+            }
+        }
+
+        .slide {
+            // background-color: #f5f5f5;
+        }
+    }
+}

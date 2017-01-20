@@ -83,6 +83,7 @@ if ( class_exists( 'acf_pro_updates' ) ) {
     require_once( 'sections/featured_content_checkerboard.php' );
     require_once( 'sections/featured_content_carousel.php' );
     require_once( 'sections/testimonials_slider.php' );
+    require_once( 'sections/sliding_accordion.php' );
     require_once( 'sections/trust_building_snippets.php' );
     require_once( 'sections/google_maps.php' );
 
@@ -117,13 +118,16 @@ function redblue_sections_enqueue_scripts_styles() {
 	wp_register_script( 'slick-main', plugin_dir_url( __FILE__ ) . 'slick/slick.min.js', array( 'jquery' ), null, true );
 	wp_register_script( 'slick-init', plugin_dir_url( __FILE__ ) . 'js/slick-init.js', array( 'slick-main' ), null, true );
 
+    //* Slick styles
+    wp_register_style( 'slick-style', plugin_dir_url( __FILE__ ) . 'slick/slick.css', null, true );
+    wp_register_style( 'slick-theme', plugin_dir_url( __FILE__ ) . 'slick/slick-theme.css', null, true );
+
     //* Specific slider scripts
     wp_register_script( 'background-image-slider-init', plugin_dir_url( __FILE__ ) . 'js/background_image_slider-init.js', array( 'slick-main' ), null, true );
     wp_register_script( 'background-rotator-init', plugin_dir_url( __FILE__ ) . 'js/background_rotator-init.js', array( 'slick-main' ), null, true );
 
-    //* Slick styles
-    wp_register_style( 'slick-style', plugin_dir_url( __FILE__ ) . 'slick/slick.css', null, true );
-	wp_register_style( 'slick-theme', plugin_dir_url( __FILE__ ) . 'slick/slick-theme.css', null, true );
+    //* Accordion script
+    wp_register_script( 'accordion-slider-init', plugin_dir_url( __FILE__ ) . '/js/accordion-slider-init.js', array( 'slick-main' ), null );
 
 }
 
