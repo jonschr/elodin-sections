@@ -105,14 +105,14 @@ function redblue_section_markup_sliding_accordion( $id, $count, $case, $context_
 	if ( $case != 'sliding_accordion' )
 		return;
 
-    //* Enqueue the scripts
-    wp_enqueue_script( 'slick-main' );
-    wp_enqueue_script( 'accordion-slider-init' );
-
-    //* Enqueue the styles
+    //* Enqueue the scripts and styles
     wp_enqueue_style( 'dashicons' );
     wp_enqueue_style( 'slick-style' );
     wp_enqueue_style( 'slick-theme' );
+
+    wp_enqueue_script( 'slick-main' );
+    // wp_enqueue_script( 'accordion-slider-init' . $context_prefix . $count );
+    wp_enqueue_script( 'accordion-slider-init' . $context_prefix . $count, dirname( plugin_dir_url( __FILE__ ) ). '/js/accordion-slider-init.js', array( 'slick-main' ), null );
 
     //* Do the function which figures out which classes we need
 	$class = rb_section_class_setup( $id, $count, $case, $context_prefix );
@@ -123,13 +123,24 @@ function redblue_section_markup_sliding_accordion( $id, $count, $case, $context_
 	//* Get the background image information
 	$tabs = get_post_meta( $id, $context_prefix . $count . '_tab', true );
 
-	//* Variables for this section
-	// $content = get_post_meta( $id, $context_prefix . $count . '_content', true );
-	// $content = apply_filters( 'the_content', $content );
+    //* We're getting variables here to connect the javascript with the specific classes used here
+    $nav_class = $context_prefix . $count . '_nav';
+    $nav_class_with_dot = '.' . $nav_class;
+    $content_class = $context_prefix . $count . '_content';
+    $content_class_with_dot = '.' . $content_class;
+
+    //* Localize the script
+    wp_localize_script( 'accordion-slider-init' . $context_prefix . $count, 'accordion_vars',
+        array(
+            'navarea_class' => $nav_class_with_dot,
+            'contentarea_class' => $content_class_with_dot
+        )
+    );
 
 	printf ( '<section id="section-%s" class="%s">', $count, $class );
 
-        echo '<div class="accordion-nav-container"><div class="wrap"><div class="accordion-slider-nav">';
+        //* Output the area, adding the nav_class so that we can have multiples areas on a page
+        printf( '<div class="accordion-nav-container"><div class="wrap"><div class="accordion-slider-nav %s">', $nav_class );
 
             for ($i=0; $i < $tabs; $i++) {
 
@@ -142,7 +153,8 @@ function redblue_section_markup_sliding_accordion( $id, $count, $case, $context_
 
         echo '</div></div></div>';
 
-        echo '<div class="accordion-slider-section-container"><div class="accordion-slider-section">';
+        //* Output the area, adding the content_class so that we can have multiples areas on a page
+        printf( '<div class="accordion-slider-section-container"><div class="accordion-slider-section %s">', $content_class );
 
             for ($i=0; $i < $tabs; $i++) {
 

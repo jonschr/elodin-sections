@@ -1,26 +1,31 @@
 jQuery(document).ready(function($) {
 
-    $('.accordion-slider-section').slick({
+    console.log( accordion_vars.navarea_class );
+    console.log( accordion_vars.contentarea_class );
+
+    $( accordion_vars.contentarea_class).slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
-        asNavFor: '.accordion-slider-nav',
+        asNavFor: accordion_vars.navarea_class ,
         focusOnSelect: true,
         fade: false,
+        adaptiveHeight: true,
         swipeToSlide: true,
         infinite: true,
     });
 
-    $('.accordion-slider-nav').slick({
+    $( accordion_vars.navarea_class ).slick({
         slidesToShow: 5,
         slidesToScroll: 1,
-        asNavFor: '.accordion-slider-section',
+        asNavFor: accordion_vars.contentarea_class,
         dots: false,
         arrows: true,
         infinite: true,
         focusOnSelect: true,
         swipeToSlide: true,
         centerMode: false,
+        adaptiveHeight: true,
         variableWidth: false,
         responsive: [{
                 breakpoint: 1000,
