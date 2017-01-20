@@ -99,6 +99,14 @@ function redblue_section_markup_background_rotator( $id, $count, $case, $context
 	if ( $case != 'background_rotator' )
 		return;
 
+    //* Enqueue the scripts
+    wp_enqueue_script( 'slick-main' );
+    wp_enqueue_script( 'background-rotator-init' );
+
+    //* Enqueue the styles
+    wp_enqueue_style( 'slick-style' );
+    wp_enqueue_style( 'slick-theme' );
+
     //* Do the function which figures out which classes we need
 	$class = rb_section_class_setup( $id, $count, $case, $context_prefix );
 	$class[] = 'slick-slider';
