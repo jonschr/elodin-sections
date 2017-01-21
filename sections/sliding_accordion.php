@@ -112,7 +112,7 @@ function redblue_section_markup_sliding_accordion( $id, $count, $case, $context_
 
     wp_enqueue_script( 'slick-main' );
     // wp_enqueue_script( 'accordion-slider-init' . $context_prefix . $count );
-    wp_enqueue_script( 'accordion-slider-init' . $context_prefix . $count, dirname( plugin_dir_url( __FILE__ ) ). '/js/accordion-slider-init.js', array( 'slick-main' ), null );
+    // wp_enqueue_script( 'accordion-slider-init' . $context_prefix . $count, dirname( plugin_dir_url( __FILE__ ) ). '/js/accordion-slider-init.js', array( 'slick-main' ), null );
 
     //* Do the function which figures out which classes we need
 	$class = rb_section_class_setup( $id, $count, $case, $context_prefix );
@@ -129,14 +129,68 @@ function redblue_section_markup_sliding_accordion( $id, $count, $case, $context_
     $content_class = $context_prefix . $count . '_content';
     $content_class_with_dot = '.' . $content_class;
 
-    //* Localize the script
-    wp_localize_script( 'accordion-slider-init' . $context_prefix . $count, 'accordion_vars',
-        array(
-            'navarea_class' => $nav_class_with_dot,
-            'contentarea_class' => $content_class_with_dot
-        )
-    );
+    //* NOTE: We're outputting the script the ugly way below.
+    //* I'd love to someday update this enqueuing all of the scripts with wp_localize_script
+    //* But in the last version of this attempted that didn't allow for outputting multiple times on the page
 
+    //* Localize the script
+    // wp_localize_script( 'accordion-slider-init', 'accordion_vars' . $count,
+    //     array(
+    //         'navarea_class' => $nav_class_with_dot,
+    //         'contentarea_class' => $content_class_with_dot
+    //     )
+    // );
+
+    ?>
+    <script>
+    jQuery(document).ready(function($) {
+
+        // console.log( <?php // echo $nav_class_with_dot; ?> );
+        // console.log( <?php // echo $content_class_with_dot; ?> );
+
+        $( <?php echo "'" . $content_class_with_dot . "'"; ?> ).slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            asNavFor: <?php echo "'" . $nav_class_with_dot . "'"; ?> ,
+            focusOnSelect: true,
+            fade: false,
+            adaptiveHeight: true,
+            swipeToSlide: true,
+            infinite: true,
+        });
+
+        $( <?php echo "'" . $nav_class_with_dot . "'"; ?> ).slick({
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            asNavFor: <?php echo "'" . $content_class_with_dot . "'"; ?>,
+            dots: false,
+            arrows: true,
+            infinite: true,
+            focusOnSelect: true,
+            swipeToSlide: true,
+            centerMode: false,
+            adaptiveHeight: true,
+            variableWidth: false,
+            responsive: [{
+                    breakpoint: 1000,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+
+    });
+    </script>
+
+    <?php
 	printf ( '<section id="section-%s" class="%s">', $count, $class );
 
         //* Output the area, adding the nav_class so that we can have multiples areas on a page
