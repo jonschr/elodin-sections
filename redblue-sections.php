@@ -91,10 +91,28 @@ if ( class_exists( 'acf_pro_updates' ) ) {
     include_once( 'lib/fields.php' );
 
     //* Scripts to change default ACF behaviors
-    include_once( 'lib/admin-print-scripts.php' );
+    // include_once( 'lib/admin-print-scripts.php' );
 
     //* Do our main function to include scripts and styles
     add_action( 'wp_enqueue_scripts', 'redblue_sections_enqueue_scripts_styles' );
+}
+
+//* Enqueue admin scripts and styles
+add_action( 'acf/input/admin_head', 'redblue_sections_admin_scripts' );
+function redblue_sections_admin_scripts() {
+
+    if ( !is_admin() )
+        return;
+
+    //* Make all ACF boxes start each pageload closed (this makes it easier to use)
+    wp_enqueue_script( 'redblue-sections-close-on-load', plugin_dir_url( __FILE__ ) . 'js/admin_close_everything_on_load.js', array( 'jquery' ), null );
+
+    //* Prevent one-click (accidental) deletions of fields
+    wp_enqueue_script( 'redblue-sections-delete-confirmation-box', plugin_dir_url( __FILE__ ) . 'js/admin_delete_confirmation_box.js', array( 'jquery' ), null );
+
+    //* Custom styles for the admin area
+    wp_enqueue_style( 'redblue-sections-admin-style', plugin_dir_url( __FILE__ ) . 'css/admin-style.css' );
+
 }
 
 //* Enqueue Scripts and Styles
@@ -105,7 +123,7 @@ function redblue_sections_enqueue_scripts_styles() {
 		return;
 
     //* Enqueue main style
-    wp_enqueue_style( 'section-style', plugin_dir_url( __FILE__ ) . '/css/redblue-section-styles.css' );
+    wp_enqueue_style( 'redblue-section-style', plugin_dir_url( __FILE__ ) . '/css/redblue-section-styles.css' );
 
     //* Google maps scrollfix
     wp_register_script( 'google-maps-scrollfix', plugin_dir_url( __FILE__ ) . '/js/google-maps-scrollfix.js', array( 'jquery' ), null );
@@ -125,6 +143,7 @@ function redblue_sections_enqueue_scripts_styles() {
     //* Specific slider scripts
     wp_register_script( 'background-image-slider-init', plugin_dir_url( __FILE__ ) . 'js/background_image_slider-init.js', array( 'slick-main' ), null, true );
     wp_register_script( 'background-rotator-init', plugin_dir_url( __FILE__ ) . 'js/background_rotator-init.js', array( 'slick-main' ), null, true );
+    wp_register_script( 'featured-content-carousel-init', plugin_dir_url( __FILE__ ) . 'js/featured_content_carousel-init.js', array( 'slick-main' ), null, true );
 
     //* Accordion script
     // wp_register_script( 'accordion-slider-init', plugin_dir_url( __FILE__ ) . '/js/accordion-slider-init.js', array( 'slick-main' ), null );

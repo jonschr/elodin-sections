@@ -36,7 +36,7 @@ function redblue_section_fields_sliding_accordion( $layouts ) {
                     'class' => '',
                     'id' => '',
                 ),
-                'collapsed' => 'field_tk7eRNKJHuUCwsDYV2z3',
+                'collapsed' => 'field_tk7eRNKJHuUCwsDYV2z4',
                 'min' => '',
                 'max' => '',
                 'layout' => 'block',
@@ -47,9 +47,19 @@ function redblue_section_fields_sliding_accordion( $layouts ) {
                         'label' => 'Tab name',
                         'name' => 'name',
                         'type' => 'text',
-                        'instructions' => '',
+                        'instructions' => 'Displays in the tab navigation, but not in the section itself.',
                         'wrapper' => array (
-                            'width' => 33.3,
+                            'width' => 33,
+                        ),
+                    ),
+                    array (
+                        'key' => 'field_tk7eRNKJHuUCwsDYV2z78',
+                        'label' => 'Tab image (optional)',
+                        'name' => 'image',
+                        'type' => 'image',
+                        'instructions' => 'This displays above the tab name (could be an icon)',
+                        'wrapper' => array (
+                            'width' => 33,
                         ),
                     ),
                     array (
@@ -60,23 +70,15 @@ function redblue_section_fields_sliding_accordion( $layouts ) {
                         'instructions' => 'Use default padding on this section?',
                         'required' => 1,
                         'choices' => array (
-                            'yes' => 'Default padding',
-                            'no' => 'No padding'
+                            'yes' => 'Both',
+                            'horizontal' => 'Horizontal',
+                            'vertical' => 'Vertical',
+                            'no' => 'None'
                         ),
                         'wrapper' => array (
-                            'width' => 33.3,
+                            'width' => 33,
                         ),
                         'layout' => 'horizontal',
-                    ),
-                    array (
-                        'key' => 'field_tk7eRNKJHuUCwsDYV2z6',
-                        'label' => 'Tab class',
-                        'name' => 'class',
-                        'type' => 'text',
-                        'placeholder' => 'tab-class another-class',
-                        'wrapper' => array (
-                            'width' => 33.3,
-                        ),
                     ),
                     array (
                         'key' => 'field_tk7eRNKJHuUCwsDYV2z7',
@@ -84,6 +86,13 @@ function redblue_section_fields_sliding_accordion( $layouts ) {
                         'name' => 'content',
                         'type' => 'wysiwyg',
                         'instructions' => '',
+                    ),
+                    array (
+                        'key' => 'field_tk7eRNKJHuUCwsDYV2z6',
+                        'label' => 'Tab class',
+                        'name' => 'class',
+                        'type' => 'text',
+                        'placeholder' => 'tab-class another-class',
                     ),
                 ),
             ),
@@ -198,11 +207,18 @@ function redblue_section_markup_sliding_accordion( $id, $count, $case, $context_
 
             for ($i=0; $i < $tabs; $i++) {
 
+                //* Get the image url if there is one
+                $image = wp_get_attachment_image_src( get_post_meta( $id, $context_prefix . $count . '_tab_' . $i . '_image', true ), 'medium' );
+
                 //* Get the tab name
                 $tab_name = get_post_meta( $id, $context_prefix . $count . '_tab_' . $i . '_name', true );
                 $number = $i;
 
-                printf( '<div class="slide" id="nav-%s"><span class="tab-name-wrap">%s</span></div>', $i, $tab_name );
+                if ( !$image )
+                    printf( '<div class="slide" id="nav-%s"><span class="tab-name-wrap">%s</span></div>', $i, $tab_name );
+
+                if ( $image )
+                    printf( '<div class="slide" id="nav-%s"><div class="tab-icon" style="background-image:url(%s)"></div><span class="tab-name-wrap">%s</span></div>', $i, $image[0], $tab_name );
             }
 
         echo '</div></div></div>';
@@ -219,14 +235,17 @@ function redblue_section_markup_sliding_accordion( $id, $count, $case, $context_
                 $padding = get_post_meta( $id, $context_prefix . $count . '_tab_' . $i . '_padding', true );
                 $number = $i;
 
-                if ( $padding != 'no' )
+                if ( $padding == 'yes' || $padding == 'vertical' )
                     printf( '<div class="slide" id="tab-%s">',  $id );
 
-                if ( $padding == 'no' )
+                if ( $padding == 'no' || $padding == 'horizontal' )
                     printf( '<div class="slide no-padding" id="tab-%s">',  $id );
 
-                    if ( $tab_content )
+                    if ( $tab_content && ( $padding == 'yes' || $padding == 'horizontal' ) )
                         printf( '<div class="wrap">%s</div>', $tab_content );
+
+                    if ( $tab_content && ( $padding == 'no' || $padding == 'vertical' ) )
+                        printf( '<div class="alt-wrap">%s</div>', $tab_content );
 
                     //* Allow a theme to hook in if we wanted to do a loop or something here
                     do_action( 'redblue_section_tab_' . $i . '_content' );

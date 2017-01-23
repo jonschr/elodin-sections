@@ -30,8 +30,11 @@ add_action('acf/input/admin_head', 'redblue_sections_acf_input_admin_head');
 function redblue_sections_acf_input_admin_head() {
     ?>
         <script type="text/javascript">
-        jQuery(function(){
-          jQuery('.layout').addClass('-collapsed');
+        jQuery(document).ready(function( $ ) {
+
+            $( '.layout' ).addClass( '-collapsed' );
+            $( '.acf-row' ).addClass( '-collapsed' );
+
         });
         </script>
     <?php
