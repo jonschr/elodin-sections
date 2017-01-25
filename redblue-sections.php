@@ -61,14 +61,14 @@ if ( class_exists( 'acf_pro_updates' ) ) {
     //* Get common functions
     include_once( 'lib/common.php' );
 
-    //* Register the custom page template
-    include_once( 'lib/template-common-functions.php' );
+    //* Add the fields
+    include_once( 'lib/fields.php' );
 
     //* Register the custom page template
     include_once( 'lib/add-template.php' );
 
-    //* Add to the default page template
-    include_once( 'lib/page-default.php' );
+    //* Add functions to set up the body class and figure out the type of sections we might have
+    include_once( 'lib/output-setup.php' );
 
     //* The sections themselves
     require_once( 'sections/fullwidth.php' );
@@ -87,14 +87,8 @@ if ( class_exists( 'acf_pro_updates' ) ) {
     require_once( 'sections/trust_building_snippets.php' );
     require_once( 'sections/google_maps.php' );
 
-    //* Add the fields
-    include_once( 'lib/fields.php' );
-
-    //* Scripts to change default ACF behaviors
-    // include_once( 'lib/admin-print-scripts.php' );
-
-    //* Do our main function to include scripts and styles
-    add_action( 'wp_enqueue_scripts', 'redblue_sections_enqueue_scripts_styles' );
+    //* Output the actual sections
+    include_once( 'lib/output-sections.php' );
 }
 
 //* Enqueue admin scripts and styles
@@ -116,6 +110,7 @@ function redblue_sections_admin_scripts() {
 }
 
 //* Enqueue Scripts and Styles
+add_action( 'wp_enqueue_scripts', 'redblue_sections_enqueue_scripts_styles' );
 function redblue_sections_enqueue_scripts_styles() {
 
     //* Don't add these scripts and styles to the admin side of the site

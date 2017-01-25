@@ -24,7 +24,6 @@ function rb_section_class_setup( $id, $count, $case, $context_prefix ) {
 /**
  * This function builds the markup for each of the sections
  * @param  string $context_prefix is the prefix for where the section is being used (this gives us the ability to use the same field group twice on one page, which is useful for header/footer use cases on standard pages)
- * @return [type]          [description]
  */
 function rb_sections_output_sections( $context_prefix ) {
 
@@ -35,28 +34,30 @@ function rb_sections_output_sections( $context_prefix ) {
 	$id = get_the_id();
 
     //* This is the only place (other than where we register the field) where we need the context prefix without the underscore
-    $context_prefix_without_trailing_underscore = substr( $context_prefix, 0, -1);
+    $context_prefix_without_trailing_underscore = substr( $context_prefix, 0, -1 );
 
     //* Figure out how many rows exist
 	$rows = get_post_meta( $id, $context_prefix_without_trailing_underscore, true );
 
-	foreach( (array) $rows as $count => $case ) {
+	if ( $rows ) {
+		foreach( (array) $rows as $count => $case ) {
 
-		//* A hook to allow for adding things before each section (programmaticaly, every time we're using a particular layout)
-		do_action( $context_prefix . 'before_section_' . $count );
-		// echo $context_prefix . 'before_section_' . $count; // for testing, to easily show the name of the hook to use
+			//* A hook to allow for adding things before each section (programmaticaly, every time we're using a particular layout)
+			do_action( $context_prefix . 'before_section_' . $count );
+			// echo $context_prefix . 'before_section_' . $count; // for testing, to easily show the name of the hook to use
 
-		//* A hook for adding things before the section number, regardless of which template
-		do_action( 'before_section_' . $count );
+			//* A hook for adding things before the section number, regardless of which template
+			do_action( 'before_section_' . $count );
 
-		// * A hook to allow for layouts to be added by other themes or plugins
-		do_action( 'redblue_sections_add_layout', $id, $count, $case, $context_prefix );
+			// * A hook to allow for layouts to be added by other themes or plugins
+			do_action( 'redblue_sections_add_layout', $id, $count, $case, $context_prefix );
 
-		//* A hook for adding things before the section number, regardless of which template
-		do_action( 'after_section_' . $count );
+			//* A hook for adding things before the section number, regardless of which template
+			do_action( 'after_section_' . $count );
 
-		//* A hook to allow for adding things after each section
-		do_action( $context_prefix . 'after_section_' . $count );
-		// echo $context_prefix . 'after_section_' . $count; // for testing, to easily show the name of the hook to use
+			//* A hook to allow for adding things after each section
+			do_action( $context_prefix . 'after_section_' . $count );
+			// echo $context_prefix . 'after_section_' . $count; // for testing, to easily show the name of the hook to use
+		}
 	}
 }
