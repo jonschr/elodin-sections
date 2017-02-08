@@ -86,6 +86,7 @@ if ( class_exists( 'acf_pro_updates' ) ) {
     require_once( 'sections/sliding_accordion.php' );
     require_once( 'sections/trust_building_snippets.php' );
     require_once( 'sections/google_maps.php' );
+    require_once( 'sections/scrollspy_nav.php' );
 
     //* Output the actual sections
     include_once( 'lib/output-sections.php' );
@@ -139,6 +140,13 @@ function redblue_sections_enqueue_scripts_styles() {
     wp_register_script( 'background-image-slider-init', plugin_dir_url( __FILE__ ) . 'js/background_image_slider-init.js', array( 'slick-main' ), null, true );
     wp_register_script( 'background-rotator-init', plugin_dir_url( __FILE__ ) . 'js/background_rotator-init.js', array( 'slick-main' ), null, true );
     wp_register_script( 'featured-content-carousel-init', plugin_dir_url( __FILE__ ) . 'js/featured_content_carousel-init.js', array( 'slick-main' ), null, true );
+
+    ///////////////
+    // SCROLLSPY //
+    ///////////////
+
+    wp_register_script( 'scrollspy', plugin_dir_url( __FILE__ ) . '/js/scrollspy.js', array( 'jquery' ), null, true );
+    wp_register_script( 'sections-smoothscroll', plugin_dir_url( __FILE__ ) . '/js/smoothscroll.js', array( 'jquery' ), null, true );
 
     //* Accordion script
     // wp_register_script( 'accordion-slider-init', plugin_dir_url( __FILE__ ) . '/js/accordion-slider-init.js', array( 'slick-main' ), null );
