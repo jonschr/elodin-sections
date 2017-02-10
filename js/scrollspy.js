@@ -27,15 +27,15 @@ jQuery(document).ready(function( $ ) {
         // console.log( current_position );
 
         //* If we're almost to the nav (or past it), we convert it to be fixed
-        if ( current_position >= top - 2*height ) {
+        if ( current_position >= top ) {
 
             //* Add the fixed class
             $( nav_element ).addClass('fixed');
             
-            $( 'section.section' ).each(function(i) {
+            $( '.section-anchor' ).each(function(i) {
 
                 //* If the top of the section is a bit higher than our current position (plus 3x the height of our menu, to make sure), make that nav item active 
-                if ( $( this ).position().top <= current_position + 3*height ) {
+                if ( $( this ).position().top <= current_position ) {
 
                     $( nav_element + ' a.active' ).removeClass('active');
                     $( nav_element + ' a' ).eq(i).addClass('active');
