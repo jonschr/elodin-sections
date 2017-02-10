@@ -17,6 +17,48 @@ function redblue_section_fields_scrollspy_nav( $layouts ) {
         'display' => 'block',
         'sub_fields' => array (
             array (
+                'key' => 'field_YAegE77WAk7',
+                'label' => 'Image type',
+                'name' => 'scrollspy_image_type',
+                'type' => 'radio',
+                'layout' => 'horizontal',
+                'choices' => array(
+                    'none' => 'None',
+                    'scrollspy_icons' => 'Icons (through <a target="_blank" href="http://fontawesome.io/icons/">Font Awesome</a>)',
+                    'scrollspy_images' => 'Images',
+                ),
+                'wrapper' => array (
+                    'width' => 50,
+                    'class' => '',
+                    'id' => '',
+                ),
+            ),
+            array (
+                'key' => 'field_YAegE77WAk8',
+                'label' => 'Image layout',
+                'name' => 'scrollspy_image_layout',
+                'type' => 'radio',
+                'layout' => 'horizontal',
+                'choices' => array(
+                    'icons_left' => 'Icons left of label',
+                    'icons_above' => 'Icons above label',
+                ),
+                'conditional_logic' => array (
+                    array (
+                        array (
+                            'field' => 'field_YAegE77WAk7',
+                            'operator' => '!=',
+                            'value' => 'none',
+                        ),
+                    ),
+                ),
+                'wrapper' => array (
+                    'width' => 50,
+                    'class' => '',
+                    'id' => '',
+                ),
+            ),
+            array (
                 'key' => 'field_YAegE77WAk2',
                 'label' => 'Menu item',
                 'name' => 'scrollspy_item',
@@ -33,7 +75,7 @@ function redblue_section_fields_scrollspy_nav( $layouts ) {
                 'min' => '',
                 'max' => '',
                 'layout' => 'block',
-                'button_label' => 'Add Slide',
+                'button_label' => 'Add link',
                 'sub_fields' => array (
                     array (
                         'key' => 'field_YAegE77WAk3',
@@ -51,21 +93,51 @@ function redblue_section_fields_scrollspy_nav( $layouts ) {
                         'name' => 'scrollspy_link',
                         'type' => 'url',
                         'wrapper' => array (
-                            'width' => 60,
+                            'width' => 40,
                         ),
                         'instructions' => 'To make this work properly, link to the section itself, e.g. http://yoursite.com/this-page/#section-0. NOTE: If sections move, you may need to update these links.',
                     ),
                     array (
                         'key' => 'field_YAegE77WAk5',
-                        'label' => 'Icon (optional)',
+                        'label' => 'Image',
                         'name' => 'scrollspy_image',
                         'type' => 'image',
                         'wrapper' => array (
-                            'width' => 20,
+                            'width' => 40,
                         ),
-                        'instructions' => '',
+                        'conditional_logic' => array (
+                            array (
+                                array (
+                                    'field' => 'field_YAegE77WAk7',
+                                    'operator' => '==',
+                                    'value' => 'scrollspy_images',
+                                ),
+                            ),
+                        ),
+                        'instructions' => 'Hint: If you\'re using the <a href="https://wordpress.org/plugins/safe-svg/" target="_blank">Safe SVG plugin</a>, you can use an SVG icon here.',
                         'return_format' => 'array',
                         'preview_size' => 'thumbnail',
+                    ),
+                    array (
+                        'key' => 'field_YAegE77WAk6',
+                        'label' => 'Icon',
+                        'name' => 'scrollspy_icon',
+                        'instructions' => 'Add the name of the icon from <a target="_blank" href="http://fontawesome.io/icons/">Font Awesome</a>, e.g. <em>\'envelope\'</em> or <em>\'facebook-official\'</em>',
+                        'type' => 'text',
+                        'wrapper' => array (
+                            'width' => 40,
+                        ),
+                        'return_format' => 'array',
+                        'preview_size' => 'thumbnail',
+                        'conditional_logic' => array (
+                            array (
+                                array (
+                                    'field' => 'field_YAegE77WAk7',
+                                    'operator' => '==',
+                                    'value' => 'scrollspy_icons',
+                                ),
+                            ),
+                        ),
                     ),
                 ),
             ),
@@ -98,8 +170,17 @@ function redblue_section_markup_scrollspy_nav( $id, $count, $case, $context_pref
     wp_enqueue_script( 'scrollspy' );
     wp_enqueue_script( 'sections-smoothscroll' );
 
+    $image_display = get_post_meta( $id, $context_prefix . $count . '_scrollspy_image_type', true );
+    $image_layout = get_post_meta( $id, $context_prefix . $count . '_scrollspy_image_layout', true );
+
+    if ( $image_display == 'scrollspy_icons' )
+        wp_enqueue_style( 'font-awesome' );
+
     //* Do the function which figures out which classes we need
     $class = rb_section_class_setup( $id, $count, $case, $context_prefix );
+
+    //* Add a class for the image layout option so that we can style accordingly
+    $class[] = $image_layout;
 
     //* Get the classes ready
     $class = implode( ' ', $class );
@@ -107,20 +188,17 @@ function redblue_section_markup_scrollspy_nav( $id, $count, $case, $context_pref
     //* Get the background image information
     $items = get_post_meta( $id, $context_prefix . $count . '_scrollspy_item', true );
 
-    //* Variables for this section
-    // $content = get_post_meta( $id, $context_prefix . $count . '_content', true );
-    // $content = apply_filters( 'the_content', $content );
-
-    printf ( '<div id="scrollspy-nav-container" class="%s">', $count, $class );
+    printf ( '<div id="scrollspy-nav-container" class="%s">', $class );
             
         do_action( 'before_inside_section_' . $count );
 
-        echo '<ul id="scrollspy-nav">';
+        echo '<ul id="scrollspy-nav" class="not-fixed">';
 
         for ( $i=0; $i < $items; $i++ ) {
 
             $link = get_post_meta( $id, $context_prefix . $count . '_scrollspy_item_' . $i . '_scrollspy_link', true );
             $label = get_post_meta( $id, $context_prefix . $count . '_scrollspy_item_' . $i . '_scrollspy_label', true );
+            $icon = get_post_meta( $id, $context_prefix . $count . '_scrollspy_item_' . $i . '_scrollspy_icon', true );
             $image_id = get_post_meta( $id, $context_prefix . $count . '_scrollspy_item_' . $i . '_scrollspy_image', true );
 
             if ( $image_id ) {
@@ -128,9 +206,26 @@ function redblue_section_markup_scrollspy_nav( $id, $count, $case, $context_pref
                 $image_url = $image_url_array[0];
             }
 
-            if ( $link && $label ) {
-                printf( '<li class="scrollspy-nav-item"><a href="%s">%s</a></li>', $link, $label );
-            }
+            if ( $link && $label )
+                printf( '<li class="scrollspy-nav-item"><a href="%s">', $link );
+
+                if ( ( $image_display == 'scrollspy_icons' && $icon ) || ( $image_display == 'scrollspy_images' && $image_id ) )
+                    echo '<span class="icon">';
+
+                    if ( $image_display == 'scrollspy_icons' && $icon )
+                        printf( '<i class="fa fa-%s" aria-hidden="true"></i>', $icon );
+
+                    if ( $image_display == 'scrollspy_images' && $image_id )
+                        printf( '<span class="icon-image" style="background-image:url(%s)"></span>', $image_url );
+
+                if ( ( $image_display == 'scrollspy_icons' && $icon ) || ( $image_display == 'scrollspy_images' && $image_id ) )
+                    echo '</span>';
+
+                if ( $label )
+                    echo $label;
+
+            if ( $link && $label )
+                echo '</a></li>';
         }
 
         echo '</ul>';

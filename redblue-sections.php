@@ -148,8 +148,12 @@ function redblue_sections_enqueue_scripts_styles() {
     wp_register_script( 'scrollspy', plugin_dir_url( __FILE__ ) . '/js/scrollspy.js', array( 'jquery' ), null, true );
     wp_register_script( 'sections-smoothscroll', plugin_dir_url( __FILE__ ) . '/js/smoothscroll.js', array( 'jquery' ), null, true );
 
+    //////////////////
+    // FONT AWESOME //
+    //////////////////
+
     //* Accordion script
-    // wp_register_script( 'accordion-slider-init', plugin_dir_url( __FILE__ ) . '/js/accordion-slider-init.js', array( 'slick-main' ), null );
+    wp_register_style( 'font-awesome', plugin_dir_url( __FILE__ ) . '/js-lib/font-awesome-4.7.0/css/font-awesome.min.css' );
 
 }
 
