@@ -25,8 +25,6 @@ jQuery(document).ready(function( $ ) {
 	//* The height of everything we need to account for
 	var heightallfixed = height + barheight + fixedheight;
 
-	console.log( heightallfixed );
-
 	//* The negative of the height of everything we need to account for
     var theoffset = -Math.abs( heightallfixed );
     
@@ -68,7 +66,7 @@ jQuery(document).ready(function( $ ) {
 
     function fixedmode() {
 
-		console.log( "FIXED MODE" );
+		// console.log( "FIXED MODE" );
 
 		//* Initialize the ddsmoothscroll plugin
 		$('#scrollspy-nav').ddscrollSpy({
@@ -79,7 +77,7 @@ jQuery(document).ready(function( $ ) {
 
     function normalmode() {
 
-    	console.log( "NORMAL MODE" );
+    	// console.log( "NORMAL MODE" );
     	
 		//* Initialize the ddsmoothscroll plugin
 		$('#scrollspy-nav').ddscrollSpy({
