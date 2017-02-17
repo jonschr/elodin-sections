@@ -73,7 +73,7 @@ jQuery(document).ready(function( $ ) {
 		//* Initialize the ddsmoothscroll plugin
 		$('#scrollspy-nav').ddscrollSpy({
 			scrolltopoffset: theoffset,
-			scrollduration: 900
+			scrollduration: 200
 		});
     }
 
@@ -84,7 +84,7 @@ jQuery(document).ready(function( $ ) {
 		//* Initialize the ddsmoothscroll plugin
 		$('#scrollspy-nav').ddscrollSpy({
 			scrolltopoffset: ( theoffset*2 + barheight + fixedheight ),
-			scrollduration: 900
+			scrollduration: 200
 		});
     }
 });

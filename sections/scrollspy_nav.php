@@ -103,7 +103,7 @@ function redblue_section_fields_scrollspy_nav( $layouts ) {
                         'wrapper' => array (
                             'width' => 40,
                         ),
-                        'instructions' => 'To make this work properly, link to the section itself, e.g. http://yoursite.com/this-page/#section-0. NOTE: If sections move, you may need to update these links.',
+                        'instructions' => 'Enter the id of the element we\'re linking to, e.g. \'section-1\'',
                     ),
                     array (
                         'key' => 'field_YAegE77WAk5',
@@ -175,7 +175,6 @@ function redblue_section_markup_scrollspy_nav( $id, $count, $case, $context_pref
         return;
 
     $scrollspy_fixed_height = get_post_meta( $id, $context_prefix . $count . '_scrollspy_fixed_height', true );
-    echo 'scrollspy_fixed_height: ' . $scrollspy_fixed_height;
 
     if ( $scrollspy_fixed_height == null )
         $scrollspy_fixed_height = 0;
@@ -219,6 +218,10 @@ function redblue_section_markup_scrollspy_nav( $id, $count, $case, $context_pref
         for ( $i=0; $i < $items; $i++ ) {
 
             $link = get_post_meta( $id, $context_prefix . $count . '_scrollspy_item_' . $i . '_scrollspy_link', true );
+            
+            //* Add a hash sign before the ID
+            $link = '#' . $link;
+
             $label = get_post_meta( $id, $context_prefix . $count . '_scrollspy_item_' . $i . '_scrollspy_label', true );
             $icon = get_post_meta( $id, $context_prefix . $count . '_scrollspy_item_' . $i . '_scrollspy_icon', true );
             $image_id = get_post_meta( $id, $context_prefix . $count . '_scrollspy_item_' . $i . '_scrollspy_image', true );
