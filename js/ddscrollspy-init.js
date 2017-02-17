@@ -1,7 +1,6 @@
 jQuery(document).ready(function( $ ) {
 
 	var fixedheight = parseInt( passed_vars.height_of_div );
-	console.log( fixedheight );
 
 	//* The nav element we'll be working with
     var nav_element = '#scrollspy-nav';
