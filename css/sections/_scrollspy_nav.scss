@@ -67,7 +67,8 @@
 					font-size: 15px;
 				}
 
-				&.active {
+				&.selected,
+				&:hover {
 					background-color: rgba( black, 0.05 );
 					color: black;
 				}

@@ -49,9 +49,6 @@ function rb_sections_output_sections( $context_prefix ) {
 			//* A hook for adding things before the section number, regardless of which template
 			do_action( 'before_section_' . $count );
 
-			//* Allow for anchors for the scrollspy section
-			printf ( '<span class="section-anchor" id="section-anchor-%s"></span>', $count );
-
 			// * A hook to allow for layouts to be added by other themes or plugins
 			do_action( 'redblue_sections_add_layout', $id, $count, $case, $context_prefix );
 

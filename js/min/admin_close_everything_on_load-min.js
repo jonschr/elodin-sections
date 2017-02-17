@@ -1,1 +1,0 @@
-jQuery(document).ready(function($){$(".layout").addClass("-collapsed"),$(".acf-row").addClass("-collapsed"),$('div.layout.-collapsed[data-layout="scrollspy_nav"]').click(function(){$('div.layout[data-layout="scrollspy_nav"] .acf-row').removeClass("-collapsed")})});

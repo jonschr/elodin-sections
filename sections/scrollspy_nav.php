@@ -59,6 +59,14 @@ function redblue_section_fields_scrollspy_nav( $layouts ) {
                 ),
             ),
             array (
+                'key' => 'field_YAegE77WAk115',
+                'label' => 'Height of fixed-position elements',
+                'instructions' => 'If you have a header which is stays at the top of the page when scrolling, please enter the height of that header while scrolled here (no need to include the height of <em>this</em> menu, as that\'s already taken into account.',
+                'name' => 'scrollspy_fixed_height',
+                'type' => 'number',
+                'placeholder' => '',
+            ),
+            array (
                 'key' => 'field_YAegE77WAk2',
                 'label' => 'Menu item',
                 'name' => 'scrollspy_item',
@@ -91,7 +99,7 @@ function redblue_section_fields_scrollspy_nav( $layouts ) {
                         'key' => 'field_YAegE77WAk4',
                         'label' => 'Link',
                         'name' => 'scrollspy_link',
-                        'type' => 'url',
+                        'type' => 'text',
                         'wrapper' => array (
                             'width' => 40,
                         ),
@@ -166,9 +174,23 @@ function redblue_section_markup_scrollspy_nav( $id, $count, $case, $context_pref
     if ( $case != 'scrollspy_nav' )
         return;
 
+    $scrollspy_fixed_height = get_post_meta( $id, $context_prefix . $count . '_scrollspy_fixed_height', true );
+    echo 'scrollspy_fixed_height: ' . $scrollspy_fixed_height;
+
+    if ( $scrollspy_fixed_height == null )
+        $scrollspy_fixed_height = 0;
+
+    // Localize the script with new data
+    $translation_array = array(
+        'height_of_div' => $scrollspy_fixed_height,
+    );
+    wp_localize_script( 'ddscrollspy-init', 'passed_vars', $translation_array );
+
     //* Enqueue the scripts
-    wp_enqueue_script( 'scrollspy' );
-    wp_enqueue_script( 'sections-smoothscroll' );
+    // wp_enqueue_script( 'throttle' );
+    wp_enqueue_script( 'ddscrollspy' );
+    wp_enqueue_script( 'ddscrollspy-init' );
+    // wp_enqueue_script( 'sections-smoothscroll' );
 
     $image_display = get_post_meta( $id, $context_prefix . $count . '_scrollspy_image_type', true );
     $image_layout = get_post_meta( $id, $context_prefix . $count . '_scrollspy_image_layout', true );

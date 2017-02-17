@@ -145,8 +145,11 @@ function redblue_sections_enqueue_scripts_styles() {
     // SCROLLSPY //
     ///////////////
 
-    wp_register_script( 'scrollspy', plugin_dir_url( __FILE__ ) . '/js/scrollspy.js', array( 'jquery' ), null, true );
-    wp_register_script( 'sections-smoothscroll', plugin_dir_url( __FILE__ ) . '/js/smoothscroll.js', array( 'jquery' ), null, true );
+    // wp_register_script( 'scrollspy', plugin_dir_url( __FILE__ ) . '/js/scrollspy.js', array( 'jquery' ), null, true );
+    // wp_register_script( 'sections-smoothscroll', plugin_dir_url( __FILE__ ) . '/js/smoothscroll.js', array( 'jquery' ), null, true );
+    // wp_register_script( 'throttle', plugin_dir_url( __FILE__ ) . '/js-lib/throttle_and_debounce/throttle_and_debounce.js', array( 'jquery' ), null, true );
+    wp_register_script( 'ddscrollspy', plugin_dir_url( __FILE__ ) . '/js-lib/ddscrollspy/ddscrollspy.js', array( 'jquery' ), null, true );
+    wp_register_script( 'ddscrollspy-init', plugin_dir_url( __FILE__ ) . '/js/ddscrollspy-init.js', array( 'ddscrollspy' ), null, true );
 
     //////////////////
     // FONT AWESOME //
