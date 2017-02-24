@@ -294,7 +294,7 @@ function redblue_section_markup_featured_content_carousel( $id, $count, $case, $
 					$permalink = get_the_permalink();
 
 					$image_id = get_post_thumbnail_id( $post->ID );
-					$image_url_array = wp_get_attachment_image_src( $image_id, array( 600, 400, true ) );
+					$image_url_array = wp_get_attachment_image_src( $image_id, 'large' );
 					$background_image = $image_url_array[0];
 
 					?>

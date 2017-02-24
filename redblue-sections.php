@@ -160,6 +160,12 @@ function redblue_sections_enqueue_scripts_styles() {
 
 }
 
+//////////////////
+// BASIC SIZING //
+//////////////////
+
+add_image_size( 'background-fullscreen', 1800, 1000, true );
+
 //* Set a content width so that videos and images aren't tiny by default
 if ( ! isset( $content_width ) ) {
 	$content_width = 800;

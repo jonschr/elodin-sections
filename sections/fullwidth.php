@@ -104,7 +104,7 @@ function redblue_section_markup_fullwidth( $id, $count, $case, $context_prefix )
 	$imageid = (int) get_post_meta( $id, $context_prefix . $count . '_background', true );
 
 	if ( $imageid ) {
-		$imageurlarray = wp_get_attachment_image_src( $imageid, array( 1600, 1000 ) );
+		$imageurlarray = wp_get_attachment_image_src( $imageid, 'background-fullscreen' );
 		$imageurl = $imageurlarray[0];
 	}
 

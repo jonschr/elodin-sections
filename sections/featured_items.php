@@ -283,7 +283,7 @@ function redblue_section_markup_featured_items( $id, $count, $case, $context_pre
     						$featured_imageid = (int) get_post_meta( $id, $context_prefix . $count . '_repeater_' . $i . '_image', true );
 
     						if ( $featured_imageid ) {
-    							$featured_imageurlarray = wp_get_attachment_image_src( $featured_imageid, array( 400, 200 ) );
+    							$featured_imageurlarray = wp_get_attachment_image_src( $featured_imageid, 'medium' );
     							$featured_imageurl = $featured_imageurlarray[0];
     						}
 

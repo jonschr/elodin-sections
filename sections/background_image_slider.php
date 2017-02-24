@@ -124,7 +124,7 @@ function redblue_section_markup_background_image_slider( $id, $count, $case, $co
             $slide_class = get_post_meta( $id, $context_prefix . $count . '_slide_' . $i . '_class', true );
 
 			if ( $image_id ) {
-				$image_url_array = wp_get_attachment_image_src( $image_id, array( 1600, 1000 ) );
+				$image_url_array = wp_get_attachment_image_src( $image_id, 'background-fullscreen' );
 				$image_url = $image_url_array[0];
             }
 
