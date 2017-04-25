@@ -263,3 +263,16 @@
 		margin: 0;
 	}
 }
+
+/* Remove color overlay
+   ========================================================================== */
+
+.section.full-color {
+	.background-div {
+		filter: none !important;
+	}
+
+	.background-div::before {
+		background-color: transparent !important;
+	}
+}

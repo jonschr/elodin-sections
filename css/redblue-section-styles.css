@@ -176,6 +176,14 @@
     padding: 0;
     margin: 0; }
 
+/* Remove color overlay
+   ========================================================================== */
+.section.full-color .background-div {
+  filter: none !important; }
+
+.section.full-color .background-div::before {
+  background-color: transparent !important; }
+
 /* ==========================================================================
    Sliders in general
    ========================================================================== */
