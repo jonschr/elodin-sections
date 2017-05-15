@@ -237,7 +237,7 @@
    ========================================================================== */
 
 .section.limit-width {
-	&:not( .featured_content_carousel ) {
+	&:not( .featured_content_carousel, .featured_3col ) {
 		.wrap {
 			max-width: 600px;
 		}
@@ -247,6 +247,15 @@
 		max-width: 600px;
 		margin-left: auto;
 		margin-right: auto;
+	}
+}
+
+.section.limit-width {
+	&.featured_3col {
+		.section-content {
+			max-width: 600px;
+			margin: 0 auto;
+		}
 	}
 }
 
