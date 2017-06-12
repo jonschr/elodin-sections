@@ -4,7 +4,7 @@ jQuery(document).ready(function($)
     $('.layout').addClass('-collapsed');
 
     //* Close individual rows
-    $('.acf-row').addClass('-collapsed');
+    // $('.acf-row').addClass('-collapsed');
 
 	//* For the scrollspy nav, the collapsing makes it tough to use. Remove that when the section is opened
     $( 'div.layout.-collapsed[data-layout="scrollspy_nav"]' ).click(function(){
