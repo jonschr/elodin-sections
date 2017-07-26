@@ -7,36 +7,39 @@
    ========================================================================== */
 
 .section.background_video {
-    padding-top: 0;
-    padding-bottom: 0;
-    overflow: hidden;
-    position: relative;
-    height: 100vh;
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
     display: block;
-
-}
-
-.section.background_video {
     position: relative;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     overflow: hidden;
+    background: black;
+
+    @include mobile-section {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
 
     .wrap {
-        position: absolute;
-        z-index: 10;
-        color: white;
-        top: 50%;
-        left: 50%;
-        transform: translate( -50%, -50% );
+        position: relative;
+        transform: translate( 0%, 0% );
+        top: auto;
+        left: auto;
     }
 
     h1,
     h2,
     h3 {
         color: white;
+    }
+
+    *::-webkit-media-controls-start-playback-button {
+        display: none !important;
+        -webkit-appearance: none;
     }
 
     > video {
@@ -70,46 +73,56 @@
 /*
    Colors
    ========================================================================== */
-.section.background_video:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: black;
-    z-index: 0;
-}
+// .section.background_video:after {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     width: 100%;
+//     background-color: black;
+//     z-index: 0;
+// }
 
-*::-webkit-media-controls-start-playback-button {
-    display: none!important;
-    -webkit-appearance: none;
-}
 
 /*
    Limit-height
    ========================================================================== */
 
-.section.background_rotator.limit-height {
+.section.background_video.limit-height {
     height: auto;
-    min-height: 0;
-    position: static;
+    padding-top: 100px;
+    padding-bottom: 100px;
 
-    .slide {
-        height: auto;
-        padding-top: 100px;
-        padding-bottom: 100px;
+    @include mobile-section {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
 
-        @include mobile-section {
-            padding-top: 30px;
-            padding-bottom: 30px;
-        }
+    .wrap {
+        position: relative;
+        transform: translate( 0%, 0% );
+        top: auto;
+        left: auto;
+    }
+}
 
-        .wrap {
-            position: static;
-            top: 0;
-            transform: translateY( 0% );
-        }
+/* ==========================================================================
+   Full height
+   ========================================================================== */
+
+.section.background_video.full-height {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 100vh;
+
+    .wrap {
+        position: absolute;
+        z-index: 10;
+        color: white;
+        top: 50%;
+        left: 50%;
+        transform: translate( -50%, -50% );
     }
 }

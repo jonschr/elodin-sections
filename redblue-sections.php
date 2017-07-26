@@ -103,7 +103,7 @@ function redblue_sections_admin_scripts() {
     wp_enqueue_script( 'redblue-sections-close-on-load', plugin_dir_url( __FILE__ ) . 'js/admin_close_everything_on_load.js', array( 'jquery' ), null );
 
     //* Prevent one-click (accidental) deletions of fields
-    wp_enqueue_script( 'redblue-sections-delete-confirmation-box', plugin_dir_url( __FILE__ ) . 'js/admin_delete_confirmation_box.js', array( 'jquery' ), null );
+    // wp_enqueue_script( 'redblue-sections-delete-confirmation-box', plugin_dir_url( __FILE__ ) . 'js/admin_delete_confirmation_box.js', array( 'jquery' ), null );
 
     //* Custom styles for the admin area
     wp_enqueue_style( 'redblue-sections-admin-style', plugin_dir_url( __FILE__ ) . 'css/admin-style.css' );
