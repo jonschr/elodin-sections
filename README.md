@@ -7,24 +7,25 @@ Red Blue Sections extends the Advanced Custom Fields for Genesis themes. It sets
 To remove sections you won't be using in this project, use the 'redblue_section_remove_layouts' in your functions.php file (or plugin):
 
 ```php
-//* Remove sections (all sections being removed below)
-add_filter( 'redblue_section_remove_layouts', 'redblue_section_remove_testimonials_sections' );
-function redblue_section_remove_testimonials_sections( $sections ) {
-	// $sections[] = 'whatever_section_you_want_to_remove';
-	$sections[] = 'background_rotator';
-	$sections[] = 'background_video';
-	$sections[] = 'checkerboard';
-	$sections[] = 'featured_3col';
-	$sections[] = 'featured_content_carousel';
-	$sections[] = 'featured-content_checkerboard';
-	$sections[] = 'featureditems';
-	$sections[] = 'fullwidth';
-	$sections[] = 'testimonials_slider';
-	$sections[] = 'threecol_fourth_half_fourth';
-	$sections[] = 'trust_building_snippets';
-	$sections[] = 'two_column';
-	return $sections;
-}
+//* Remove all of the sections
+remove_all_filters( 'redblue_section_add_layout' );
+
+//* Uncomment the lines below to re-add the layouts that we'll actually be using
+// add_filter( 'redblue_section_add_layout', 'redblue_section_fields_background_image_slider' );
+// add_filter( 'redblue_section_add_layout', 'redblue_section_fields_background_rotator' );
+// add_filter( 'redblue_section_add_layout', 'redblue_section_fields_background_video' );
+// add_filter( 'redblue_section_add_layout', 'redblue_section_fields_checkerboard' );
+// add_filter( 'redblue_section_add_layout', 'redblue_section_fields_featured_3col' );
+// add_filter( 'redblue_section_add_layout', 'redblue_section_fields_featured_content_carousel' );
+// add_filter( 'redblue_section_add_layout', 'redblue_section_fields_featured_content_checkerboard' );
+// add_filter( 'redblue_section_add_layout', 'redblue_section_fields_featured_items' );
+// add_filter( 'redblue_section_add_layout', 'redblue_section_fields_fullwidth' );
+// add_filter( 'redblue_section_add_layout', 'redblue_section_fields_google_maps' );
+// add_filter( 'redblue_section_add_layout', 'redblue_section_fields_scrollspy_nav' );
+// add_filter( 'redblue_section_add_layout', 'redblue_section_fields_sliding_accordion' );
+// add_filter( 'redblue_section_add_layout', 'redblue_section_fields_testimonials_slider' );
+// add_filter( 'redblue_section_add_layout', 'redblue_section_fields_trust_building_snippets' );
+// add_filter( 'redblue_section_add_layout', 'redblue_section_fields_two_column' );
 ```
 
 ## Add sections
