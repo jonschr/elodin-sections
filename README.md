@@ -4,7 +4,7 @@ Red Blue Sections extends the Advanced Custom Fields for Genesis themes. It sets
 *This plugin requires the Advanced Custom Fields Pro plugin, and the Genesis framework. Without both of these installed and active, it probably won't do anything.*
 
 ## Remove unused sections
-To remove sections you won't be using in this project, use the 'redblue_section_remove_layouts' in your functions.php file (or plugin):
+The best practice for removing fields, the for the lonevity of the site you're working on, is to remove _all_ sections, then immediately re-add just the ones that this site will be using. That means if we add more sections to the site, they won't automatically pop into the site's backend.
 
 ```php
 //* Remove all of the sections
