@@ -13,7 +13,7 @@ function redblue_section_fields_two_column( $layouts ) {
     $layouts[] = array (
         'key' => 'fqscmHNXnwwW',
         'name' => 'two_column',
-        'label' => 'Two Column (vertically aligned)',
+        'label' => 'Two Column',
         'display' => 'block',
         'sub_fields' => array (
             array (
