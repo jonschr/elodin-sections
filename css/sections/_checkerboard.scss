@@ -17,11 +17,12 @@
         flex-direction: column;
     }
 
+
     flex-wrap: nowrap;
     align-items: stretch;
 
     .label {
-        background-color: rgba( black, 0.8 );
+        background-color: rgba(black, 0.8);
         color: white;
         margin-top: 15px;
         float: left;
@@ -44,7 +45,7 @@
         min-height: 300px;
         background-size: cover;
         background-position: center center;
-        background-color: rgba( black, 0.1 );
+        background-color: rgba(black, 0.1);
     }
 
     .checkerboard-content {
@@ -87,20 +88,20 @@
     }
 }
 
+
 /*
    Checkerboard-wide
    ========================================================================== */
 
-.section.checkerboard.checkerboard-wide {
+.section.checkerboard.wide {
     .content-wrap {
         @include notmobile-section {
-            max-width: 1000px;
+            max-width: 100%;
         }
     }
 }
 
-.section.checkerboard.checkerboard-wide {
-
+.section.checkerboard.wide {
     //* Wide sections need smaller vertical margins
     .checkerboard-content {
         padding-top: 50px;

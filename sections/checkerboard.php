@@ -25,13 +25,36 @@ function redblue_section_fields_checkerboard( $layouts ) {
                 'required' => 1,
                 'conditional_logic' => 0,
                 'wrapper' => array (
-                    'width' => '',
+                    'width' => '50',
                     'class' => '',
                     'id' => '',
                 ),
                 'choices' => array (
                     'left' => 'Content left',
                     'right' => 'Content right',
+                ),
+                'allow_null' => 0,
+                'other_choice' => 0,
+                'save_other_choice' => 0,
+                'default_value' => '',
+                'layout' => 'horizontal',
+            ),
+            array (
+                'key' => 'field_57ec238829c6234a',
+                'label' => 'Width',
+                'name' => 'width',
+                'type' => 'radio',
+                'instructions' => '',
+                'required' => 1,
+                'conditional_logic' => 0,
+                'wrapper' => array (
+                    'width' => '50',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'choices' => array (
+                    'default-width' => 'Normal',
+                    'wide' => 'Extra Wide',
                 ),
                 'allow_null' => 0,
                 'other_choice' => 0,
@@ -48,7 +71,7 @@ function redblue_section_fields_checkerboard( $layouts ) {
                 'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array (
-                    'width' => 50,
+                    'width' => 75,
                     'class' => '',
                     'id' => '',
                 ),
@@ -66,7 +89,7 @@ function redblue_section_fields_checkerboard( $layouts ) {
                 'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array (
-                    'width' => 50,
+                    'width' => 25,
                     'class' => '',
                     'id' => '',
                 ),
@@ -123,6 +146,7 @@ function redblue_section_markup_checkerboard( $id, $count, $case, $context_prefi
     //* Do the function which figures out which classes we need
 	$class = rb_section_class_setup( $id, $count, $case, $context_prefix );
 	$class[] = get_post_meta( $id, $context_prefix . $count . '_alignment', true );
+    $class[] = get_post_meta( $id, $context_prefix . $count . '_width', true );
 
 	//* Get the background image information
 	$image = wp_get_attachment_url( get_post_meta( $id, $context_prefix . $count . '_background', true ) );
