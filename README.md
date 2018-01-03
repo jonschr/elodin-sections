@@ -14,6 +14,14 @@ A few classes have been set up by default to allow for more flexibility for sect
 - **limit-width** – constrain the width of the text in a content section to 600 pixels, rather than going all the way across the page. Often customized in terms of width by the theme.
 - **dark** – use a dark color scheme instead of the usual light one
 
+### Padding setups ###
+These are mosly useful on full-width sections, but can be used on a few others as well (e.g. on background video)
+- **no-padding** – eliminates all padding and maximum width on a section (useful for embedding things that should touch all edges of a section)
+– **no-padding-vertical**
+– **no-padding-horizontal**
+– **no-padding-top**
+– **no-padding-bottom**
+
 ### For use on anything with a background
 - **full-color** – removes the automatic dark overlay on the section background, and allows either a background image or a background video to show up at full color instead (text may be hard to read over this). This class can also be used on individual slides on some rotators, and on those using this on the section itself will have no effect.
 
