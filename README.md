@@ -3,6 +3,21 @@ Red Blue Sections extends the Advanced Custom Fields for Genesis themes. It sets
 
 *This plugin requires the Advanced Custom Fields Pro plugin, and the Genesis framework. Without both of these installed and active, it probably won't do anything.*
 
+
+## Style-ready classes
+A few classes have been set up by default to allow for more flexibility for sections. These can be added at the bottom of each section, separated by spaces, e.g. **align-center full-height**
+
+### For use on all sections
+- **align-center** – aligns everything inside the section to center on desktop and tablet, but leaves it left-aligned it on mobile. NOTE: some sections, due to their specific layouts, have defaults that already center align things.
+- **full-height** – makes the section full-height on desktop (100% of the height of the browser viewport). NOTE: This may cause unexpected behavior on some sections with complex layouts.
+- **limit-height** – constrain the height of a section that, by default, would ordinarily take up the entire vertical height of the viewport (there are only a couple of sections where this is necessary, as most are not full-height by default).
+- **limit-width** – constrain the width of the text in a content section to 600 pixels, rather than going all the way across the page. Often customized in terms of width by the theme.
+- **dark** – use a dark color scheme instead of the usual light one
+
+### For use on anything with a background
+- **full-color** – removes the automatic dark overlay on the section background, and allows either a background image or a background video to show up at full color instead (text may be hard to read over this). This class can also be used on individual slides on some rotators, and on those using this on the section itself will have no effect.
+
+
 ## Remove unused sections
 The best practice for removing fields, the for the lonevity of the site you're working on, is to remove _all_ sections, then immediately re-add just the ones that this site will be using. That means if we add more sections to the site, they won't automatically pop into the site's backend.
 
@@ -101,15 +116,3 @@ function prefix_add_instead_of_section( $args ) {
 	return array_merge( $args, $new_args );
 }
 ```
-
-## Style-ready classes
-A few classes have been set up by default to allow for more flexibility for sections. These can be added at the bottom of each section, separated by spaces, e.g. **align-center full-height**
-
-### For use on all sections
-- **align-center** – aligns everything inside the section to center on desktop and tablet, but leaves it left-aligned it on mobile. NOTE: some sections, due to their specific layouts, have defaults that already center align things.
-- **full-height** – makes the section full-height on desktop (100% of the height of the browser viewport). NOTE: This may cause unexpected behavior on some sections with complex layouts.
-- **limit-height** – constrain the height of a section that, by default, would ordinarily take up the entire vertical height of the viewport.
-- **limit-width** – constrain the width of the text in a content section to 600 pixels, rather than going all the way across the page.
-
-### For use on anything with a background
-- **full-color** – removes the automatic overlay on the section background
