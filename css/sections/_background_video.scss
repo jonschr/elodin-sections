@@ -6,7 +6,7 @@
    Structure
    ========================================================================== */
 
-.section.background_video {
+body.flexible-content-page-builder .section.background_video {
     height: auto;
     padding-top: 100px;
     padding-bottom: 100px;
@@ -24,16 +24,18 @@
         padding-bottom: 30px;
     }
 
+
     .wrap {
         position: relative;
-        transform: translate( 0%, 0% );
+        transform: translate(0%, 0%);
         top: auto;
         left: auto;
     }
 
     h1,
     h2,
-    h3 {
+    h3,
+    p {
         color: white;
     }
 
@@ -50,11 +52,13 @@
         width: 100%;
         height: 100%;
         opacity: 0.3;
-        @media (min-aspect-ratio: 16/9) {
+
+        @media (min-aspect-ratio: 16 / 9) {
             height: 300%;
             top: -100%;
         }
-        @media (max-aspect-ratio: 16/9) {
+
+        @media (max-aspect-ratio: 16 / 9) {
             width: 300%;
             left: -100%;
         }
@@ -67,6 +71,10 @@
             height: 100%;
             object-fit: cover;
         }
+    }
+
+    &.full-color > video {
+        opacity: 1;
     }
 }
 
@@ -85,7 +93,6 @@
 //     z-index: 0;
 // }
 
-
 /*
    Limit-height
    ========================================================================== */
@@ -100,9 +107,10 @@
         padding-bottom: 30px;
     }
 
+
     .wrap {
         position: relative;
-        transform: translate( 0%, 0% );
+        transform: translate(0%, 0%);
         top: auto;
         left: auto;
     }
@@ -117,12 +125,26 @@
     padding-bottom: 0;
     height: 100vh;
 
+    @include mobile-section {
+        height: auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+
     .wrap {
         position: absolute;
         z-index: 10;
         color: white;
         top: 50%;
         left: 50%;
-        transform: translate( -50%, -50% );
+        transform: translate(-50%, -50%);
+
+        @include mobile-section {
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: none;
+        }
     }
 }
