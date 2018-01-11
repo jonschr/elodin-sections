@@ -14,6 +14,9 @@ A few classes have been set up by default to allow for more flexibility for sect
 - **limit-width** – constrain the width of the text in a content section to 600 pixels, rather than going all the way across the page. Often customized in terms of width by the theme.
 - **dark** – use a dark color scheme instead of the usual light one
 
+### Background image modifications ###
+- **background-fixed** – a parallaxish effect; we make the background image for a section fixed-position.
+
 ### Padding setups ###
 These are mosly useful on full-width sections, but can be used on a few others as well (e.g. on background video)
 - **no-padding** – eliminates all padding and maximum width on a section (useful for embedding things that should touch all edges of a section)
