@@ -265,12 +265,12 @@
    ========================================================================== */
 
 .section.no-padding {
-    padding: 0;
+    padding: 0 !important;
 
     .wrap {
-        max-width: 100%;
-        padding: 0;
-        margin: 0;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
 }
 
@@ -278,8 +278,8 @@
    ========================================================================== */
 
 .section.no-padding-vertical {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
 }
 
 /* No Padding Horizontal
@@ -287,9 +287,9 @@
 
 .section.no-padding-horizontal {
     .wrap {
-        max-width: 100%;
-        padding: 0;
-        margin: 0;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
 }
 
@@ -297,14 +297,14 @@
    ========================================================================== */
 
 .section.no-padding-top {
-    padding-top: 0;
+    padding-top: 0 !important;
 }
 
 /* No Padding Bottom
    ========================================================================== */
 
 .section.no-padding-bottom {
-    padding-bottom: 0;
+    padding-bottom: 0 !important;
 }
 
 /* Remove color overlay
