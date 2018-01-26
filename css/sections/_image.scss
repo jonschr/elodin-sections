@@ -1,0 +1,12 @@
+.section.image {
+    padding: 0 !important;
+
+    .overlay {
+        position: absolute;
+        width: 100%;
+        background: rgba(black, 0.8);
+        padding: 20px 0;
+        left: 0;
+        bottom: 0;
+    }
+}

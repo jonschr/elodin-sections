@@ -79,7 +79,6 @@ if ( class_exists( 'acf_pro_updates' ) ) {
     require_once( 'sections/background_rotator.php' );
     require_once( 'sections/background_image_slider.php' );
     require_once( 'sections/background_video.php' );
-    // require_once( 'sections/threecol_fourth_half_fourth.php' ); // only for use on the Sigmaflow site. If needed, pull from github
     require_once( 'sections/featured_content_checkerboard.php' );
     require_once( 'sections/featured_content_carousel.php' );
     require_once( 'sections/testimonials_slider.php' );
@@ -87,6 +86,8 @@ if ( class_exists( 'acf_pro_updates' ) ) {
     require_once( 'sections/trust_building_snippets.php' );
     require_once( 'sections/google_maps.php' );
     require_once( 'sections/scrollspy_nav.php' );
+    require_once( 'sections/image.php' );
+    // require_once( 'sections/threecol_fourth_half_fourth.php' ); // deprecated
 
     //* Output the actual sections
     include_once( 'lib/output-sections.php' );
