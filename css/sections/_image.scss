@@ -8,5 +8,18 @@
         padding: 20px 0;
         left: 0;
         bottom: 0;
+
+        @include mobile-section {
+            display: none;
+        }
+
+
+        * {
+            color: white;
+        }
+    }
+
+    img.the-image {
+        margin-bottom: -10px;
     }
 }

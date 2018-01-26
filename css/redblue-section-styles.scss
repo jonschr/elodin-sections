@@ -5,44 +5,45 @@ $tablet-width-section: 768px;
 $desktop-width-section: 1200px;
 
 @mixin mobile-section {
-	 @media (max-width: #{$mobile-width-section}){
-		@content;
-	}
+    @media (max-width: #{$mobile-width-section}) {
+        @content;
+    }
 }
 
 @mixin tablet-section {
-	 @media (min-width: #{$tablet-width-section}) and (max-width: #{$desktop-width-section - 1px}){
-		@content;
-	}
+    @media (min-width: #{$tablet-width-section}) and (max-width: #{$desktop-width-section - 1px}) {
+        @content;
+    }
 }
 
 @mixin desktop-section {
-	 @media (min-width: #{$desktop-width-section}){
-		@content;
-	}
+    @media (min-width: #{$desktop-width-section}) {
+        @content;
+    }
 }
 
 @mixin notmobile-section {
-	 @media (min-width: #{$tablet-width-section}){
-		@content;
-	}
+    @media (min-width: #{$tablet-width-section}) {
+        @content;
+    }
 }
 
-@import '_sectiongeneral';
-@import 'sections/_slidergeneral';
-@import 'sections/_fullwidth';
-@import 'sections/_background_rotator';
-@import 'sections/_background_image_slider';
-@import 'sections/_background_video';
-@import 'sections/_featureditems';
-@import 'sections/_featured_content_carousel';
-@import 'sections/_featured_3col';
-@import 'sections/_threecol_fourth_half_fourth';
-@import 'sections/_checkerboard';
-@import 'sections/_two_column';
-@import 'sections/_testimonial_slider';
-@import 'sections/_trust_building_snippets';
-@import 'sections/_featured_content_carousel';
-@import 'sections/_accordion_slider';
-@import 'sections/_google_maps';
-@import 'sections/_scrollspy_nav';
+@import "_sectiongeneral";
+@import "sections/_slidergeneral";
+@import "sections/_fullwidth";
+@import "sections/_background_rotator";
+@import "sections/_background_image_slider";
+@import "sections/_background_video";
+@import "sections/_featureditems";
+@import "sections/_featured_content_carousel";
+@import "sections/_featured_3col";
+@import "sections/_threecol_fourth_half_fourth";
+@import "sections/_checkerboard";
+@import "sections/_two_column";
+@import "sections/_testimonial_slider";
+@import "sections/_trust_building_snippets";
+@import "sections/_featured_content_carousel";
+@import "sections/_accordion_slider";
+@import "sections/_google_maps";
+@import "sections/_scrollspy_nav";
+@import "sections/_image";

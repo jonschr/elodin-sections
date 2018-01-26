@@ -95,7 +95,7 @@ function redblue_section_markup_image( $id, $count, $case, $context_prefix ) {
             printf( '<div class="image-container"><img class="the-image" src="%s" /></div>', $imageurl );
 
 		if ( $overlay )
-			printf( '<div class="overlay"><div class="overlay-inner">%s</div></div>', $overlay );
+			printf( '<div class="overlay"><div class="wrap">%s</div></div>', $overlay );
 
 		do_action( 'after_inside_section_' . $count );
 
