@@ -189,21 +189,37 @@ function redblue_section_fields_featured_3col( $layouts ) {
                 ),
             ),
             array (
-                'key' => 'field_RjNWCcMfsiEU7',
-                'label' => 'Image',
-                'name' => 'image',
-                'type' => 'image',
-                'instructions' => '',
-                'required' => 0,
-                'conditional_logic' => 0,
+                'key' => 'field_RjNWCcMfsiEU6a_left',
+                'label' => 'Button text left',
+                'name' => 'button_text_left',
+                'type' => 'text',
                 'wrapper' => array (
-                    'width' => 25,
+                    'width' => 32,
                     'class' => '',
                     'id' => '',
                 ),
-                'return_format' => 'array',
-                'preview_size' => 'thumbnail',
-                'library' => 'all',
+            ),
+            array (
+                'key' => 'field_RjNWCcMfsiEU6a_center',
+                'label' => 'Button text center',
+                'name' => 'button_text_center',
+                'type' => 'text',
+                'wrapper' => array (
+                    'width' => 32,
+                    'class' => '',
+                    'id' => '',
+                ),
+            ),
+            array (
+                'key' => 'field_RjNWCcMfsiEU6a_right',
+                'label' => 'Button text right',
+                'name' => 'button_text_right',
+                'type' => 'text',
+                'wrapper' => array (
+                    'width' => 32,
+                    'class' => '',
+                    'id' => '',
+                ),
             ),
             array (
                 'key' => 'field_RjNWCcMfsiEU10',
@@ -211,7 +227,7 @@ function redblue_section_fields_featured_3col( $layouts ) {
                 'name' => 'background',
                 'type' => 'image',
                 'wrapper' => array (
-                    'width' => 25,
+                    'width' => 50,
                 ),
                 'return_format' => 'array',
                 'preview_size' => 'thumbnail',
@@ -243,7 +259,7 @@ function redblue_section_fields_featured_3col( $layouts ) {
 add_action( 'redblue_sections_add_layout', 'redblue_section_markup_featured_3col', 10, 4 );
 function redblue_section_markup_featured_3col( $id, $count, $case, $context_prefix ) {
 
-	if ( $case != 'featured_3col' )
+	if ( $case != 'featured_3col' || is_admin() )
 		return;
 
     //* Do the function which figures out which classes we need
@@ -309,6 +325,19 @@ function redblue_section_markup_featured_3col( $id, $count, $case, $context_pref
     $url_center = get_post_meta( $id, $context_prefix . $count . '_link_center', true );
     $url_right = get_post_meta( $id, $context_prefix . $count . '_link_right', true );
 
+    //* Get the button text
+    $button_text_left = get_post_meta( $id, $context_prefix . $count . '_button_text_left', true );
+    $button_text_center = get_post_meta( $id, $context_prefix . $count . '_button_text_center', true );
+    $button_text_right = get_post_meta( $id, $context_prefix . $count . '_button_text_right', true );
+
+    if ( !$button_text_left )
+        $button_text_left = 'Read more';
+
+    if ( !$button_text_center )
+        $button_text_center = 'Read more';
+
+    if ( !$button_text_right )
+        $button_text_right = 'Read more';
 
 	//* Markup for this section
 	if ( $imageid )
@@ -329,7 +358,7 @@ function redblue_section_markup_featured_3col( $id, $count, $case, $context_pref
                 echo '<div class="content-container">';
                     printf( '<h3 class="column-featured-heading">%s</h3>', $heading_left );
                     printf( '<div class="content">%s</div>', $content_left );
-                    printf( '<a class="button button-small" href="%s">Read more</a>', $url_left );
+                    printf( '<a class="button button-small" href="%s">%s</a>', $url_left, $button_text_left );
                 echo '</div>';
             echo '</div>';
 
@@ -338,7 +367,7 @@ function redblue_section_markup_featured_3col( $id, $count, $case, $context_pref
                 echo '<div class="content-container">';
                     printf( '<h3 class="column-featured-heading">%s</h3>', $heading_center );
                     printf( '<div class="content">%s</div>', $content_center );
-                    printf( '<a class="button button-small" href="%s">Read more</a>', $url_center );
+                    printf( '<a class="button button-small" href="%s">%s</a>', $url_center, $button_text_center );
                 echo '</div>';
             echo '</div>';
 
@@ -347,7 +376,7 @@ function redblue_section_markup_featured_3col( $id, $count, $case, $context_pref
                 echo '<div class="content-container">';
                     printf( '<h3 class="column-featured-heading">%s</h3>', $heading_right );
                     printf( '<div class="content">%s</div>', $content_right );
-                    printf( '<a class="button button-small" href="%s">Read more</a>', $url_right );
+                    printf( '<a class="button button-small" href="%s">%s</a>', $url_right, $button_text_right );
                 echo '</div>';
             echo '</div>';
 
