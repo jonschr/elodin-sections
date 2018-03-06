@@ -153,6 +153,8 @@ function redblue_section_markup_two_column( $id, $count, $case, $context_prefix 
 	$class = implode( ' ', $class );
 
 	//* Variables for this section
+    $content_above_selection = get_post_meta( $id, $context_prefix . $count . '_content_above_selection', true );
+
 	$content_above = get_post_meta( $id, $context_prefix . $count . '_content_above', true );
 	$content_above = apply_filters( 'the_content', $content_above );
 
@@ -173,7 +175,7 @@ function redblue_section_markup_two_column( $id, $count, $case, $context_prefix 
 
 		echo '<div class="wrap">';
 
-			if ( $content_above )
+			if ( $content_above && ( $content_above_selection == 'yes' ) )
 				printf( '<div class="content_above">%s</div>', $content_above );
 
 	        echo '<div class="column-container">';
