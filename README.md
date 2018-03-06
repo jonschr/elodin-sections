@@ -24,6 +24,9 @@ These are mosly useful on full-width sections, but can be used on a few others a
 - **no-padding-horizontal**
 - **no-padding-top**
 - **no-padding-bottom**
+- **small-padding-vertical** – 30px of padding on the top and bottom (instead of the default 100px)
+- **small-padding-top** – 30px of padding on the top
+- **small-padding-bottom** – 30px of padding on the bottom
 
 ### For use on anything with a background
 - **full-color** – removes the automatic dark overlay on the section background, and allows either a background image or a background video to show up at full color instead (text may be hard to read over this). This class can also be used on individual slides on some rotators, and on those using this on the section itself will have no effect.
