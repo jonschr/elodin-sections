@@ -303,6 +303,11 @@
     padding-bottom: 0 !important;
 }
 
+.section.small-padding-vertical {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+}
+
 /* No Padding Horizontal
    ========================================================================== */
 
@@ -321,11 +326,19 @@
     padding-top: 0 !important;
 }
 
+.section.small-padding-top {
+    padding-top: 30px !important;
+}
+
 /* No Padding Bottom
    ========================================================================== */
 
 .section.no-padding-bottom {
     padding-bottom: 0 !important;
+}
+
+.section.small-padding-bottom {
+    padding-bottom: 30px !important;
 }
 
 /* Remove color overlay

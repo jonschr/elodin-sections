@@ -246,9 +246,14 @@
   padding-top: 0 !important;
   padding-bottom: 0 !important; }
 
+/* line 306, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+.section.small-padding-vertical {
+  padding-top: 30px !important;
+  padding-bottom: 30px !important; }
+
 /* No Padding Horizontal
    ========================================================================== */
-/* line 310, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+/* line 315, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
 .section.no-padding-horizontal .wrap {
   max-width: 100% !important;
   padding: 0 !important;
@@ -256,24 +261,32 @@
 
 /* No Padding Top
    ========================================================================== */
-/* line 320, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+/* line 325, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
 .section.no-padding-top {
   padding-top: 0 !important; }
 
+/* line 329, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+.section.small-padding-top {
+  padding-top: 30px !important; }
+
 /* No Padding Bottom
    ========================================================================== */
-/* line 327, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+/* line 336, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
 .section.no-padding-bottom {
   padding-bottom: 0 !important; }
 
+/* line 340, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+.section.small-padding-bottom {
+  padding-bottom: 30px !important; }
+
 /* Remove color overlay
    ========================================================================== */
-/* line 335, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+/* line 348, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
 .section.full-color .background-div {
   -webkit-filter: none !important;
           filter: none !important; }
 
-/* line 339, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
+/* line 352, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/_sectiongeneral.scss */
 .section.full-color .background-div::before {
   background-color: transparent !important; }
 
