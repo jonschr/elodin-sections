@@ -6,6 +6,7 @@ function redblue_sections_set_layouts() {
 
 	//* Figure out which sections to leave out for this project
 	$disable_layouts = array();
+	$sections = isset( $sections ) ? $sections : null;
 	$disable_layouts = apply_filters( 'redblue_section_remove_layouts', $sections );
 
 	//* Declare our $layouts variable, just in case (we'll be adding to this in each of the various sections)
@@ -18,12 +19,15 @@ function redblue_sections_set_layouts() {
 	do_action( 'redblue_sections_add_sections' );
 
 	//* Allow a theme to add arguments for where we use the sections
+	$instead_of_args = isset( $instead_of_args ) ? $instead_of_args : null;
 	$instead_of_content = apply_filters( 'redblue_section_instead_of_content_display', $instead_of_args );
 
 	//* Allow a theme to add arguments for where we use the sections
+	$above_args = isset( $above_args ) ? $above_args : null;
 	$above_content = apply_filters( 'redblue_section_above_content_display', $above_args );
 
 	//* Allow a theme to add arguments for where we use the sections
+	$below_args = isset( $below_args ) ? $below_args : null;
 	$below_content = apply_filters( 'redblue_section_below_content_display', $below_args );
 
 	/**
