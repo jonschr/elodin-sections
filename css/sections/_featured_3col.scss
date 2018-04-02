@@ -3,7 +3,6 @@
    ========================================================================== */
 
 .section.featured_3col {
-
     &.align-center {
         text-align: center;
     }
@@ -19,20 +18,24 @@
             flex-flow: column;
         }
 
+
         .column {
             flex: 0 1 auto;
             width: 30%;
             background-color: #333;
             color: white;
+            padding-bottom: 10px;
 
             @include tablet-section {
                 width: 48%;
                 margin-bottom: 35px;
             }
 
+
             @include mobile-section {
                 width: 100%;
             }
+
 
             &:last-child {
                 margin-bottom: 0;
@@ -66,12 +69,13 @@
                 min-height: 175px;
             }
 
+
             img {
                 bottom: 40px;
                 position: absolute;
                 left: 0;
                 margin-left: 50%;
-                transform: translateX( -50% );
+                transform: translateX(-50%);
                 z-index: 10;
             }
         }
@@ -81,12 +85,11 @@
             position: absolute;
             bottom: 0;
             margin-left: 50%;
-            transform: translateX( -50% );
+            transform: translateX(-50%);
             border: 16px solid red;
             border-color: transparent transparent #333333 transparent;
             display: block;
             z-index: 15;
-
         }
 
         .logo-image:after {
@@ -96,13 +99,19 @@
             right: 0;
             top: 0;
             bottom: 0;
-            background-color: rgba( black, .2 );
+            background-color: rgba(black, 0.2);
             z-index: 5;
 
             /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+100 */
-            background: -moz-linear-gradient(top,  rgba(0,0,0,0) 30%, rgba(0,0,0,0.60) 100%); /* FF3.6-15 */
-            background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 30%,rgba(0,0,0,0.60) 100%); /* Chrome10-25,Safari5.1-6 */
-            background: linear-gradient(to bottom,  rgba(0,0,0,0) 30%,rgba(0,0,0,0.60) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.6) 100%);
+
+            /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.6) 100%);
+
+            /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.6) 100%);
+
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         }
 
         .content-container {

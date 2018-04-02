@@ -358,7 +358,10 @@ function redblue_section_markup_featured_3col( $id, $count, $case, $context_pref
                 echo '<div class="content-container">';
                     printf( '<h3 class="column-featured-heading">%s</h3>', $heading_left );
                     printf( '<div class="content">%s</div>', $content_left );
-                    printf( '<a class="button button-small" href="%s">%s</a>', $url_left, $button_text_left );
+
+                    if ( $url_left )
+                        printf( '<a class="button button-small" href="%s">%s</a>', $url_left, $button_text_left );
+                        
                 echo '</div>';
             echo '</div>';
 
@@ -367,7 +370,10 @@ function redblue_section_markup_featured_3col( $id, $count, $case, $context_pref
                 echo '<div class="content-container">';
                     printf( '<h3 class="column-featured-heading">%s</h3>', $heading_center );
                     printf( '<div class="content">%s</div>', $content_center );
-                    printf( '<a class="button button-small" href="%s">%s</a>', $url_center, $button_text_center );
+
+                    if ( $url_center )
+                        printf( '<a class="button button-small" href="%s">%s</a>', $url_center, $button_text_center );
+
                 echo '</div>';
             echo '</div>';
 
@@ -376,7 +382,10 @@ function redblue_section_markup_featured_3col( $id, $count, $case, $context_pref
                 echo '<div class="content-container">';
                     printf( '<h3 class="column-featured-heading">%s</h3>', $heading_right );
                     printf( '<div class="content">%s</div>', $content_right );
-                    printf( '<a class="button button-small" href="%s">%s</a>', $url_right, $button_text_right );
+
+                    if ( $url_right )
+                        printf( '<a class="button button-small" href="%s">%s</a>', $url_right, $button_text_right );
+
                 echo '</div>';
             echo '</div>';
 
