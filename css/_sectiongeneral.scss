@@ -20,7 +20,7 @@
         // max-width: 100%;
 
         .wrap {
-            max-width: 1200px;
+            max-width: 1280px;
             width: 100%;
 
             @include tablet-section {
@@ -187,6 +187,37 @@
     background-color: transparent;
 }
 
+/* ==========================================================================
+   Light
+   ========================================================================== */
+
+.section.light {
+    &.background-image {
+        .background-div {
+            box-shadow: none !important;
+            filter: none !important;
+
+            &:before {
+                box-shadow: none !important;
+                background: transparent !important;
+            }
+        }
+    }
+
+    * {
+        color: black;
+        text-shadow: none !important;
+
+        @include mobile-section {
+            color: black;
+        }
+    }
+
+    p {
+        background: transparent !important;
+    }
+}
+
 /*
    Full-color
    ========================================================================== */
@@ -274,6 +305,70 @@
         .section-content {
             max-width: 600px;
             margin: 0 auto;
+        }
+    }
+}
+
+/* ==========================================================================
+   Alignment
+   ========================================================================== */
+
+.section.fullwidth.align-left,
+.section.fullwidth.align-right {
+    .wrap {
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+
+        .section-content {
+            max-width: 600px;
+            width: 100%;
+        }
+    }
+}
+
+/* Align-left
+   ========================================================================== */
+
+.section.fullwidth.align-left {
+    .wrap {
+        max-width: 1280px;
+
+        @media (max-width: 1340px) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .section-content {
+            margin-left: 0;
+            margin-right: auto;
+            text-align: left !important;
+        }
+    }
+}
+
+/* Align-right
+   ========================================================================== */
+
+.section.fullwidth.align-right {
+    .wrap {
+        max-width: 1280px;
+
+        @media (max-width: 1340px) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .section-content {
+            margin-right: 0;
+            margin-left: auto;
+            width: auto !important;
+            text-align: left !important;
+
+            @include mobile-section {
+                text-align: left !important;
+            }
         }
     }
 }
