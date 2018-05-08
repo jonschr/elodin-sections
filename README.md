@@ -40,21 +40,23 @@ The best practice for removing fields, the for the lonevity of the site you're w
 remove_all_filters( 'redblue_section_add_layout' );
 
 //* Uncomment the lines below to re-add the layouts that we'll actually be using
+add_filter( 'redblue_section_add_layout', 'redblue_section_fields_fullwidth' );
+add_filter( 'redblue_section_add_layout', 'redblue_section_fields_two_column' );
+add_filter( 'redblue_section_add_layout', 'redblue_section_fields_featured_items' );
+add_filter( 'redblue_section_add_layout', 'redblue_section_fields_checkerboard' );
 // add_filter( 'redblue_section_add_layout', 'redblue_section_fields_background_image_slider' );
 // add_filter( 'redblue_section_add_layout', 'redblue_section_fields_background_rotator' );
 // add_filter( 'redblue_section_add_layout', 'redblue_section_fields_background_video' );
-// add_filter( 'redblue_section_add_layout', 'redblue_section_fields_checkerboard' );
+// add_filter( 'redblue_section_add_layout', 'redblue_section_fields_featured_items_carousel' );
 // add_filter( 'redblue_section_add_layout', 'redblue_section_fields_featured_3col' );
 // add_filter( 'redblue_section_add_layout', 'redblue_section_fields_featured_content_carousel' );
 // add_filter( 'redblue_section_add_layout', 'redblue_section_fields_featured_content_checkerboard' );
-// add_filter( 'redblue_section_add_layout', 'redblue_section_fields_featured_items' );
-// add_filter( 'redblue_section_add_layout', 'redblue_section_fields_fullwidth' );
 // add_filter( 'redblue_section_add_layout', 'redblue_section_fields_google_maps' );
 // add_filter( 'redblue_section_add_layout', 'redblue_section_fields_scrollspy_nav' );
 // add_filter( 'redblue_section_add_layout', 'redblue_section_fields_sliding_accordion' );
 // add_filter( 'redblue_section_add_layout', 'redblue_section_fields_testimonials_slider' );
 // add_filter( 'redblue_section_add_layout', 'redblue_section_fields_trust_building_snippets' );
-// add_filter( 'redblue_section_add_layout', 'redblue_section_fields_two_column' );
+
 ```
 
 ## Add sections
