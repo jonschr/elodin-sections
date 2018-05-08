@@ -1,0 +1,125 @@
+/* ==========================================================================
+   Section defaults
+   ========================================================================== */
+
+/* Site inner collapses if there isn't content
+   ========================================================================== */
+
+.flexible-page-with-sections {
+    .site-inner {
+        padding: 0;
+    }
+}
+
+/* Structure
+   ========================================================================== */
+
+.page-template-page-flexible-content {
+    .site-inner {
+        // padding: 0;
+        // max-width: 100%;
+
+        .wrap {
+            max-width: 1280px;
+            width: 100%;
+
+            @include tablet-section {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+    }
+}
+
+.flexible-content-page-builder {
+    background-image: none !important;
+
+    .section {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background-color: white;
+        position: relative;
+        margin: 0;
+
+        @include mobile-section {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        ul:last-child {
+            margin-bottom: 0;
+        }
+
+        li:last-child {
+            margin-bottom: 0;
+        }
+
+        .wrap {
+            position: relative;
+            z-index: 10;
+
+            @include mobile-section {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+    }
+
+    .section:nth-of-type(odd) {
+        background-color: $light;
+    }
+}
+
+/* ==========================================================================
+   Font defaults
+   ========================================================================== */
+
+.section {
+    p {
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        padding: 0;
+        line-height: 1em;
+    }
+}
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+
+.section {
+    ol,
+    ul {
+        padding-left: 35px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+    }
+
+    ul li {
+        list-style-type: disc;
+    }
+
+    ol li {
+        list-style-type: upper-roman;
+    }
+}

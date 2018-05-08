@@ -1,0 +1,62 @@
+/* ==========================================================================
+   Padding classes
+   ========================================================================== */
+
+/* No Padding
+   ========================================================================== */
+
+.section.no-padding {
+    padding: 0 !important;
+
+    .wrap {
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+}
+
+/* No Padding Vertical
+   ========================================================================== */
+
+.section.no-padding-vertical {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.section.small-padding-vertical {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+}
+
+/* No Padding Horizontal
+   ========================================================================== */
+
+.section.no-padding-horizontal {
+    .wrap {
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+}
+
+/* No Padding Top
+   ========================================================================== */
+
+.section.no-padding-top {
+    padding-top: 0 !important;
+}
+
+.section.small-padding-top {
+    padding-top: 30px !important;
+}
+
+/* No Padding Bottom
+   ========================================================================== */
+
+.section.no-padding-bottom {
+    padding-bottom: 0 !important;
+}
+
+.section.small-padding-bottom {
+    padding-bottom: 30px !important;
+}

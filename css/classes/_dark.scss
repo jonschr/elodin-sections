@@ -1,0 +1,18 @@
+/* Dark section
+   ========================================================================== */
+
+.section.dark {
+    background-color: #333 !important;
+
+    * {
+        color: white;
+    }
+}
+
+.section.dark .background-div {
+    background-image: none;
+}
+
+.section.dark .background-div::before {
+    background-color: transparent;
+}

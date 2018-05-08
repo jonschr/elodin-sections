@@ -73,6 +73,7 @@ if ( class_exists( 'acf_pro_updates' ) ) {
     //* The sections themselves
     require_once( 'sections/fullwidth.php' );
     require_once( 'sections/featured_items.php' );
+    require_once( 'sections/featured_items_carousel.php' );
     require_once( 'sections/two_column.php' );
     require_once( 'sections/checkerboard.php' );
     require_once( 'sections/featured_3col.php' );
@@ -141,6 +142,7 @@ function redblue_sections_enqueue_scripts_styles() {
     wp_register_script( 'background-image-slider-init', plugin_dir_url( __FILE__ ) . 'js/background_image_slider-init.js', array( 'slick-main' ), null, true );
     wp_register_script( 'background-rotator-init', plugin_dir_url( __FILE__ ) . 'js/background_rotator-init.js', array( 'slick-main' ), null, true );
     wp_register_script( 'featured-content-carousel-init', plugin_dir_url( __FILE__ ) . 'js/featured_content_carousel-init.js', array( 'slick-main' ), null, true );
+    wp_register_script( 'featured-item-carousel-init', plugin_dir_url( __FILE__ ) . 'js/featured-item-carousel-init.js', array( 'slick-main' ), null, true );
 
     ///////////////
     // SCROLLSPY //

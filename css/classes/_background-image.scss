@@ -1,0 +1,30 @@
+/* Background image
+   ========================================================================== */
+
+.section.background-image {
+    .background-div {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        background-size: cover;
+        background-position: center center;
+        filter: grayscale(50%);
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(black, 0.6);
+            z-index: 5;
+        }
+    }
+
+    * {
+        color: white;
+    }
+}

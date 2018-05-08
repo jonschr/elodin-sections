@@ -28,7 +28,15 @@ $desktop-width-section: 1200px;
     }
 }
 
-@import "_sectiongeneral";
+/* Defaults
+   ========================================================================== */
+
+@import "classes/background-image";
+
+/* Sections
+   ========================================================================== */
+
+@import "section-default-styles";
 @import "sections/_slidergeneral";
 @import "sections/_fullwidth";
 @import "sections/_background_rotator";
@@ -36,6 +44,7 @@ $desktop-width-section: 1200px;
 @import "sections/_background_video";
 @import "sections/_featureditems";
 @import "sections/_featured_content_carousel";
+@import "sections/_featured_item_carousel";
 @import "sections/_featured_3col";
 @import "sections/_threecol_fourth_half_fourth";
 @import "sections/_checkerboard";
@@ -47,3 +56,15 @@ $desktop-width-section: 1200px;
 @import "sections/_google_maps";
 @import "sections/_scrollspy_nav";
 @import "sections/_image";
+
+/* Classes
+   ========================================================================== */
+
+@import "classes/padding";
+@import "classes/limit-width";
+@import "classes/limit-height";
+@import "classes/align";
+@import "classes/light";
+@import "classes/dark";
+@import "classes/full-color";
+@import "classes/background-fixed";

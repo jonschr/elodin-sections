@@ -2,17 +2,26 @@
     ul {
         display: flex;
         flex-flow: row wrap;
-        width: 600px;
+        width: 450px;
 
         li {
             flex: 0 1 auto;
-            width: 200px;
+            width: 225px;
 
             a {
-                &:hover {
+                font-size: 13px;
 
-                }
+                &:hover {}
             }
         }
+    }
+}
+
+.acf-limit-height {
+    min-height: 200px !important;
+
+    iframe {
+        height: 170px !important;
+        min-height: 170px !important;
     }
 }

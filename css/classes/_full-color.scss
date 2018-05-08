@@ -1,0 +1,26 @@
+/*
+   Full-color
+   ========================================================================== */
+
+.section.full-color {
+    .background-div {
+        filter: grayscale(0%);
+
+        &::before {
+            background-color: transparent;
+        }
+    }
+}
+
+/* Remove color overlay
+   ========================================================================== */
+
+.section.full-color {
+    .background-div {
+        filter: none !important;
+    }
+
+    .background-div::before {
+        background-color: transparent !important;
+    }
+}

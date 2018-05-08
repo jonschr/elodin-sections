@@ -1,0 +1,30 @@
+/* ==========================================================================
+   Light
+   ========================================================================== */
+
+.section.light {
+    &.background-image {
+        .background-div {
+            box-shadow: none !important;
+            filter: none !important;
+
+            &:before {
+                box-shadow: none !important;
+                background: transparent !important;
+            }
+        }
+    }
+
+    * {
+        color: black;
+        text-shadow: none !important;
+
+        @include mobile-section {
+            color: black;
+        }
+    }
+
+    p {
+        background: transparent !important;
+    }
+}

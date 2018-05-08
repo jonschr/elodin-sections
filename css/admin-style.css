@@ -1,13 +1,15 @@
 .acf-fc-popup ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-  width: 600px; }
+  flex-flow: row wrap;
+  width: 450px; }
   .acf-fc-popup ul li {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 auto;
-            flex: 0 1 auto;
-    width: 200px; }
-/*# sourceMappingURL=admin-style.css.map */
+    flex: 0 1 auto;
+    width: 225px; }
+    .acf-fc-popup ul li a {
+      font-size: 13px; }
+
+.acf-limit-height {
+  min-height: 200px !important; }
+  .acf-limit-height iframe {
+    height: 170px !important;
+    min-height: 170px !important; }
