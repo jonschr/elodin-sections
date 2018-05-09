@@ -329,17 +329,14 @@ function redblue_section_markup_featured_items_carousel( $id, $count, $case, $co
 						//* Get the link information
 						$featured_link = get_post_meta( $id, $context_prefix . $count . '_repeater_' . $i . '_link', true );
 
-						if ( $featured_imageid && !$video )
+						if ( $featured_imageid )
 							printf( '<div class="flex-featured-image"><img src="%s" /></div>', $featured_imageurl );
 
-						if ( $featured_heading )
-							printf( '<h3>%s</h3>', $featured_heading );
-
-						if ( $featured_content )
-							echo apply_filters( 'the_content', $featured_content );
-
-						if ( $featured_link )
-							printf( '</a>', $featured_link );
+						if ( $featured_content ) {
+                            echo '<div class="featured-item-content">';
+    							echo apply_filters( 'the_content', $featured_content );
+                            echo '</div>';
+                        }
 
 					echo '</div></div>'; // .item-container, .item
 				}
