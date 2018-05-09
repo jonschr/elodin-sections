@@ -1,8 +1,4 @@
 .featured_items_carousel {
-    .featuredcontent {
-        margin-bottom: 50px;
-    }
-
     .slide-container {
         padding: 15px;
     }
@@ -12,15 +8,22 @@
         margin-left: -15px;
         margin-right: -15px;
         width: calc( 100% + 30px );
+        padding-top: 50px;
     }
 
     .flex-featured-image {
         margin-bottom: 20px;
+        text-align: center !important;
+
+        img {
+            margin: 0px auto;
+        }
     }
 
     .slick-slide {
         opacity: 0;
         transition: .5s opacity ease;
+        outline: none !important;
 
         &.slick-active {
             opacity: 1;
@@ -28,7 +31,7 @@
     }
 
     .slick-arrow {
-        top: -30px;
+        top: 15px;
         left: 50%;
         margin: 0;
         padding: 0;

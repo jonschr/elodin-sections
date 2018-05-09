@@ -54,6 +54,65 @@ function redblue_section_fields_featured_items_carousel( $layouts ) {
                 'media_upload' => 1,
             ),
             array (
+                'key' => 'field_9jJg6BQ42JuE1BBB',
+                'label' => 'Image sizing',
+                'name' => 'image_sizing',
+                'type' => 'radio',
+                'instructions' => 'If specific sizing is needed on the images, you can set that here. Auto-cropping works best for images larger than 600px on a long side or 500px on a short (or square) side.',
+                'required' => 1,
+                'choices' => array (
+                    'default' => 'Default (use sizing per image)',
+                    'horizontal' => 'Horizontal',
+                    'square' => 'Square',
+                    'vertical' => 'Vertical',
+                    'custom' => 'Custom'
+                ),
+                'wrapper' => array (
+                    'width' => '',
+                ),
+                'layout' => 'horizontal',
+            ),
+            array (
+                'key' => 'field_9jJg6BQ42JuE7CCC',
+                'label' => 'Width (pixels)',
+                'name' => 'image_width',
+                'type' => 'number',
+                'wrapper' => array (
+                    'width' => 50,
+                ),
+                'default_value' => '',
+                'placeholder' => 'e.g. 400',
+                'conditional_logic' => array (
+                    array (
+                        array (
+                            'field' => 'field_9jJg6BQ42JuE1BBB',
+                            'operator' => '==',
+                            'value' => 'custom',
+                        ),
+                    ),
+                ),
+            ),
+            array (
+                'key' => 'field_9jJg6BQ42JuE7DDD',
+                'label' => 'Height (pixels)',
+                'name' => 'image_height',
+                'type' => 'number',
+                'wrapper' => array (
+                    'width' => 50,
+                ),
+                'default_value' => '',
+                'placeholder' => 'e.g. 600',
+                'conditional_logic' => array (
+                    array (
+                        array (
+                            'field' => 'field_9jJg6BQ42JuE1BBB',
+                            'operator' => '==',
+                            'value' => 'custom',
+                        ),
+                    ),
+                ),
+            ),
+            array (
                 'key' => 'field_9jJg6BQ42JuE2',
                 'label' => 'Featured Item',
                 'name' => 'repeater',
@@ -205,7 +264,36 @@ function redblue_section_markup_featured_items_carousel( $id, $count, $case, $co
 	//* Variables for this section
 	$content = get_post_meta( $id, $context_prefix . $count . '_content', true );
 	$content = apply_filters( 'the_content', $content );
+    $size = get_post_meta( $id, $context_prefix . $count . '_image_sizing', true );
 
+    //* Figure out the image size to actually use for each of those
+    switch ( $size ) {
+        case null :
+            $image_size = 'large';
+            break;
+        case 'default' : 
+            $image_size = 'large';
+            break;
+        case 'horizontal' :
+            $image_size = array( 600, 400, true );
+            break;
+        case 'square' :
+            $image_size = array( 500, 500, true );
+            break;
+        case 'vertical' :
+            $image_size = array( 400, 600, true );
+            break;
+        case 'custom' :
+            $width = get_post_meta( $id, $context_prefix . $count . '_image_width', true );
+            $height = get_post_meta( $id, $context_prefix . $count . '_image_height', true );
+
+            $image_size = array( $width, $height, true );
+
+            if ( !$width || !$height )
+                $image_size = 'large';
+
+            break;
+    }
 
 	//* Markup for this section
 	if ( $imageid )
@@ -216,22 +304,14 @@ function redblue_section_markup_featured_items_carousel( $id, $count, $case, $co
 		
         do_action( 'before_inside_section_' . $count );
 
-		if ( $content )
+		if ( $content_above_selection == true && $content )
 			printf( '<div class="featuredcontent">%s</div><div class="clear"></div>', $content );
-
-
-		$itemsclass[0] = 'items';
-
-		//* Figure out how many featured items we'll have (to add to the class)
-		$featureditems = get_post_meta( $id, $context_prefix . $count . '_repeater', true );
-
-		if ( ( $featureditems % 4 == 0 ) && !( $featureditems % 3 == 0 ) )
-			$itemsclass[] = 'force-four-columns';
-
-		$itemsclass = implode( ' ', $itemsclass );
-
+        
+        //* Figure out how many featured items we'll have (to add to the class)
+        $featureditems = get_post_meta( $id, $context_prefix . $count . '_repeater', true );
+                
 		if ( $featureditems )
-			printf( '<div id="featured-item-carousel-%s" class="%s">', $rand, $itemsclass );
+			printf( '<div id="featured-item-carousel-%s">', $rand );
 
 				for ( $i=0; $i < $featureditems ; $i++ ) {
 
@@ -240,10 +320,8 @@ function redblue_section_markup_featured_items_carousel( $id, $count, $case, $co
 						//* Get the background image information
 						$featured_imageid = (int) get_post_meta( $id, $context_prefix . $count . '_repeater_' . $i . '_image', true );
 
-						if ( $featured_imageid ) {
-							$featured_imageurlarray = wp_get_attachment_image_src( $featured_imageid, 'large' );
-							$featured_imageurl = $featured_imageurlarray[0];
-						}
+						if ( $featured_imageid )
+							$featured_imageurl = wp_get_attachment_image_url( $featured_imageid, $image_size );
 
 						//* Get content information
 						$featured_content = get_post_meta( $id, $context_prefix . $count . '_repeater_' . $i . '_content', true );
@@ -259,9 +337,6 @@ function redblue_section_markup_featured_items_carousel( $id, $count, $case, $co
 
 						if ( $featured_content )
 							echo apply_filters( 'the_content', $featured_content );
-
-						// if ( $featured_imageid )
-						// 	printf( '<div class="featured-image-bkg" style="background-image:url(%s);"></div>', $featured_imageurl );
 
 						if ( $featured_link )
 							printf( '</a>', $featured_link );

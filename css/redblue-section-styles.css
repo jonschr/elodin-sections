@@ -670,37 +670,39 @@ body.flexible-content-page-builder .section.background_video {
         padding-top: 20px; }
 
 /* line 2, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_item_carousel.scss */
-.featured_items_carousel .featuredcontent {
-  margin-bottom: 50px; }
-
-/* line 6, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_item_carousel.scss */
 .featured_items_carousel .slide-container {
   padding: 15px; }
 
-/* line 10, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_item_carousel.scss */
+/* line 6, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_item_carousel.scss */
 .featured_items_carousel .slick-slider {
   -webkit-transition: .5s opacity ease;
   transition: .5s opacity ease;
   margin-left: -15px;
   margin-right: -15px;
-  width: calc( 100% + 30px); }
+  width: calc( 100% + 30px);
+  padding-top: 50px; }
 
-/* line 17, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_item_carousel.scss */
+/* line 14, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_item_carousel.scss */
 .featured_items_carousel .flex-featured-image {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  text-align: center !important; }
+  /* line 18, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_item_carousel.scss */
+  .featured_items_carousel .flex-featured-image img {
+    margin: 0px auto; }
 
-/* line 21, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_item_carousel.scss */
+/* line 23, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_item_carousel.scss */
 .featured_items_carousel .slick-slide {
   opacity: 0;
   -webkit-transition: .5s opacity ease;
-  transition: .5s opacity ease; }
-  /* line 25, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_item_carousel.scss */
+  transition: .5s opacity ease;
+  outline: none !important; }
+  /* line 28, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_item_carousel.scss */
   .featured_items_carousel .slick-slide.slick-active {
     opacity: 1; }
 
-/* line 30, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_item_carousel.scss */
+/* line 33, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_item_carousel.scss */
 .featured_items_carousel .slick-arrow {
-  top: -30px;
+  top: 15px;
   left: 50%;
   margin: 0;
   padding: 0;
@@ -708,41 +710,41 @@ body.flexible-content-page-builder .section.background_video {
   height: 30px;
   -webkit-transition: .5s all ease;
   transition: .5s all ease; }
-  /* line 39, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_item_carousel.scss */
+  /* line 42, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_item_carousel.scss */
   .featured_items_carousel .slick-arrow:before {
     font-size: 30px;
     width: 30px;
     height: 30px;
     margin: 0;
     padding: 0; }
-  /* line 47, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_item_carousel.scss */
+  /* line 50, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_item_carousel.scss */
   .featured_items_carousel .slick-arrow:focus, .featured_items_carousel .slick-arrow:hover {
     outline: none;
     border: none;
     -webkit-box-shadow: none;
             box-shadow: none; }
-  /* line 54, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_item_carousel.scss */
+  /* line 57, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_item_carousel.scss */
   .featured_items_carousel .slick-arrow.slick-prev {
     -webkit-transform: translateX(calc( -50% - 20px));
             transform: translateX(calc( -50% - 20px)); }
-    /* line 57, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_item_carousel.scss */
+    /* line 60, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_item_carousel.scss */
     .featured_items_carousel .slick-arrow.slick-prev:before {
       content: "\f341";
       font-family: 'dashicons'; }
-  /* line 63, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_item_carousel.scss */
+  /* line 66, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_item_carousel.scss */
   .featured_items_carousel .slick-arrow.slick-next {
     -webkit-transform: translateX(calc( -50% + 20px));
             transform: translateX(calc( -50% + 20px)); }
-    /* line 66, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_item_carousel.scss */
+    /* line 69, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_item_carousel.scss */
     .featured_items_carousel .slick-arrow.slick-next:before {
       content: "\f345";
       font-family: 'dashicons'; }
 
-/* line 76, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_item_carousel.scss */
+/* line 79, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_item_carousel.scss */
 .featured_items_carousel .slick-arrow:before {
   color: black; }
 
-/* line 83, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_item_carousel.scss */
+/* line 86, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/redblue-sections/css/sections/_featured_item_carousel.scss */
 .featured_items_carousel.dark .slick-arrow:before {
   color: black; }
 
