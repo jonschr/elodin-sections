@@ -262,7 +262,8 @@ function redblue_section_markup_featured_items_carousel( $id, $count, $case, $co
 	$class = implode( ' ', $class );
 
 	//* Variables for this section
-	$content = get_post_meta( $id, $context_prefix . $count . '_content', true );
+    $content_above_selection = get_post_meta( $id, $context_prefix . $count . '_content_above_selection', true );
+	$content = get_post_meta( $id, $context_prefix . $count . '_content_above', true );
 	$content = apply_filters( 'the_content', $content );
     $size = get_post_meta( $id, $context_prefix . $count . '_image_sizing', true );
 
@@ -304,7 +305,11 @@ function redblue_section_markup_featured_items_carousel( $id, $count, $case, $co
 		
         do_action( 'before_inside_section_' . $count );
 
-		if ( $content_above_selection == true && $content )
+        // echo 'Content above: ' . $content_above_selection;
+        // echo '<br/>';
+        // echo 'Content: ' . $content;
+
+		if ( ( $content_above_selection == 'yes' ) && $content )
 			printf( '<div class="featuredcontent">%s</div><div class="clear"></div>', $content );
         
         //* Figure out how many featured items we'll have (to add to the class)
