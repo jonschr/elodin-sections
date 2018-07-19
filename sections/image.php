@@ -74,10 +74,8 @@ function redblue_section_markup_image( $id, $count, $case, $context_prefix ) {
 	//* Get the background image information
 	$imageid = (int) get_post_meta( $id, $context_prefix . $count . '_background', true );
 
-	if ( $imageid ) {
-		$imageurlarray = wp_get_attachment_image_src( $imageid, 'background-fullscreen' );
-		$imageurl = $imageurlarray[0];
-	}
+	if ( $imageid ) 
+		$imageurl = wp_get_attachment_image_url( $imageid, 'background-fullscreen' );
 
 	//* Get the classes ready
 	$class = implode( ' ', $class );
@@ -99,6 +97,6 @@ function redblue_section_markup_image( $id, $count, $case, $context_prefix ) {
 
 		do_action( 'after_inside_section_' . $count );
 
-	echo '</div></section>'; // .wrap, section.section
+	echo '</section>'; // .wrap, section.section
 
 }
