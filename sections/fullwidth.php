@@ -103,10 +103,8 @@ function redblue_section_markup_fullwidth( $id, $count, $case, $context_prefix )
 	//* Get the background image information
 	$imageid = (int) get_post_meta( $id, $context_prefix . $count . '_background', true );
 
-	if ( $imageid ) {
-		$imageurlarray = wp_get_attachment_image_src( $imageid, 'background-fullscreen' );
-		$imageurl = $imageurlarray[0];
-	}
+	if ( $imageid ) 
+		$imageurl = wp_get_attachment_image_url( $imageid, 'background-fullscreen' );
 
 	//* If there's a background image, then add a class to account for that
 	if ( $imageid )

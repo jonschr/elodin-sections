@@ -132,8 +132,7 @@ function redblue_section_markup_background_rotator( $id, $count, $case, $context
 
 			if ( $image_id ) {
 
-				$image_url_array = wp_get_attachment_image_src( $image_id, 'background-fullscreen' );
-				$image_url = $image_url_array[0];
+				$image_url = wp_get_attachment_image_url( $image_id, 'background-fullscreen' );
 
 				echo '<div class="slide">';
 
