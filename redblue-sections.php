@@ -88,6 +88,7 @@ if ( class_exists( 'acf_pro_updates' ) ) {
     require_once( 'sections/google_maps.php' );
     require_once( 'sections/scrollspy_nav.php' );
     require_once( 'sections/image.php' );
+    require_once( 'sections/blocks.php' );
     // require_once( 'sections/threecol_fourth_half_fourth.php' ); // deprecated
 
     //* Output the actual sections
