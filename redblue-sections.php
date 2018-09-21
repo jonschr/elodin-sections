@@ -109,13 +109,13 @@ function redblue_sections_admin_scripts() {
         return;
 
     //* Make all ACF boxes start each pageload closed (this makes it easier to use)
-    wp_enqueue_script( 'redblue-sections-close-on-load', plugin_dir_url( __FILE__ ) . 'js/admin_close_everything_on_load.js', array( 'jquery' ), 'REDBLUE_SECTIONS_VERSION', true );
+    wp_enqueue_script( 'redblue-sections-close-on-load', plugin_dir_url( __FILE__ ) . 'js/admin_close_everything_on_load.js', array( 'jquery' ), REDBLUE_SECTIONS_VERSION, true );
 
     //* Prevent one-click (accidental) deletions of fields
     // wp_enqueue_script( 'redblue-sections-delete-confirmation-box', plugin_dir_url( __FILE__ ) . 'js/admin_delete_confirmation_box.js', array( 'jquery' ), null );
 
     //* Custom styles for the admin area
-    wp_enqueue_style( 'redblue-sections-admin-style', plugin_dir_url( __FILE__ ) . 'css/admin-style.css', array(), 'REDBLUE_SECTIONS_VERSION', 'screen' );
+    wp_enqueue_style( 'redblue-sections-admin-style', plugin_dir_url( __FILE__ ) . 'css/admin-style.css', array(), REDBLUE_SECTIONS_VERSION, 'screen' );
 
 }
 
@@ -128,28 +128,28 @@ function redblue_sections_enqueue_scripts_styles() {
 		return;
 
     //* Enqueue main style
-    wp_enqueue_style( 'redblue-section-style', plugin_dir_url( __FILE__ ) . 'css/redblue-section-styles.css', array(), 'REDBLUE_SECTIONS_VERSION', 'screen' );
+    wp_enqueue_style( 'redblue-section-style', plugin_dir_url( __FILE__ ) . 'css/redblue-section-styles.css', array(), REDBLUE_SECTIONS_VERSION, 'screen' );
 
     //* Google maps scrollfix
-    wp_register_script( 'google-maps-scrollfix', plugin_dir_url( __FILE__ ) . 'js/google-maps-scrollfix.js', array( 'jquery' ), 'REDBLUE_SECTIONS_VERSION', true );
+    wp_register_script( 'google-maps-scrollfix', plugin_dir_url( __FILE__ ) . 'js/google-maps-scrollfix.js', array( 'jquery' ), REDBLUE_SECTIONS_VERSION, true );
 
     ///////////
     // SLICK //
     ///////////
 
     //* Slick slider main scripts
-	wp_register_script( 'slick-main', plugin_dir_url( __FILE__ ) . 'slick/slick.min.js', array( 'jquery' ), 'REDBLUE_SECTIONS_VERSION', true );
-	wp_register_script( 'slick-init', plugin_dir_url( __FILE__ ) . 'js/slick-init.js', array( 'slick-main' ), 'REDBLUE_SECTIONS_VERSION', true );
+	wp_register_script( 'slick-main', plugin_dir_url( __FILE__ ) . 'slick/slick.min.js', array( 'jquery' ), REDBLUE_SECTIONS_VERSION, true );
+	wp_register_script( 'slick-init', plugin_dir_url( __FILE__ ) . 'js/slick-init.js', array( 'slick-main' ), REDBLUE_SECTIONS_VERSION, true );
 
     //* Slick styles
-    wp_register_style( 'slick-style', plugin_dir_url( __FILE__ ) . 'slick/slick.css', array(), 'REDBLUE_SECTIONS_VERSION', 'screen' );
-    wp_register_style( 'slick-theme', plugin_dir_url( __FILE__ ) . 'slick/slick-theme.css', array(), 'REDBLUE_SECTIONS_VERSION', 'screen' );
+    wp_register_style( 'slick-style', plugin_dir_url( __FILE__ ) . 'slick/slick.css', array(), REDBLUE_SECTIONS_VERSION, 'screen' );
+    wp_register_style( 'slick-theme', plugin_dir_url( __FILE__ ) . 'slick/slick-theme.css', array(), REDBLUE_SECTIONS_VERSION, 'screen' );
 
     //* Specific slider scripts
-    wp_register_script( 'background-image-slider-init', plugin_dir_url( __FILE__ ) . 'js/background_image_slider-init.js', array( 'slick-main' ), 'REDBLUE_SECTIONS_VERSION', true );
-    wp_register_script( 'background-rotator-init', plugin_dir_url( __FILE__ ) . 'js/background_rotator-init.js', array( 'slick-main' ), 'REDBLUE_SECTIONS_VERSION', true );
-    wp_register_script( 'featured-content-carousel-init', plugin_dir_url( __FILE__ ) . 'js/featured_content_carousel-init.js', array( 'slick-main' ), 'REDBLUE_SECTIONS_VERSION', true );
-    wp_register_script( 'featured-item-carousel-init', plugin_dir_url( __FILE__ ) . 'js/featured-item-carousel-init.js', array( 'slick-main' ), 'REDBLUE_SECTIONS_VERSION', true );
+    wp_register_script( 'background-image-slider-init', plugin_dir_url( __FILE__ ) . 'js/background_image_slider-init.js', array( 'slick-main' ), REDBLUE_SECTIONS_VERSION, true );
+    wp_register_script( 'background-rotator-init', plugin_dir_url( __FILE__ ) . 'js/background_rotator-init.js', array( 'slick-main' ), REDBLUE_SECTIONS_VERSION, true );
+    wp_register_script( 'featured-content-carousel-init', plugin_dir_url( __FILE__ ) . 'js/featured_content_carousel-init.js', array( 'slick-main' ), REDBLUE_SECTIONS_VERSION, true );
+    wp_register_script( 'featured-item-carousel-init', plugin_dir_url( __FILE__ ) . 'js/featured-item-carousel-init.js', array( 'slick-main' ), REDBLUE_SECTIONS_VERSION, true );
 
     ///////////////
     // SCROLLSPY //
@@ -158,15 +158,15 @@ function redblue_sections_enqueue_scripts_styles() {
     // wp_register_script( 'scrollspy', plugin_dir_url( __FILE__ ) . '/js/scrollspy.js', array( 'jquery' ), null, true );
     // wp_register_script( 'sections-smoothscroll', plugin_dir_url( __FILE__ ) . '/js/smoothscroll.js', array( 'jquery' ), null, true );
     // wp_register_script( 'throttle', plugin_dir_url( __FILE__ ) . '/js-lib/throttle_and_debounce/throttle_and_debounce.js', array( 'jquery' ), null, true );
-    wp_register_script( 'ddscrollspy', plugin_dir_url( __FILE__ ) . '/js-lib/ddscrollspy/ddscrollspy.js', array( 'jquery' ), 'REDBLUE_SECTIONS_VERSION', true );
-    wp_register_script( 'ddscrollspy-init', plugin_dir_url( __FILE__ ) . '/js/ddscrollspy-init.js', array( 'ddscrollspy' ), 'REDBLUE_SECTIONS_VERSION', true );
+    wp_register_script( 'ddscrollspy', plugin_dir_url( __FILE__ ) . '/js-lib/ddscrollspy/ddscrollspy.js', array( 'jquery' ), REDBLUE_SECTIONS_VERSION, true );
+    wp_register_script( 'ddscrollspy-init', plugin_dir_url( __FILE__ ) . '/js/ddscrollspy-init.js', array( 'ddscrollspy' ), REDBLUE_SECTIONS_VERSION, true );
 
     //////////////////
     // FONT AWESOME //
     //////////////////
 
     //* Accordion script
-    wp_register_style( 'font-awesome', plugin_dir_url( __FILE__ ) . '/js-lib/font-awesome-4.7.0/css/font-awesome.min.css', array(), 'REDBLUE_SECTIONS_VERSION', 'screen' );
+    wp_register_style( 'font-awesome', plugin_dir_url( __FILE__ ) . '/js-lib/font-awesome-4.7.0/css/font-awesome.min.css', array(), REDBLUE_SECTIONS_VERSION, 'screen' );
 
 }
 
