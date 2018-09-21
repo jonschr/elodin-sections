@@ -27,10 +27,8 @@ if ( !defined( 'ABSPATH' ) ) {
 // Plugin directory
 define( 'REDBLUE_SECTIONS', dirname( __FILE__ ) );
 
-// Get the version of the plugin
-$plugin_data = get_plugin_data( __FILE__ );
-$plugin_version = $plugin_data['Version'];
-define ( 'REDBLUE_SECTIONS_VERSION', $plugin_version );
+// Define the version of the plugin
+define ( 'REDBLUE_SECTIONS_VERSION', 0.9 );
 
 /**
  * Add a notification if ACF isn't installed and active
