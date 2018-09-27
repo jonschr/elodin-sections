@@ -15,6 +15,13 @@ function redblue_sections_set_layouts() {
 	//* Allow a theme to add a layout
 	$layouts = apply_filters( 'redblue_section_add_layout', $layouts );
 
+	//* Allow a theme or plugin to add default fields throughout
+	$layouts = apply_filters( 'redblue_section_global_fields', $layouts );
+
+	// echo '<pre>';
+	// print_r( $layouts );
+	// echo '</pre>';
+
 	//* Add the sections
 	do_action( 'redblue_sections_add_sections' );
 
