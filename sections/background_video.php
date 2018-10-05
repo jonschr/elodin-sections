@@ -159,7 +159,7 @@ function redblue_section_markup_background_video( $id, $count, $case, $context_p
 		printf( '<div class="wrap">%s</div>', $content );
 
 			//* Output the video itself
-			printf( '<video class="background_video_the_video" autoplay="" muted="" loop="loop" poster="%s" preload="auto" class="video-playing">', $image_fallback );
+			printf( '<video class="background_video_the_video" autoplay muted loop playsinline poster="%s" preload="auto" class="video-playing">', $image_fallback );
 
 
 				if ( $video_mp4 )
