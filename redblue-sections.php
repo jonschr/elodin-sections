@@ -1,11 +1,12 @@
 <?php
 /*
-	Plugin Name: Red Blue Sections
-	Plugin URI: http://redblue.us
-	Description: An ACF addon which installs fields and basic layouts for flexible content areas.
-	Version: 0.9
+	Plugin Name: Elodin Sections
+	Plugin URI: https://github.com/jonschr/elodin-sections
+    GitHub Plugin URI: https://github.com/jonschr/elodin-sections
+    Description: An ACF addon which installs fields and basic layouts for flexible content areas.
+	Version: 1.0
     Author: Jon Schroeder
-    Author URI: http://redblue.us
+    Author URI: https://elod.in
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
