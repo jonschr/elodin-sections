@@ -1,5 +1,5 @@
-# Red Blue Sections
-Red Blue Sections extends the Advanced Custom Fields for Genesis themes. It sets up a new page template for this purpose, registers the necessary fields, and sets up basic layouts for some commonly-used sections.
+# Elodin Sections
+Elodin Sections extends the Advanced Custom Fields for Genesis themes. It sets up a new page template for this purpose, registers the necessary fields, and sets up basic layouts for some commonly-used sections.
 
 *This plugin requires the Advanced Custom Fields Pro plugin, and the Genesis framework. Without both of these installed and active, it probably won't do anything.*
 
@@ -33,7 +33,7 @@ These are mosly useful on full-width sections, but can be used on a few others a
 
 
 ## Remove unused sections
-The best practice for removing fields, the for the lonevity of the site you're working on, is to remove _all_ sections, then immediately re-add just the ones that this site will be using. That means if we add more sections to the site, they won't automatically pop into the site's backend.
+The best practice for removing fields, for the longevity of the site you're working on, is to remove _all_ sections, then immediately re-add just the ones that this site will be using. That means if we add more sections to the site, they won't automatically pop into the site's backend.
 
 ```php
 //* Remove all of the sections
