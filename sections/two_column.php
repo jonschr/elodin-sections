@@ -30,7 +30,7 @@ function redblue_section_fields_two_column( $layouts ) {
                     'halfhalf' => 'Half and half',
                 ),
                 'wrapper' => array (
-                    'width' => 60,
+                    'width' => 50,
                 ),
                 'layout' => 'horizontal',
             ),
@@ -46,7 +46,23 @@ function redblue_section_fields_two_column( $layouts ) {
                     'yes' => 'Yes'
                 ),
                 'wrapper' => array (
-                    'width' => 40,
+                    'width' => 25,
+                ),
+                'layout' => 'horizontal',
+            ),
+            array (
+                'key' => 'field_fqscmagagaHgNXttwersnwwW1',
+                'label' => 'Content below',
+                'name' => 'content_below_selection',
+                'type' => 'radio',
+                'instructions' => 'Content below the two-column area?',
+                'required' => 1,
+                'choices' => array (
+                    'no' => 'No',
+                    'yes' => 'Yes'
+                ),
+                'wrapper' => array (
+                    'width' => 25,
                 ),
                 'layout' => 'horizontal',
             ),
@@ -56,14 +72,14 @@ function redblue_section_fields_two_column( $layouts ) {
                 'name' => 'content_above',
                 'type' => 'wysiwyg',
                 'conditional_logic' => array (
-    				array (
-    					array (
-    						'field' => 'field_fqscmagagaHgNXnwwW1',
-    						'operator' => '==',
-    						'value' => 'yes',
-    					),
-    				),
-    			),
+                    array (
+                        array (
+                            'field' => 'field_fqscmagagaHgNXnwwW1',
+                            'operator' => '==',
+                            'value' => 'yes',
+                        ),
+                    ),
+                ),
                 'tabs' => 'all',
                 'toolbar' => 'full',
                 'media_upload' => 1,
@@ -87,6 +103,24 @@ function redblue_section_fields_two_column( $layouts ) {
                 'type' => 'wysiwyg',
                 'wrapper' => array (
                     'width' => 50,
+                ),
+                'tabs' => 'all',
+                'toolbar' => 'full',
+                'media_upload' => 1,
+            ),
+            array (
+                'key' => 'field_fqscmHNXnwwasdgtweW12ga',
+                'label' => 'Content below',
+                'name' => 'content_below',
+                'type' => 'wysiwyg',
+                'conditional_logic' => array (
+                    array (
+                        array (
+                            'field' => 'field_fqscmagagaHgNXttwersnwwW1',
+                            'operator' => '==',
+                            'value' => 'yes',
+                        ),
+                    ),
                 ),
                 'tabs' => 'all',
                 'toolbar' => 'full',
@@ -120,7 +154,7 @@ function redblue_section_fields_two_column( $layouts ) {
         ),
     );
 
-	return $layouts;
+    return $layouts;
 }
 
 //////////////////////////
@@ -130,12 +164,12 @@ function redblue_section_fields_two_column( $layouts ) {
 add_action( 'redblue_sections_add_layout', 'redblue_section_markup_two_column', 10, 4 );
 function redblue_section_markup_two_column( $id, $count, $case, $context_prefix ) {
 
-	if ( $case != 'two_column' )
-		return;
+    if ( $case != 'two_column' )
+        return;
 
     //* Do the function which figures out which classes we need
-	$class = rb_section_class_setup( $id, $count, $case, $context_prefix );
-	$class[] = get_post_meta( $id, $context_prefix . $count . '_alignment', true );
+    $class = rb_section_class_setup( $id, $count, $case, $context_prefix );
+    $class[] = get_post_meta( $id, $context_prefix . $count . '_alignment', true );
 
     //* Get the background image information
     $imageid = (int) get_post_meta( $id, $context_prefix . $count . '_background', true );
@@ -149,45 +183,55 @@ function redblue_section_markup_two_column( $id, $count, $case, $context_prefix 
     if ( $imageid )
         $class[] = 'background-image';
 
-	//* Get the classes ready
-	$class = implode( ' ', $class );
+    //* Get the classes ready
+    $class = implode( ' ', $class );
 
-	//* Variables for this section
+    //* Variables for this section
     $content_above_selection = get_post_meta( $id, $context_prefix . $count . '_content_above_selection', true );
 
-	$content_above = get_post_meta( $id, $context_prefix . $count . '_content_above', true );
-	$content_above = apply_filters( 'the_content', $content_above );
+    $content_above = get_post_meta( $id, $context_prefix . $count . '_content_above', true );
+    $content_above = apply_filters( 'the_content', $content_above );
 
-	$content_one = get_post_meta( $id, $context_prefix . $count . '_content_one', true );
-	$content_one = apply_filters( 'the_content', $content_one );
+    $content_one = get_post_meta( $id, $context_prefix . $count . '_content_one', true );
+    $content_one = apply_filters( 'the_content', $content_one );
 
     $content_two = get_post_meta( $id, $context_prefix . $count . '_content_two', true );
-	$content_two = apply_filters( 'the_content', $content_two );
+    $content_two = apply_filters( 'the_content', $content_two );
 
-	//* Output the container section
-	printf( '<section id="section-%s" class="%s">', $count, $class );
+    $content_below_selection = get_post_meta( $id, $context_prefix . $count . '_content_below_selection', true );
+    $content_below = get_post_meta( $id, $context_prefix . $count . '_content_below', true );
+    $content_below = apply_filters( 'the_content', $content_below );
 
-	//* If there's a background image, output that
-	if ( $imageid )
-		printf( '<div class="background-div" style="background-image:url( %s )"></div>', $imageurl );
+    //* Output the container section
+    printf( '<section id="section-%s" class="%s">', $count, $class );
 
-		do_action( 'before_inside_section_' . $count );
+    //* If there's a background image, output that
+    if ( $imageid )
+        printf( '<div class="background-div" style="background-image:url( %s )"></div>', $imageurl );
 
-		echo '<div class="wrap">';
+        do_action( 'before_inside_section_' . $count );
 
-			if ( $content_above && ( $content_above_selection == 'yes' ) )
-				printf( '<div class="content_above">%s</div>', $content_above );
+        echo '<div class="wrap">';
 
-	        echo '<div class="column-container">';
+            //* If there's content above, let's output that
+            if ( $content_above && ( $content_above_selection == 'yes' ) )
+                printf( '<div class="content_above">%s</div>', $content_above );
 
-	    		printf( '<div class="column"><div class="content-wrap">%s</div></div>', $content_one );
-	    		printf( '<div class="column"><div class="content-wrap">%s</div></div>', $content_two );
+            echo '<div class="column-container">';
 
-	        echo '</div>'; // .wrap
-		echo '</div>'; // .column-container
+                printf( '<div class="column"><div class="content-wrap">%s</div></div>', $content_one );
+                printf( '<div class="column"><div class="content-wrap">%s</div></div>', $content_two );
 
-		do_action( 'after_inside_section_' . $count );
+            echo '</div>'; // .wrap
 
-	echo '</section>'; // section.section
+            //* If there's content below, let's output that
+            if ( $content_below && ( $content_below_selection == 'yes' ) )
+                printf( '<div class="content_below">%s</div>', $content_below );
+
+        echo '</div>'; // .column-container
+
+        do_action( 'after_inside_section_' . $count );
+
+    echo '</section>'; // section.section
 
 }
