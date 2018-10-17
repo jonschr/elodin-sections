@@ -1,5 +1,9 @@
 ## Changelog
 
+#### 1.0.4
+
+- Changed the name of the main file
+
 #### 1.0.3
 
 - Added changelog to the repo for better UI within WordPress updater.
