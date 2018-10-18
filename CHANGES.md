@@ -1,5 +1,10 @@
 ## Changelog
 
+#### 1.0.5
+
+- Testing updating functionality, making sure that still works after the name change
+- No other changes
+
 #### 1.0.4
 
 - Changed the name of the main file
