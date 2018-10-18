@@ -1,5 +1,3 @@
-## Changelog
-
 #### 1.0.5
 
 - Testing updating functionality, making sure that still works after the name change
