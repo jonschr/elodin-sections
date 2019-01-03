@@ -71,7 +71,7 @@
 	* Adds our template to the page dropdown for v4.7+
 	*/
 	public function add_new_template( $posts_templates ) {
-		$posts_templates = array_merge( $posts_templates, $this->templates );
+		$posts_templates = array_merge( $this->templates, $posts_templates );
 		return $posts_templates;
 	}
 

@@ -86,7 +86,7 @@ function redblue_sections_set_layouts() {
 				),
 			),
 			'location' => $above_content,
-			'menu_order' => 1,
+			'menu_order' => 0,
 			'position' => 'acf_after_title',
 			'label_placement' => 'top',
 			'instruction_placement' => 'label',
