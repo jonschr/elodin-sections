@@ -27,6 +27,6 @@ function redblue_section_markup_THESECTIONNAME( $id, $count, $case, $context_pre
 	if ( $case != 'THESECTIONNAME' )
 		return;
 
-    THEMARKUP
+    // THEMARKUP
 
 }
