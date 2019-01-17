@@ -4,7 +4,7 @@
 	Plugin URI: https://github.com/jonschr/elodin-sections
     GitHub Plugin URI: https://github.com/jonschr/elodin-sections
     Description: An ACF addon which installs fields and basic layouts for flexible content areas.
-	Version: 1.0.5
+	Version: 1.1
     Author: Jon Schroeder
     Author URI: https://elod.in
 
@@ -29,7 +29,7 @@ if ( !defined( 'ABSPATH' ) ) {
 define( 'REDBLUE_SECTIONS', dirname( __FILE__ ) );
 
 // Define the version of the plugin
-define ( 'REDBLUE_SECTIONS_VERSION', '1.0.5' );
+define ( 'REDBLUE_SECTIONS_VERSION', '1.1' );
 
 /**
  * Add a notification if ACF isn't installed and active
@@ -74,6 +74,9 @@ if ( class_exists( 'acf_pro_updates' ) ) {
 
     //* Add functions to set up the body class and figure out the type of sections we might have
     include_once( 'lib/output-setup.php' );
+
+    //* Disable Gutenberg if we're on the custom template
+    include_once( 'lib/disable-gutenberg-on-flexible-template.php' );
 
     //* The sections themselves
     require_once( 'sections/fullwidth.php' );
