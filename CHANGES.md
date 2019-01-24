@@ -1,3 +1,9 @@
+#### 1.1
+
+- Removing Gutenberg when we're on the flexible template
+- Changing the flexible template to be second on the list instead of last
+- Minor Gutenberg compatibility fixes
+
 #### 1.0.5
 
 - Testing updating functionality, making sure that still works after the name change

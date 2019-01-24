@@ -11,7 +11,7 @@ add_filter( 'redblue_section_add_layout', 'redblue_section_fields_THESECTIONNAME
 function redblue_section_fields_THESECTIONNAME( $layouts ) {
 
     $layouts[] = array (
-        THELAYOUTS
+        // THELAYOUTS
     );
 
 	return $layouts;
