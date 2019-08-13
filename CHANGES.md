@@ -1,4 +1,8 @@
-#### 1.1.1
+#### 1.1.2 August 12, 2019
+
+- BUGFIX: On an exact-match search for an existing page, be sure to allow the search template to be the one found, and not the flexible content template.
+
+#### 1.1.1 August 12, 2019
 
 - Removing accidental Roman numbers from lists in a few sections
 

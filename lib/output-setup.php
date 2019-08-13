@@ -11,6 +11,10 @@ function redblue_sections_add_body_classes( $classes ) {
     //* Get the page number
     $id = get_the_id();
 
+    // Bail if this is actually a search template
+    if ( get_search_query() )
+        return $classes;
+
     //////////////////////
     // NOTES ON CLASSES //
     //////////////////////

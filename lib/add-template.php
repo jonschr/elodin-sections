@@ -111,7 +111,11 @@
  	public function view_project_template( $template ) {
 
  		// Get global post
- 		global $post;
+		 global $post;
+		 
+		 //* Bail right now if there's a search query
+		if ( get_search_query() )
+			return $template;
 
  		// Return template if post is empty
  		if ( ! $post ) {

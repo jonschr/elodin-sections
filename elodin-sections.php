@@ -4,7 +4,7 @@
 	Plugin URI: https://github.com/jonschr/elodin-sections
     GitHub Plugin URI: https://github.com/jonschr/elodin-sections
     Description: An ACF addon which installs fields and basic layouts for flexible content areas.
-	Version: 1.1.1
+	Version: 1.1.2
     Author: Jon Schroeder
     Author URI: https://elod.in
 
