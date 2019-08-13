@@ -1,15 +1,2 @@
-.acf-fc-popup ul {
-  display: flex;
-  flex-flow: row wrap;
-  width: 450px; }
-  .acf-fc-popup ul li {
-    flex: 0 1 auto;
-    width: 225px; }
-    .acf-fc-popup ul li a {
-      font-size: 13px; }
-
-.acf-limit-height {
-  min-height: 200px !important; }
-  .acf-limit-height iframe {
-    height: 170px !important;
-    min-height: 170px !important; }
+/* line 2, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/elodin-sections/css/admin-style.scss */.acf-fc-popup ul{display:-webkit-box;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-flow:row wrap;width:450px}/* line 7, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/elodin-sections/css/admin-style.scss */.acf-fc-popup ul li{-webkit-box-flex:0;flex:0 1 auto;width:225px}/* line 11, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/elodin-sections/css/admin-style.scss */.acf-fc-popup ul li a{font-size:13px}/* line 20, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/elodin-sections/css/admin-style.scss */.acf-limit-height{min-height:200px !important}/* line 23, Users/jonschroeder/Documents/Websites/squarefoot-tradesman/app/public/wp-content/plugins/elodin-sections/css/admin-style.scss */.acf-limit-height iframe{height:170px !important;min-height:170px !important}
+/*# sourceMappingURL=admin-style.css.map */

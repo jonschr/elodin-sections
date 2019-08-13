@@ -1,3 +1,7 @@
+#### 1.1.1
+
+- Removing accidental Roman numbers from lists in a few sections
+
 #### 1.1
 
 - Removing Gutenberg when we're on the flexible template
