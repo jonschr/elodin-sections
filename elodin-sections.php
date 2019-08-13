@@ -29,7 +29,7 @@ if ( !defined( 'ABSPATH' ) ) {
 define( 'REDBLUE_SECTIONS', dirname( __FILE__ ) );
 
 // Define the version of the plugin
-define ( 'REDBLUE_SECTIONS_VERSION', '1.1' );
+define ( 'REDBLUE_SECTIONS_VERSION', '1.1.2' );
 
 /**
  * Add a notification if ACF isn't installed and active
