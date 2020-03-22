@@ -44,7 +44,7 @@
         -webkit-appearance: none;
     }
 
-    > video {
+    >video {
         position: absolute;
         z-index: 5;
         top: 0;
@@ -73,7 +73,7 @@
         }
     }
 
-    &.full-color > video {
+    &.full-color>video {
         opacity: 1;
     }
 }
@@ -123,10 +123,12 @@
 .section.background_video.full-height {
     padding-top: 0;
     padding-bottom: 0;
-    height: 100vh;
+    // height: 100vh;
+    display: block;
 
     @include mobile-section {
         height: auto;
+        min-height: auto;
         padding-top: 30px;
         padding-bottom: 30px;
     }

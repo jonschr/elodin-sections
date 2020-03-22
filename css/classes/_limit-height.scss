@@ -3,16 +3,11 @@
    ========================================================================== */
 
 .section.full-height {
-    @include desktop-section {
-        height: 100vh;
-        position: relative;
+    display: flex;
+    align-items: center;
 
-        .wrap {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+    @include desktop-section {
+        min-height: 100vh;
     }
 }
 

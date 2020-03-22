@@ -3,16 +3,35 @@
    ========================================================================== */
 
 .section.background_image_slider {
+
+    &.full-height {
+        display: block;
+
+        @include desktop-section {
+            height: 100vh;
+            position: relative;
+
+            .wrap {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
     padding: 0;
     margin: 0;
     position: relative;
     background-color: #333;
+    margin-bottom: 0 !important;
 
     .slide {
         position: relative;
         padding: 100px 0;
         min-height: 500px;
         background-color: white;
+
         @include mobile-section {
             min-height: auto;
             padding: 70px 0 50px;
@@ -25,7 +44,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        filter: grayscale( 50% );
+        filter: grayscale(50%);
         background-position: center center;
         background-size: cover;
         z-index: 25;
@@ -37,7 +56,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba( black, 0.7 );
+            background-color: rgba(black, 0.7);
         }
     }
 
@@ -59,8 +78,9 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translateY( -50% ) translateX( -50% );
+        transform: translateY(-50%) translateX(-50%);
         z-index: 50;
+
         @include mobile-section {
             transform: none;
             top: 0;
@@ -76,6 +96,7 @@
         padding: 0;
         margin: 0;
         bottom: 20px;
+
         @include mobile-section {
             top: 25px;
             bottom: auto;
