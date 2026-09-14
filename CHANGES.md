@@ -1,3 +1,10 @@
+#### 1.1.4 September 14, 2026
+
+- Fixed the ACF section picker overflowing into adjacent editor controls.
+- Updated Fullwidth Image sections to use WordPress responsive full-size images while preserving their native aspect ratio.
+- Centered optional overlay content over images on desktop and mobile.
+- Added an optional mobile image that replaces the desktop image below 768px.
+
 #### 1.1.2 August 12, 2019
 
 - BUGFIX: On an exact-match search for an existing page, be sure to allow the search template to be the one found, and not the flexible content template.

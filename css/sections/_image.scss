@@ -3,23 +3,26 @@
 
     .overlay {
         position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        inset: 0;
         width: 100%;
-        background: rgba(black, 0.8);
         padding: 20px 0;
-        left: 0;
-        bottom: 0;
-
-        @include mobile-section {
-            display: none;
-        }
-
+        text-align: center;
 
         * {
             color: white;
         }
     }
 
+    .image-container picture {
+        display: block;
+    }
+
     img.the-image {
-        margin-bottom: -10px;
+        display: block;
+        width: 100%;
+        height: auto;
     }
 }

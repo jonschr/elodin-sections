@@ -1,12 +1,10 @@
 .acf-fc-popup {
     ul {
-        display: flex;
-        flex-flow: row wrap;
-        width: 450px;
+        display: block;
+        width: auto;
 
         li {
-            flex: 0 1 auto;
-            width: 225px;
+            width: auto;
 
             a {
                 font-size: 13px;

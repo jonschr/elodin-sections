@@ -1220,18 +1220,21 @@ body .slick-slider {
   padding: 0 !important; }
   .section.image .overlay {
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    inset: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.8);
     padding: 20px 0;
-    left: 0;
-    bottom: 0; }
-    @media (max-width: 767px) {
-      .section.image .overlay {
-        display: none; } }
+    text-align: center; }
     .section.image .overlay * {
       color: white; }
+  .section.image .image-container picture {
+    display: block; }
   .section.image img.the-image {
-    margin-bottom: -10px; }
+    display: block;
+    width: 100%;
+    height: auto; }
 
 /* Classes
    ========================================================================== */

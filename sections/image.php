@@ -18,10 +18,10 @@ function redblue_section_fields_image( $layouts ) {
         'sub_fields' => array (
             array (
                 'key' => 'field_ztViAyUZUXN6ZV1',
-                'label' => 'Image',
+                'label' => 'Desktop Image',
                 'name' => 'background',
                 'type' => 'image',
-                'instructions' => 'This image should be a minimum of 1800px wide, and however tall you\'d like, as it will maintain aspect ratio in all views.',
+                'instructions' => 'This image should be a minimum of 1800px wide. It will maintain its aspect ratio and is used on mobile when no mobile image is supplied.',
                 'wrapper' => array (
                     'width' => 30,
                 ),
@@ -30,12 +30,23 @@ function redblue_section_fields_image( $layouts ) {
                 'min_height' => '150',
             ),
             array (
+                'key' => 'field_ztViAyUZUXN6ZV4',
+                'label' => 'Mobile Image',
+                'name' => 'mobile_background',
+                'type' => 'image',
+                'instructions' => 'Optional image shown below 768px wide.',
+                'wrapper' => array (
+                    'width' => 30,
+                ),
+                'preview_size' => 'medium',
+            ),
+            array (
                 'key' => 'field_ztViAyUZUXN6ZV2',
                 'label' => 'Overlay Content',
                 'name' => 'overlay',
                 'type' => 'wysiwyg',
                 'wrapper' => array (
-                    'width' => 70,
+                    'width' => 40,
                 ),
             ),
             array (
@@ -73,9 +84,9 @@ function redblue_section_markup_image( $id, $count, $case, $context_prefix ) {
 
 	//* Get the background image information
 	$imageid = (int) get_post_meta( $id, $context_prefix . $count . '_background', true );
-
-	if ( $imageid ) 
-		$imageurl = wp_get_attachment_image_url( $imageid, 'background-fullscreen' );
+	$mobile_imageid = (int) get_post_meta( $id, $context_prefix . $count . '_mobile_background', true );
+	$mobile_image = $mobile_imageid ? wp_get_attachment_image_src( $mobile_imageid, 'full' ) : false;
+	$mobile_srcset = $mobile_imageid ? wp_get_attachment_image_srcset( $mobile_imageid, 'full' ) : '';
 
 	//* Get the classes ready
 	$class = implode( ' ', $class );
@@ -89,8 +100,16 @@ function redblue_section_markup_image( $id, $count, $case, $context_prefix ) {
 
 		do_action( 'before_inside_section_' . $count );
 
-        if ( $imageid )
-            printf( '<div class="image-container"><img class="the-image" src="%s" /></div>', $imageurl );
+        if ( $imageid ) {
+            echo '<div class="image-container"><picture>';
+
+                if ( $mobile_image && $mobile_srcset )
+                    printf( '<source media="(max-width: 767px)" srcset="%s" width="%d" height="%d">', esc_attr( $mobile_srcset ), $mobile_image[1], $mobile_image[2] );
+
+                echo wp_get_attachment_image( $imageid, 'full', false, array( 'class' => 'the-image' ) );
+
+            echo '</picture></div>';
+        }
 
 		if ( $overlay )
 			printf( '<div class="overlay"><div class="wrap">%s</div></div>', $overlay );
