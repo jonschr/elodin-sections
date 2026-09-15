@@ -14,6 +14,14 @@
         * {
             color: white;
         }
+
+        &.overlay-top {
+            align-items: flex-start;
+        }
+
+        &.overlay-bottom {
+            align-items: flex-end;
+        }
     }
 
     .image-container picture {

@@ -1229,6 +1229,10 @@ body .slick-slider {
     text-align: center; }
     .section.image .overlay * {
       color: white; }
+    .section.image .overlay.overlay-top {
+      align-items: flex-start; }
+    .section.image .overlay.overlay-bottom {
+      align-items: flex-end; }
   .section.image .image-container picture {
     display: block; }
   .section.image img.the-image {

@@ -50,6 +50,21 @@ function redblue_section_fields_image( $layouts ) {
                 ),
             ),
             array (
+                'key' => 'field_ztViAyUZUXN6ZV5',
+                'label' => 'Overlay Vertical Position',
+                'name' => 'overlay_position',
+                'type' => 'select',
+                'choices' => array (
+                    'center' => 'Center',
+                    'top' => 'Near Top',
+                    'bottom' => 'Near Bottom',
+                ),
+                'default_value' => 'center',
+                'wrapper' => array (
+                    'width' => 30,
+                ),
+            ),
+            array (
                 'key' => 'field_ztViAyUZUXN6ZV3',
                 'label' => 'Class',
                 'name' => 'class',
@@ -94,6 +109,7 @@ function redblue_section_markup_image( $id, $count, $case, $context_prefix ) {
 	//* Variables for this section
 	$overlay = get_post_meta( $id, $context_prefix . $count . '_overlay', true );
 	$overlay = apply_filters( 'the_content', $overlay );
+	$overlay_position = sanitize_html_class( get_post_meta( $id, $context_prefix . $count . '_overlay_position', true ) );
 
 	//* Markup for this section
 	printf ( '<section id="section-%s" class="%s">', $count, $class );
@@ -112,7 +128,7 @@ function redblue_section_markup_image( $id, $count, $case, $context_prefix ) {
         }
 
 		if ( $overlay )
-			printf( '<div class="overlay"><div class="wrap">%s</div></div>', $overlay );
+			printf( '<div class="overlay overlay-%s"><div class="wrap">%s</div></div>', esc_attr( $overlay_position ), $overlay );
 
 		do_action( 'after_inside_section_' . $count );
 

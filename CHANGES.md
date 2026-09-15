@@ -1,3 +1,7 @@
+#### Unreleased
+
+- Added top, center, and bottom vertical positioning for Fullwidth Image overlay content.
+
 #### 1.1.4 September 14, 2026
 
 - Fixed the ACF section picker overflowing into adjacent editor controls.
